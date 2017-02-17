@@ -677,7 +677,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="name">Statut</span>
 	<div class="classic_select">
 		<select class="select2-base">
-			<option value="">select 2 qfsd sd fsdf sdfsd fsdf sdf</option>
+			<option value="">select 2</option>
 		</select>
 	</div>
 	<span class="customErrorValidation" data-name="street"></span>
@@ -1025,7 +1025,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <div class="form">
 
 <fieldset>
-	<legend>Est-ce une habitation modeste ?</legend>
+	<legend>Est-ce une habitation modeste ?sdf</legend>
 	<label class="radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>

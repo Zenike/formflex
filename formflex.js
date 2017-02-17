@@ -9,15 +9,6 @@ function formflex_refresh(){
 
 
 
-//module de calendrier
-$(document).ready(function () {
-	if($(".pickadate").length > 0){
-		$(".pickadate").pickadate({
-			format: "dd-mm-yyyy",
-			formatSubmit: 'yyyy-mm-dd'
-		});
-	}
-});
 
 
 
