@@ -6,7 +6,6 @@
 @formflex_icons_fz: 18px;/*18px*/
 @formflex_bd: #aaa;/*#aaa*/
 @formflex_bd_hover: #555;/*#555*/
-@formflex_bdc: #ccc;/*#ccc*/
 @formflex_main_color_theme: @theme;/*@theme*/
 @formflex_main_color_theme_hover: @theme_light;/*@theme_light*/
 @formflex_main_color_theme_mousedown: @theme_dark;/*@theme_dark*/
@@ -18,7 +17,7 @@
 
 /* FORMFLEX CHECKSKIN */
 @formflex_checkskin_fz: 18px;/*18px*/
-@formflex_checkskin_fontcolor: #fff;/*#fff*/
+@formflex_checkskin_iconcolor: #fff;/*#fff*/
 @formflex_checkskin_bg_color: #fff;/*#fff*/
 @formflex_checkskin_bg_color_checked: @theme;/*@theme*/
 @formflex_checkskin_bg_color_checked_hover: @theme_light;/*@theme_light*/
@@ -26,10 +25,10 @@
 @formflex_checkskin_bd_color: #aaa;/*#aaa*/
 @formflex_checkskin_bd_color_hover: #555;/*#555*/
 .formflex_checkskin_pimping {}/*cible directement span.input*/
+.focus_pimping {
+.shadow(red,0,0,10px);
+}
 	
-
-
-
 .customErrorValidation {
 position: absolute;
 display: none;
@@ -71,7 +70,7 @@ display: none;
 }
 
 .zone_add_from_ext {
-border-top: 1px solid @formflex_bdc;
+border-top: 1px solid @formflex_bd;
 margin-top: 10px;
 padding-top: 10px;
 overflow: hidden;
@@ -87,7 +86,7 @@ overflow: hidden;
 }
 
 .classic_select {
-border: 1px solid @formflex_bdc;
+border: 1px solid @formflex_bd;
 overflow: hidden;
 background-image: url(../img/select_handler.png);
 background-repeat: no-repeat;
@@ -99,7 +98,7 @@ display: block;
 padding-right: @formflex_input_height;
 	&:hover {
 	background-position: bottom right;
-	border-color: @formflex_bd;
+	border-color: @formflex_bd_hover;
 	}
 	&.arrow_full {
 	background-image: url(../img/select_handler_full.png);
@@ -203,8 +202,9 @@ padding-right: @formflex_input_height;
 		}
 	}
 }
+
 .select2-drop {
-border-color: @formflex_bdc !important;
+border-color: @formflex_bd !important;
 	.select2-input {
 	color: @formflex_input_fontcolor !important;
 	}
@@ -223,7 +223,7 @@ border-color: @formflex_bdc !important;
 position: relative;
 overflow: hidden;
 	.infos {
-	border: 1px solid @formflex_bdc;
+	border: 1px solid @formflex_bd;
 	border-right: 0;
 	height: @formflex_input_height;
 	line-height: @formflex_input_height;
@@ -425,7 +425,7 @@ cursor: pointer;
 	background-color: @formflex_checkskin_bg_color;
 	border: 1px solid @formflex_checkskin_bd_color;
 	.round(100px);
-	color: @formflex_checkskin_fontcolor;
+	color: @formflex_checkskin_iconcolor;
 	font-size: @formflex_checkskin_fz;
 	display: block;
 	overflow: hidden;
@@ -522,7 +522,7 @@ label.star {
 
 .lang_menu {
 overflow: hidden;
-border-bottom: 1px solid @formflex_bdc;
+border-bottom: 1px solid @formflex_bd;
 	&.mode_popup {
 	display: none;
 	}
@@ -557,7 +557,6 @@ border-bottom: 1px solid @formflex_bdc;
 	outline:0px !important;
 	-webkit-appearance:none;
 	}
-	/* options du cadre */
 	&.mg {
 	margin: 15px;
 	}
@@ -568,7 +567,7 @@ border-bottom: 1px solid @formflex_bdc;
 	font-size: 12px;
 	color: @formflex_input_fontcolor;
 		&.bdb {
-		border-bottom: 1px solid @formflex_bdc;
+		border-bottom: 1px solid @formflex_bd;
 		padding-bottom: 5px;
 		}
 		em {
@@ -626,11 +625,11 @@ border-bottom: 1px solid @formflex_bdc;
 		margin: 0;
 		}
 		&.bdb {
-		border-bottom: 1px solid @formflex_bdc;
+		border-bottom: 1px solid @formflex_bd;
 		padding-bottom: 10px;
 		}
 		&.bdt {
-		border-top: 1px solid @formflex_bdc;
+		border-top: 1px solid @formflex_bd;
 		padding-top: 5px;
 		}
 		&.radio.bdb, &.checkbox.bdb {
@@ -671,7 +670,7 @@ border-bottom: 1px solid @formflex_bdc;
 		label {
 		float: left;
 			&.bdr {
-			border-right: 1px solid @formflex_bdc;
+			border-right: 1px solid @formflex_bd;
 			margin-right: 5px;
 			}
 		}
@@ -724,11 +723,11 @@ border-bottom: 1px solid @formflex_bdc;
 			}
 		}
 		&.bdb {
-		border-bottom: 1px solid @formflex_bdc;
+		border-bottom: 1px solid @formflex_bd;
 		padding-bottom: 10px;
 		}
 		&.bdt {
-		border-top: 1px solid @formflex_bdc;
+		border-top: 1px solid @formflex_bd;
 		padding-top: 5px;
 		}
 		&.mgl {
@@ -899,7 +898,7 @@ border-bottom: 1px solid @formflex_bdc;
 	input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="date"],input[type="email"] {
 	display: block;
 	height: @formflex_input_height;
-	border: 1px solid @formflex_bdc;
+	border: 1px solid @formflex_bd;
 	float: left;
 	margin: 0 3px;
 	padding: 0 5px;
@@ -911,11 +910,8 @@ border-bottom: 1px solid @formflex_bdc;
 		background-color: #fff !important;
 		}
 		&.picker__input {
-		border-color: @formflex_bdc !important;
+		border-color: @formflex_bd !important;
 		cursor: text;
-		}
-		&:focus {
-		border-color: @formflex_bd;
 		}
 	}
 	.classic_select {
@@ -944,7 +940,7 @@ border-bottom: 1px solid @formflex_bdc;
 	padding: 0 5px;
 	overflow: hidden;
 	background-color: #fff;
-	border: 1px solid @formflex_bdc;
+	border: 1px solid @formflex_bd;
 	clear: both;
 		input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="date"],input[type="email"],.classic_select {
 		width: 100%;
@@ -980,11 +976,11 @@ border-bottom: 1px solid @formflex_bdc;
 	}
 	textarea {
 	display: block;
-	border: 1px solid @formflex_bdc;
+	border: 1px solid @formflex_bd;
 	float: left;
 	margin: 0 3px;
 	padding: 5px;
-	font-size: 12px;
+	font-size: @formflex_input_font_size;
 	color: @formflex_input_fontcolor;
 	background-color: #fff;
 	min-height: 100px;
@@ -1000,7 +996,7 @@ border-bottom: 1px solid @formflex_bdc;
 	margin-left: 0;
 	}
 	.textarea {
-	border: 1px solid @formflex_bdc;
+	border: 1px solid @formflex_bd;
 	display: block;
 	clear: both;
 		&.no_wrap {
@@ -1024,14 +1020,14 @@ border-bottom: 1px solid @formflex_bdc;
 		.classic_select {
 		background: none;
 		background-color: @formflex_input_disbled_bgcolor;
-		border: 1px solid @formflex_bdc;
+		border: 1px solid @formflex_bd;
 		}
 		.checkskin {
 		cursor: default;
 			.input {
 			background-color: @formflex_input_disbled_bgcolor;
 			color: @formflex_input_disbled_bgcolor;
-			border: 1px solid @formflex_bdc;
+			border: 1px solid @formflex_bd;
 			}
 			&.checked {
 				.input {
