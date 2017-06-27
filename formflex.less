@@ -16,7 +16,9 @@
 @formflex_name_color_hover: #000;/*#000*/
 
 /* FORMFLEX CHECKSKIN */
+@formflex_checkskin_input_size_decal: 0px;/*0px*/
 @formflex_checkskin_fz: 18px;/*18px*/
+@formflex_checkskin_checkbox_round: 5px;/*5px*/
 @formflex_checkskin_iconcolor: #fff;/*#fff*/
 @formflex_checkskin_bg_color: #fff;/*#fff*/
 @formflex_checkskin_bg_color_checked: @theme;/*@theme*/
@@ -25,9 +27,6 @@
 @formflex_checkskin_bd_color: #aaa;/*#aaa*/
 @formflex_checkskin_bd_color_hover: #555;/*#555*/
 .formflex_checkskin_pimping {}/*cible directement span.input*/
-.focus_pimping {
-.shadow(red,0,0,10px);
-}
 	
 .customErrorValidation {
 position: absolute;
@@ -388,9 +387,9 @@ cursor: pointer;
 	&.checked {
 		span.input {
 		background-color: @formflex_checkskin_bg_color_checked;
-		height: @formflex_input_height + 2;
-		line-height: @formflex_input_height + 2;
-		width: @formflex_input_height + 2;
+		height: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
+		line-height: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
+		width: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
 		border: none;
 			i {
 			display: inline;
@@ -405,22 +404,24 @@ cursor: pointer;
 	&.mousedown {
 		span.input {
 		background-color: @formflex_checkskin_bg_color_mousedown !important;
-		height: @formflex_input_height + 2;
-		line-height: @formflex_input_height + 2;
-		width: @formflex_input_height + 2;
+		height: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
+		line-height: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
+		width: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
 		border: none;
 		}
 	}
 	&.checkbox {
 		span.input {
-		.round(5px);
+		.round(@formflex_checkskin_checkbox_round);
 		}
 	}
 	span.input {
 	float: left;
-	height:  @formflex_input_height;
-	line-height: @formflex_input_height;
-	width: @formflex_input_height;
+	height:  @formflex_input_height + @formflex_checkskin_input_size_decal;
+	line-height: @formflex_input_height + @formflex_checkskin_input_size_decal;
+	width: @formflex_input_height  + @formflex_checkskin_input_size_decal;
+	position: relative;
+	top: @formflex_checkskin_input_size_decal/2*-1;
 	text-align: center;
 	background-color: @formflex_checkskin_bg_color;
 	border: 1px solid @formflex_checkskin_bd_color;
@@ -446,7 +447,7 @@ cursor: pointer;
 	}
 	span.name {
 	float: none !important;
-	padding-left: @formflex_input_height + 10 !important;
+	padding-left: @formflex_input_height + 10 + @formflex_checkskin_input_size_decal !important;
 	margin-left: 0 !important;
 	}
 	span.illu {
