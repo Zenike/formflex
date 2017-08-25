@@ -2542,7 +2542,6 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 <script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/jquery-validation/jquery.validate.min.js"></script>
 <script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo $pathLinkFile; ?>/../../../formflex.js"></script>
-<script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/startpack.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
 <script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/monjquery.js"></script>
 </body>

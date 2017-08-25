@@ -47,7 +47,7 @@ display: none;
 	line-height: 20px;
 	color: #fff;
 	padding: 0 5px;
-	.round(3px);
+	border-radius: 3px;
 	display: block;
 	font-size: 10px;
 	white-space: nowrap;
@@ -91,12 +91,12 @@ overflow: hidden;
 background-image: url(../img/select_handler.png);
 background-repeat: no-repeat;
 background-position: top right;
-.bgz(auto @formflex_input_height*2);
+background-size: auto @formflex_input_height*2;
 height: @formflex_input_height;
 background-color: #fff;
 display: block;
 padding-right: @formflex_input_height;
-.round(@formflex_input_round);
+border-radius: @formflex_input_round;
 	&:hover {
 	background-position: bottom right;
 	border-color: @formflex_bd_hover;
@@ -330,7 +330,7 @@ text-align: center;
 background-color: @formflex_main_color_theme;
 font-size: @formflex_icons_fz;
 color: #fff;
-.round(100px);
+border-radius: 100px;
 cursor: pointer;
 border: none;
 	&:hover {
@@ -414,7 +414,7 @@ cursor: pointer;
 	}
 	&.checkbox {
 		span.input {
-		.round(@formflex_checkskin_checkbox_round);
+		border-radius: @formflex_checkskin_checkbox_round;
 		}
 	}
 	span.input {
@@ -427,7 +427,7 @@ cursor: pointer;
 	text-align: center;
 	background-color: @formflex_checkskin_bg_color;
 	border: 1px solid @formflex_checkskin_bd_color;
-	.round(100px);
+	border-radius: 100px;
 	color: @formflex_checkskin_iconcolor;
 	font-size: @formflex_checkskin_fz;
 	display: block;
@@ -907,8 +907,8 @@ border-bottom: 1px solid @formflex_bd;
 	padding: 0 5px;
 	font-size: @formflex_input_font_size;
 	color: @formflex_input_fontcolor;
-	.round(@formflex_input_round);
-	.tr;
+	border-radius: @formflex_input_round;
+	transition: 0.3s;
 		&[readonly],&.readonly {
 		border-color: transparent !important;
 		background-color: #fff !important;
@@ -946,7 +946,7 @@ border-bottom: 1px solid @formflex_bd;
 	background-color: #fff;
 	border: 1px solid @formflex_bd;
 	clear: both;
-	.round(@formflex_input_round);
+	border-radius: @formflex_input_round;
 		input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="date"],input[type="email"],.classic_select {
 		width: 100%;
 		padding: 0;
@@ -993,7 +993,7 @@ border-bottom: 1px solid @formflex_bd;
 	width: 400px;
 	min-width: 400px;
 	max-width: 400px;
-	.round(@formflex_input_round);
+	border-radius: @formflex_input_round;
 	}
 	textarea[disabled=disabled] {
 	background-color: #eee;
@@ -1005,7 +1005,7 @@ border-bottom: 1px solid @formflex_bd;
 	border: 1px solid @formflex_bd;
 	display: block;
 	clear: both;
-	.round(@formflex_input_round);
+	border-radius: @formflex_input_round;
 		&.no_wrap {
 		border: none;
 			textarea {
