@@ -1,4 +1,4 @@
-<?php 
+<?php
 $pathLinkFile="./assets/";
 ?>
 <?php
@@ -64,7 +64,7 @@ function generateRandomString() {
 <label>
 	<span class="name">horizontal simple</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
@@ -72,7 +72,7 @@ function generateRandomString() {
 <label class="to_the_right">
 	<span class="name">horizontal extensible (script)</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
@@ -81,7 +81,7 @@ function generateRandomString() {
 	<span class="name">à la ligne simple</span>
 	<span class="clear"></span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
@@ -90,7 +90,7 @@ function generateRandomString() {
 	<span class="name">à la ligne extensible (css uniquement)</span>
 	<span class="clear"></span>
 	<span class="full"><input type="text" size="30"></span>
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
@@ -100,7 +100,7 @@ function generateRandomString() {
 &ltlabel>
 	&ltspan class="name">horizontal simple&lt/span>
 	&ltinput type="text" size="30">
-	
+
 	&ltspan class="customErrorValidation">&lt/span>
 	&ltspan class="clear">&lt/span>
 &lt/label>
@@ -108,7 +108,7 @@ function generateRandomString() {
 &ltlabel class="to_the_right">
 	&ltspan class="name">horizontal extensible (script)&lt/span>
 	&ltinput type="text" size="30">
-	
+
 	&ltspan class="customErrorValidation">&lt/span>
 	&ltspan class="clear">&lt/span>
 &lt/label>
@@ -117,7 +117,7 @@ function generateRandomString() {
 	&ltspan class="name">à la ligne simple&lt/span>
 	&ltspan class="clear">&lt/span>
 	&ltinput type="text" size="30">
-	
+
 	&ltspan class="customErrorValidation">&lt/span>
 	&ltspan class="clear">&lt/span>
 &lt/label>
@@ -126,7 +126,7 @@ function generateRandomString() {
 	&ltspan class="name">à la ligne extensible (css uniquement)&lt/span>
 	&ltspan class="clear">&lt/span>
 	&ltspan class="full">&ltinput type="text" size="30">&lt/span>
-	
+
 	&ltspan class="customErrorValidation">&lt/span>
 	&ltspan class="clear">&lt/span>
 &lt/label>
@@ -171,7 +171,7 @@ function generateRandomString() {
 	<label>
 		<span class="name"><?php echo generateRandomString(); ?></span>
 		<input type="text" size="30">
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -179,7 +179,7 @@ function generateRandomString() {
 	<label>
 		<span class="name no_size">label non aligné aux autres grace à la class no_size (voir infos)</span>
 		<input type="text" size="30">
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -190,7 +190,7 @@ function generateRandomString() {
 &ltlabel>
 	&ltspan class="name no_size">label non aligné aux autres grace à la class no_size (voir infos)&lt/span>
 	&ltinput type="text" size="30">
-	
+
 	&ltspan class="customErrorValidation">&lt/span>
 	&ltspan class="clear">&lt/span>
 &lt/label>
@@ -268,7 +268,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	</button>
 	<label>
 		<input type="text" size="30" name="street">
-		
+
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
@@ -280,7 +280,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	</button>
 	<label>
 		<input type="text" size="30" name="street">
-		
+
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
@@ -294,7 +294,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&lt/button>
 	&ltlabel>
 		&ltinput type="text" size="30" name="street">
-		
+
 		&ltspan class="customErrorValidation" data-name="street">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -306,7 +306,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&lt/button>
 	&ltlabel>
 		&ltinput type="text" size="30" name="street">
-		
+
 		&ltspan class="customErrorValidation" data-name="street">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -334,21 +334,21 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label>
 		<span class="name">Rue</span>
 		<input type="text" size="30" name="street">
-		
+
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
 		<span class="name">num</span>
 		<input type="text" size="5" name="street_nbr">
-		
+
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
 		<span class="name">CP</span>
 		<input type="text" size="10" name="street_nbr">
-		
+
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
@@ -362,21 +362,21 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&lt;label>
 		&lt;span class="name">Rue&lt;/span>
 		&lt;input type="text" size="30" name="street">
-		
+
 		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
 	&lt;label>
 		&lt;span class="name">num&lt;/span>
 		&lt;input type="text" size="5" name="street_nbr">
-		
+
 		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
 	&lt;label>
 		&lt;span class="name">CP&lt;/span>
 		&lt;input type="text" size="10" name="street_nbr">
-		
+
 		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
@@ -405,14 +405,14 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label class="cols">
 		<span class="name">CP*</span>
 		<span class="full"><input type="text" size="10" name="street"></span>
-		
+
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
 	<label class="cols">
 		<span class="name">Localité*</span>
 		<span class="full"><input type="text" size="10" name="street"></span>
-		
+
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
@@ -423,14 +423,14 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label class="cols to_the_right">
 		<span class="name forced_align">CP*</span>
 		<input type="text" size="10" name="street">
-		
+
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
 	<label class="cols to_the_right">
 		<span class="name">Localité*</span>
 		<input type="text" size="10" name="street_nbr">
-		
+
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
@@ -443,14 +443,14 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&ltlabel class="cols">
 		&ltspan class="name">CP*&lt/span>
 		&ltspan class="full">&ltinput type="text" size="10" name="street">&lt/span>
-		
+
 		&ltspan class="customErrorValidation" data-name="street">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
 	&ltlabel class="cols">
 		&ltspan class="name">Localité*&lt/span>
 		&ltspan class="full">&ltinput type="text" size="10" name="street">&lt/span>
-		
+
 		&ltspan class="customErrorValidation" data-name="street_nbr">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -461,14 +461,14 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&ltlabel class="cols to_the_right">
 		&ltspan class="name forced_align">CP*&lt/span>
 		&ltinput type="text" size="10" name="street">
-		
+
 		&ltspan class="customErrorValidation" data-name="street">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
 	&ltlabel class="cols to_the_right">
 		&ltspan class="name">Localité*&lt/span>
 		&ltinput type="text" size="10" name="street_nbr">
-		
+
 		&ltspan class="customErrorValidation" data-name="street_nbr">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -485,21 +485,21 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label>
 		<span class="name">Rue</span>
 		<input type="text" size="30" name="street">
-		
+
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
 		<span class="name">num</span>
 		<input type="text" size="5" name="street_nbr">
-		
+
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
 		<span class="name">CP</span>
 		<input type="text" size="10" name="street_nbr">
-		
+
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
@@ -513,21 +513,21 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&lt;label>
 		&lt;span class="name">Rue&lt;/span>
 		&lt;input type="text" size="30" name="street">
-		
+
 		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
 	&lt;label>
 		&lt;span class="name">num&lt;/span>
 		&lt;input type="text" size="5" name="street_nbr">
-		
+
 		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
 	&lt;label>
 		&lt;span class="name">CP&lt;/span>
 		&lt;input type="text" size="10" name="street_nbr">
-		
+
 		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
@@ -556,7 +556,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label>
 		<span class="name">Rue</span>
 		<input type="text" size="30" name="street">
-		
+
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
@@ -568,7 +568,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			</select>
 		</div>
 		<span class="name">mois</span>
-		
+
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
@@ -576,7 +576,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		<span class="name">CP</span>
 		<input type="text" size="10" name="street_nbr">
 		<span class="name">%</span>
-		
+
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
@@ -589,7 +589,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&lt;label>
 		&lt;span class="name">Rue&lt;/span>
 		&lt;input type="text" size="30" name="street">
-		
+
 		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
@@ -601,7 +601,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			&lt;/select>
 		&lt;/div>
 		&lt;span class="name">mois&lt;/span>
-		
+
 		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
@@ -609,7 +609,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		&lt;span class="name">CP&lt;/span>
 		&lt;input type="text" size="10" name="street_nbr">
 		&lt;span class="name">%&lt;/span>
-		
+
 		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
 		&lt;span class="clear">&lt;/span>
 	&lt;/label>
@@ -758,8 +758,8 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="name">Upload des fichiers</span>
 	<span class="clear"></span>
 	<div class="classic_file">
-		<span class="infos">Fichier pdf...</span>
-		<span class="btn">Parcourir</span>
+		<span class="classic_file_infos">Fichier pdf...</span>
+		<span class="classic_file_btn">Parcourir</span>
 		<input type="file">
 	</div>
 	<span class="customErrorValidation" data-name="street"></span>
@@ -907,7 +907,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			<select name="" id="">
 				<option value="">mois</option>
 			</select>
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</div>
@@ -917,7 +917,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label>
 		<span class="clear"></span>
 		<input type="text" size="5" placeholder="année">
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -933,7 +933,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			&ltselect name="" id="">
 				&ltoption value="">mois&lt/option>
 			&lt/select>
-			
+
 			&ltspan class="customErrorValidation">&lt/span>
 			&ltspan class="clear">&lt/span>
 		&lt/div>
@@ -943,7 +943,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&ltlabel>
 		&ltspan class="clear">&lt/span>
 		&ltinput type="text" size="5" placeholder="année">
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -970,7 +970,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <fieldset class="unify">
 	<label>
 		<input type="text" size="12" placeholder="Votre commune">
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -980,7 +980,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 				<option value="">+ 0 km</option>
 			</select>
 		</span>
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -991,7 +991,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 &ltfieldset class="unify">
 	&ltlabel>
 		&ltinput type="text" size="12" placeholder="Votre commune">
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1001,7 +1001,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 				&ltoption value="">+ 0 km&lt/option>
 			&lt/select>
 		&lt/span>
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1032,7 +1032,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			<input type="radio" name="test3">
 		</span>
 		<span class="name">Mercredi 19 fé</span>
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -1042,7 +1042,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			<input type="radio" name="test3">
 		</span>
 		<span class="name">Mercredi 19 février -</span>
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -1058,7 +1058,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			&ltinput type="radio" name="test3">
 		&lt/span>
 		&ltspan class="name">Mercredi 19 fé&lt/span>
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1068,7 +1068,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			&ltinput type="radio" name="test3">
 		&lt/span>
 		&ltspan class="name">Mercredi 19 février -&lt/span>
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1144,7 +1144,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <fieldset class="bd_sep equalize">
 	<legend>Est-ce une habitation modeste ?</legend>
 	<span class="clear"></span>
-	
+
 	<?php for($i=1;$i<=10;$i++){ ?>
 	<label class="radio checkskin">
 		<span class="input">
@@ -1152,7 +1152,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			<input type="radio" name="test3">
 		</span>
 		<span class="name"><?php echo generateRandomString(); ?></span>
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -1164,7 +1164,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 &ltfieldset class="bd_sep equalize">
 	&ltlegend>Est-ce une habitation modeste ?&lt/legend>
 	&ltspan class="clear">&lt/span>
-	
+
 	&lt?php for($i=1;$i&lt=10;$i++){ ?>
 	&ltlabel class="radio checkskin">
 		&ltspan class="input">
@@ -1172,7 +1172,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			&ltinput type="radio" name="test3">
 		&lt/span>
 		&ltspan class="name">&lt?php echo generateRandomString(); ?>&lt/span>
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1203,7 +1203,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			<input type="radio" name="test3">
 		</span>
 		<span class="name">Mercredi 19 fé</span>
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -1213,7 +1213,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			<input type="radio" name="test3">
 		</span>
 		<span class="name">Mercredi 19 février -</span>
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -1229,7 +1229,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			&ltinput type="radio" name="test3">
 		&lt/span>
 		&ltspan class="name">Mercredi 19 fé&lt/span>
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1239,7 +1239,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			&ltinput type="radio" name="test3">
 		&lt/span>
 		&ltspan class="name">Mercredi 19 février -&lt/span>
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1268,7 +1268,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		<input type="checkbox" name="test3">
 	</span>
 	<span class="name">Mercredi 19 fé fg sdfgdfg dfg dfgdf gd gdfg dfgd fsdfsdf sdfsdf sdfsdfsdfsdfsdfsdfsdf sdfsdfsdfsdfsd fsdfs fsdfsdfsdfdgdfgdfgdfgdfg dfg dfgdfg dfg dfg dgdgdfgdgdfgdfg dfg dfg dgdfgd dfg dfgdf gdg dfg</span>
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
@@ -1281,7 +1281,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		&ltinput type="checkbox" name="test3">
 	&lt/span>
 	&ltspan class="name">Mercredi 19 fé&lt/span>
-	
+
 	&ltspan class="customErrorValidation">&lt/span>
 	&ltspan class="clear">&lt/span>
 &lt/label>
@@ -1308,13 +1308,13 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			<i class="fa fa-check"></i>
 			<input type="checkbox" name="test3">
 		</span>
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
 		<input type="text" size="30">
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -1328,13 +1328,13 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 			&lti class="fa fa-check">&lt/i>
 			&ltinput type="checkbox" name="test3">
 		&lt/span>
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
 	&ltlabel>
 		&ltinput type="text" size="30">
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1451,7 +1451,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <label>
 	<span class="name">Commentaire</span>
 	<textarea name="" id="" cols="30" rows="10"></textarea>
-	
+
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
 </label>
@@ -1482,7 +1482,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <label>
 	<span class="name">Commentaire</span>
 	<span class="textarea"><textarea name="" id="" cols="30" rows="10"></textarea></span>
-	
+
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
 </label>
@@ -1492,7 +1492,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 &lt;label>
 	&lt;span class="name">Commentaire&lt;/span>
 	&lt;span class="textarea">&lt;textarea name="" id="" cols="30" rows="10">&lt;/textarea>&lt;/span>
-	
+
 	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
 	&lt;span class="clear">&lt;/span>
 &lt;/label>
@@ -1522,21 +1522,21 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <label data-lang-target="commentaires_test-fr">
 	<span class="name">Commentaire fr</span>
 	<span class="textarea"><textarea name="" id="" cols="30" rows="10">fr</textarea></span>
-	
+
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
 </label>
 <label data-lang-target="commentaires_test-nl">
 	<span class="name">Commentaire nl</span>
 	<span class="textarea"><textarea name="" id="" cols="30" rows="10">nl</textarea></span>
-	
+
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
 </label>
 <label data-lang-target="commentaires_test-en">
 	<span class="name">Commentaire en</span>
 	<span class="textarea"><textarea name="" id="" cols="30" rows="10">en</textarea></span>
-	
+
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
 </label>
@@ -1609,28 +1609,28 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 <label data-target="afficher_suite_oui">
 	<span class="name">oui</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_non">
 	<span class="name">non</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_ptet">
 	<span class="name">ptet</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_ptet afficher_suite_oui">
 	<span class="name">oui et ptet</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
@@ -1662,26 +1662,26 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 <label data-target="afficher_suite_2_oui">
 	<span class="name">oui</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_2_oui">
 	<span class="name">non</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 
 </div><!-- /form -->
 <blockquote>
-- utiliser l'attribut "data-radio-auto-menu" sur chaque élément 
+- utiliser l'attribut "data-radio-auto-menu" sur chaque élément
 de commande (label.radio) et y spécifier le mot clé lié à ce choix<br />
 <br />
 - mettre ce mot clé sur chaque élément qui devra être affiché quand ce choix est actif.<br />
 Le mot clé doit être mis dans un attribut "data-target".<br />
-peut importe où il se trouve sur la page et sur quel type d'élement, 
+peut importe où il se trouve sur la page et sur quel type d'élement,
 il sera commandé par le menu.<br />
 <br />
 - il est possible qu'on élément soit commandé par plusieurs menu, juste mettre les différents
@@ -1727,7 +1727,7 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 <label data-target="afficher_checkbox_suite-yes">
 	<span class="name">Addresse différente affichée si case cochée</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
@@ -1776,28 +1776,28 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 <label data-target="afficher_suite_select-oui">
 	<span class="name">oui</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_select-non">
 	<span class="name">non</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_select-ptet">
 	<span class="name">ptet</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_select-ptet afficher_suite_select-oui">
 	<span class="name">oui et ptet</span>
 	<input type="text" size="30">
-	
+
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
@@ -1813,7 +1813,7 @@ EX: oui, non, 1, 2, celibataire, etc.
 <br /><br />
 - mettre la combinaison du mot clé et de la réponse (séparé par un tiret) sur chaque élément qui devra être affiché quand ce choix est actif.<br />
 Le mot clé doit être mis dans un attribut "data-target".<br />
-peut importe où il se trouve sur la page et sur quel type d'élement, 
+peut importe où il se trouve sur la page et sur quel type d'élement,
 il sera commandé par le menu.<br />
 EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 <br /><br />
@@ -1850,14 +1850,14 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 	<label>
 		<span class="name">champs-1</span>
 		<input type="text" size="30">
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
 		<span class="name">champs-2</span>
 		<input type="text" size="30">
-		
+
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
@@ -1882,14 +1882,14 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 		<label>
 			<span class="name">champs-1</span>
 			<input type="text" size="30">
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
 		<label>
 			<span class="name">champs-2</span>
 			<input type="text" size="30">
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
@@ -1908,14 +1908,14 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 	&ltlabel>
 		&ltspan class="name">champs-1&lt/span>
 		&ltinput type="text" size="30">
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
 	&ltlabel>
 		&ltspan class="name">champs-2&lt/span>
 		&ltinput type="text" size="30">
-		
+
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
@@ -1936,14 +1936,14 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 		&ltlabel>
 			&ltspan class="name">champs-1&lt/span>
 			&ltinput type="text" size="30">
-			
+
 			&ltspan class="customErrorValidation">&lt/span>
 			&ltspan class="clear">&lt/span>
 		&lt/label>
 		&ltlabel>
 			&ltspan class="name">champs-2&lt/span>
 			&ltinput type="text" size="30">
-			
+
 			&ltspan class="customErrorValidation">&lt/span>
 			&ltspan class="clear">&lt/span>
 		&lt/label>
@@ -2000,11 +2000,11 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 					<input type="hidden" value="0" class="sortable_get_position">
 					<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 				</label>
-			
+
 				<label>
 					<span class="name">batiment</span>
 					<input type="text" size="60" name="" data-name="building" value="">
-					
+
 					<span class="customErrorValidation"></span>
 					<span class="clear"></span>
 				</label>
@@ -2061,27 +2061,27 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 				<input type="hidden" value="0" class="sortable_get_position">
 				<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 			</label>
-		
+
 			<label>
 				<span class="name">rue</span>
 				<input type="text" name="form[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="30" value="">
-				
+
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
 			</label>
-		
+
 			<label>
 				<span class="name">numero</span>
 				<input type="text" name="form[pages][1295][0][number][<?php echo $lang; ?>]" data-name="number" size="5" value="">
-				
+
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
 			</label>
-			
+
 			<label>
 				<span class="name">Ville test</span>
 				<input type="text" name="form[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="20" value="">
-				
+
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
 			</label>
@@ -2127,27 +2127,27 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 				&ltinput type="hidden" value="0" class="sortable_get_position">
 				&ltspan class="round_icon gray_on_white move">&lti class="fa fa-arrows">&lt/i>&lt/span>
 			&lt/label>
-		
+
 			&ltlabel>
 				&ltspan class="name">rue&lt/span>
 				&ltinput type="text" name="form[pages][1295][0][street][&lt?php echo $lang; ?>]" data-name="street" size="30" value="">
-				
+
 				&ltspan class="customErrorValidation">&lt/span>
 				&ltspan class="clear">&lt/span>
 			&lt/label>
-		
+
 			&ltlabel>
 				&ltspan class="name">numero&lt/span>
 				&ltinput type="text" name="form[pages][1295][0][number][&lt?php echo $lang; ?>]" data-name="number" size="5" value="">
-				
+
 				&ltspan class="customErrorValidation">&lt/span>
 				&ltspan class="clear">&lt/span>
 			&lt/label>
-			
+
 			&ltlabel>
 				&ltspan class="name">Ville&lt/span>
 				&ltinput type="text" name="form[pages][1295][0][city][&lt?php echo $lang; ?>]" data-name="city" size="20" value="">
-				
+
 				&ltspan class="customErrorValidation">&lt/span>
 				&ltspan class="clear">&lt/span>
 			&lt/label>
@@ -2219,11 +2219,11 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
-		
+
 		<label>
 			<span class="name">Ville</span>
 			<input type="text" name="form[pages][1295][0][city]" data-name="city" size="50" value="">
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
@@ -2258,11 +2258,11 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			&ltinput type="hidden" value="0" class="sortable_get_position">
 			&ltspan class="round_icon gray_on_white move">&lti class="fa fa-arrows">&lt/i>&lt/span>
 		&lt/label>
-		
+
 		&ltlabel>
 			&ltspan class="name">Ville&lt/span>
 			&ltinput type="text" name="form[pages][1295][0][city]" data-name="city" size="50" value="">
-			
+
 			&ltspan class="customErrorValidation">&lt/span>
 			&ltspan class="clear">&lt/span>
 		&lt/label>
@@ -2296,18 +2296,18 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 				<input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
 			</span>
 			<span class="name">oui</span>
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
-	
+
 		<label class="radio checkskin">
 			<span class="input">
 				<i class="fa fa-check"></i>
 				<input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
 			</span>
 			<span class="name">non</span>
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
@@ -2328,18 +2328,18 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 				&ltinput type="radio" name="form[pages][1295][0][radio]" data-name="radio">
 			&lt/span>
 			&ltspan class="name">dsfgsdf&lt/span>
-			
+
 			&ltspan class="customErrorValidation">&lt/span>
 			&ltspan class="clear">&lt/span>
 		&lt/label>
-	
+
 		&ltlabel class="radio checkskin">
 			&ltspan class="input">
 				&lti class="fa fa-check">&lt/i>
 				&ltinput type="radio" name="form[pages][1295][0][radio]" data-name="radio">
 			&lt/span>
 			&ltspan class="name">dsfgsdf&lt/span>
-			
+
 			&ltspan class="customErrorValidation">&lt/span>
 			&ltspan class="clear">&lt/span>
 		&lt/label>
@@ -2371,7 +2371,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 
 
-<div class="replace_names_link">afficher names</div> 
+<div class="replace_names_link">afficher names</div>
 
 <div class="form">
 <div class="sortable">
@@ -2381,15 +2381,15 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
-	
+
 		<label>
 			<span class="name">rue</span>
 			<input type="text" name="form[pages][1295][0][street]" data-name="street" size="30" value="">
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
-	
+
 		<label>
 			<span class="name">num</span>
 			<div class="classic_select">
@@ -2397,7 +2397,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 					<option value="">mois</option>
 				</select>
 			</div>
-			
+
 			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="clear"></span>
 		</label>
@@ -2414,15 +2414,15 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
-	
+
 		<label>
 			<span class="name">rue</span>
 			<input type="text" name="form[pages][1295][1][street]" data-name="street" size="30" value="">
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
-	
+
 		<label>
 			<span class="name">num</span>
 			<div class="classic_select">
@@ -2430,7 +2430,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 					<option value="">mois</option>
 				</select>
 			</div>
-			
+
 			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="clear"></span>
 		</label>
@@ -2447,15 +2447,15 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
-	
+
 		<label>
 			<span class="name">rue</span>
 			<input type="text" name="form[pages][1295][2][street]" data-name="street" size="30" value="">
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
-	
+
 		<label>
 			<span class="name">num</span>
 			<div class="classic_select">
@@ -2463,7 +2463,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 					<option value="">mois</option>
 				</select>
 			</div>
-			
+
 			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="clear"></span>
 		</label>
@@ -2496,18 +2496,18 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 
 
-<div class="replace_names_link">afficher names</div> 
+<div class="replace_names_link">afficher names</div>
 
 <div class="form">
 	<fieldset class="category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-form-base="form[pages][1295]">
 		<label>
 			<span class="name">rue</span>
 			<input type="text" name="sdfsdfsdf" data-name="street" size="30" value="">
-			
+
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
-	
+
 		<label>
 			<span class="name">num</span>
 			<div class="classic_select">
@@ -2515,7 +2515,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 					<option value="">mois</option>
 				</select>
 			</div>
-			
+
 			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="clear"></span>
 		</label>

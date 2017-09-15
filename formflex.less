@@ -28,7 +28,7 @@
 @formflex_checkskin_bd_color: #aaa;/*#aaa*/
 @formflex_checkskin_bd_color_hover: #555;/*#555*/
 .formflex_checkskin_pimping {}/*cible directement span.input*/
-	
+
 .customErrorValidation {
 position: absolute;
 display: none;
@@ -223,7 +223,7 @@ border-color: @formflex_bd !important;
 .classic_file {
 position: relative;
 overflow: hidden;
-	.infos {
+	.classic_file_infos {
 	border: 1px solid @formflex_bd;
 	border-right: 0;
 	height: @formflex_input_height;
@@ -236,7 +236,7 @@ overflow: hidden;
 	color: @formflex_input_fontcolor;
 	background-color: #fff;
 	}
-	.btn {
+	.classic_file_btn {
 	background-color: @formflex_main_color_theme;
 	height: @formflex_input_height + 2;
 	line-height: @formflex_input_height + 2;
@@ -262,13 +262,16 @@ overflow: hidden;
 	cursor: pointer;
 	}
 	&:hover {
-		.btn {
+		.classic_file_btn {
 		background-color: @formflex_main_color_theme_hover;
 		}
 	}
 }
 
 ul.files_uploaded, ul.dates_uploaded {
+list-style-type: none;
+padding: 0;
+margin: 0;
 	li {
 	width: 260px;
 	margin: 5px 0;
@@ -283,6 +286,7 @@ ul.files_uploaded, ul.dates_uploaded {
 		display: block;
 		height: @formflex_input_height + 2;
 		line-height: @formflex_input_height + 2;
+		text-decoration: none;
 			&:hover {
 			text-decoration: underline;
 			}
@@ -526,6 +530,9 @@ label.star {
 .lang_menu {
 overflow: hidden;
 border-bottom: 1px solid @formflex_bd;
+list-style-type: none;
+margin: 0;
+padding: 0;
 	&.mode_popup {
 	display: none;
 	}
@@ -547,11 +554,11 @@ border-bottom: 1px solid @formflex_bd;
 /******* STRUCTURE FORM *********/
 
 .form {
-	textarea:hover, 
-	input:hover, 
-	textarea:active, 
-	input:active, 
-	textarea:focus, 
+	textarea:hover,
+	input:hover,
+	textarea:active,
+	input:active,
+	textarea:focus,
 	input:focus,
 	button:focus,
 	button:active,
@@ -559,6 +566,9 @@ border-bottom: 1px solid @formflex_bd;
 	{
 	outline:0px !important;
 	-webkit-appearance:none;
+	}
+	* {
+	box-sizing: content-box;
 	}
 	&.mg {
 	margin: 15px;
@@ -667,6 +677,8 @@ border-bottom: 1px solid @formflex_bd;
 	margin-left: 50px;
 	}
 	fieldset {
+	padding: 0;
+	border: none;
 	margin: 5px 0;
 	position: relative;
 	display: block;
@@ -1020,7 +1032,7 @@ border-bottom: 1px solid @formflex_bd;
 		padding: 10px 1%;
 		width: 98%;
 		max-width: 98%;
-		min-width: 98%; 
+		min-width: 98%;
 		}
 	}
 	&.off_form {
@@ -1047,10 +1059,10 @@ border-bottom: 1px solid @formflex_bd;
 		background-color: @formflex_input_disbled_bgcolor;
 		}
 		.delete {
-		display: none !important; 
+		display: none !important;
 		}
 		.dupplicate {
-		display: none !important; 
+		display: none !important;
 		}
 		label.clone {
 			.delete {
