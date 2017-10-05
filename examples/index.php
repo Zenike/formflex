@@ -635,11 +635,23 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <label>
 	<span class="name">Statut</span>
-	<div class="classic_select">
+	<span class="classic_select">
 		<select>
 			<option value="">Homme</option>
 		</select>
-	</div>
+	</span>
+	<span class="customErrorValidation" data-name="street"></span>
+	<span class="clear"></span>
+</label>
+
+<label>
+	<span class="full">
+		<span class="classic_select">
+			<select>
+				<option value="">Homme</option>
+			</select>
+		</span>
+	</span>
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
 </label>
