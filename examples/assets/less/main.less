@@ -33,7 +33,7 @@ body, textarea {
 font-family: Verdana, Arial, sans-serif;
 }
 body {
-background-color: #ddd;
+background-color: #222 !important;
 }
 
 
@@ -60,52 +60,27 @@ margin: 0;
 		cursor: pointer;
 		z-index: 999;
 		border-radius: 5px;
+		text-decoration: none;
 			&:hover {
 			background-color: #000;
 			}
 		}
 	}
+@media all and (max-width:400px){
+display: none;
+}
 }
 
 
 
-
-
-
-#css {
-background-color: #eee;
-overflow: auto;
-padding: 50px;
-}
-h1 {
-color: yellowgreen;
-font-size: 50px;
-border-bottom: 1px dashed yellowgreen;
-padding-bottom: 20px;
-margin-bottom: 40px;
-font-family: georgia;
-font-style: italic;
-	i {
-	font-size: 60px !important;
-	color: yellowgreen;
-	}
-}
-h2 {
-color: yellowgreen;
-font-size: 30px;
-border-bottom: 1px dashed yellowgreen;
-padding-bottom: 10px;
-margin-bottom: 20px;
-vertical-align: middle;
-}
 
 #wrapper {
-width: 1000px;
+max-width: 1000px;
+width: 96%;
 margin: auto;
 margin-top: 50px;
 margin-bottom: 50px;
 padding-bottom: 50px;
-/*border: 1px dotted #ddd;*/
 position: relative;
 background-color: @wrapper_color;
 border: 20px solid @wrapper_color;
@@ -117,25 +92,56 @@ border-radius: 10px;
 	}
 }
 
-#navbar {
-background-color: yellowgreen;
-height: 25px;
-border-bottom: 1px solid green;
-	li {
-	float: left;
-		a {
-		display: block;
-		height: 25px;
-		line-height: 25px;
-		padding: 0 10px;
-		color: #fff;
-		border-right: 1px solid green;
-		}
-		&:hover, &.selected {
-		background-color: green;
-		}
+
+// #css {
+// background-color: #eee;
+// overflow: auto;
+// padding: 50px;
+// }
+#wrapper h1 {
+color: yellowgreen;
+font-size: 50px;
+border-bottom: 1px dashed yellowgreen;
+padding-bottom: 20px;
+margin: 0;
+margin-bottom: 40px;
+font-family: georgia;
+font-style: italic;
+	i {
+	font-size: 60px !important;
+	color: yellowgreen;
 	}
 }
+// h2 {
+// color: yellowgreen;
+// font-size: 30px;
+// border-bottom: 1px dashed yellowgreen;
+// padding-bottom: 10px;
+// margin-bottom: 20px;
+// vertical-align: middle;
+// }
+
+
+
+// #navbar {
+// background-color: yellowgreen;
+// height: 25px;
+// border-bottom: 1px solid green;
+// 	li {
+// 	float: left;
+// 		a {
+// 		display: block;
+// 		height: 25px;
+// 		line-height: 25px;
+// 		padding: 0 10px;
+// 		color: #fff;
+// 		border-right: 1px solid green;
+// 		}
+// 		&:hover, &.selected {
+// 		background-color: green;
+// 		}
+// 	}
+// }
 
 .formflex_title {
 border-bottom: 3px solid @theme;
@@ -158,8 +164,10 @@ font-style: italic;
 margin: 20px 0;
 }
 
-pre, blockquote {
+#wrapper pre, #wrapper blockquote {
 margin: 0;
+padding: 0;
+border: none;
 font-size: 12px;
 color: green;
 margin-bottom: 50px;
