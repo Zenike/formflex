@@ -1,5 +1,6 @@
 /* FORMFLEX GENERAL */
 @formflex_input_height: 27px;/*27px*/
+@formflex_input_bgcolor: #fff;/*#fff*/
 @formflex_input_font_size: 12px;/*12px*/
 @formflex_input_fontcolor: @tm;/*@tm*/
 @formflex_input_round: 0px;/*0px*/
@@ -93,7 +94,7 @@ background-repeat: no-repeat;
 background-position: top right;
 background-size: auto @formflex_input_height*2;
 height: @formflex_input_height;
-background-color: #fff;
+background-color: @formflex_input_bgcolor;
 display: block;
 border-radius: @formflex_input_round;
 	&:hover {
@@ -236,7 +237,7 @@ overflow: hidden;
 	padding: 0 5px;
 	font-size: @formflex_input_font_size;
 	color: @formflex_input_fontcolor;
-	background-color: #fff;
+	background-color: @formflex_input_bgcolor;
 	}
 	.classic_file_btn {
 	background-color: @formflex_main_color_theme;
@@ -923,6 +924,7 @@ padding: 0;
 	color: @formflex_input_fontcolor;
 	border-radius: @formflex_input_round;
 	transition: 0.3s;
+	background-color: @formflex_input_bgcolor;
 		&[readonly],&.readonly {
 		border-color: transparent !important;
 		background-color: #fff !important;
@@ -931,6 +933,26 @@ padding: 0;
 		border-color: @formflex_bd !important;
 		cursor: text;
 		}
+	}
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: @formflex_input_fontcolor;
+	opacity: 0.8;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: @formflex_input_fontcolor;
+	opacity: 0.8;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: @formflex_input_fontcolor;
+	opacity: 0.8;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: @formflex_input_fontcolor;
+	opacity: 0.8;
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */
+	color: @formflex_input_fontcolor;
+	opacity: 0.8;
 	}
 	.classic_select {
 	margin: 0 3px;
@@ -957,7 +979,7 @@ padding: 0;
 	display: block;
 	padding: 0 5px;
 	overflow: hidden;
-	background-color: #fff;
+	background-color: @formflex_input_bgcolor;
 	border: 1px solid @formflex_bd;
 	clear: both;
 	border-radius: @formflex_input_round;
@@ -1008,7 +1030,7 @@ padding: 0;
 	padding: 5px;
 	font-size: @formflex_input_font_size;
 	color: @formflex_input_fontcolor;
-	background-color: #fff;
+	background-color: @formflex_input_bgcolor;
 	min-height: 100px;
 	height: 100px;
 	width: 400px;
