@@ -22,7 +22,7 @@ function generateRandomString() {
 	<meta http-equiv="Content-Language" content="fr" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<link href="<?php echo $pathLinkFile; ?>css/style.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="<?php echo $pathLinkFile; ?>img/favicon.png" rel="shortcut icon" type="image/png" />
 	<link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
@@ -47,16 +47,18 @@ function generateRandomString() {
 	</li>
 </ul>
 
-<h1><i class="fa fa-space-shuttle"></i> Formflex</h1>
+<h1><i class="fa fa-superpowers"></i> Formflex v2.0</h1>
 
 <!-- /FIN DU HEADER ------------------------------------------------------------------------------->
 <!-- /FIN DU HEADER ------------------------------------------------------------------------------->
 
 
-
+<div class="formflex_section_title">
+	Éléments de base
+</div>
 
 <div class="formflex_title">
-	Champs texts simples
+	input text
 </div>
 
 <div class="form">
@@ -363,6 +365,17 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </label>
 
+<label class="to_the_right">
+	<span class="name">Statut</span>
+	<div class="classic_select">
+		<select name="" id="">
+			<option value="">Homme</option>
+		</select>
+	</div>
+	<span class="customErrorValidation" data-name="street"></span>
+	<span class="clear"></span>
+</label>
+
 </div><!-- /form -->
 <pre>
 &lt;label>
@@ -394,6 +407,17 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
 	&lt;span class="clear">&lt;/span>
 &lt;/label>
+
+&lt;label class="to_the_right">
+	&lt;span class="name">Statut&lt;/span>
+	&lt;div class="classic_select">
+		&lt;select name="" id="">
+			&lt;option value="">Homme&lt;/option>
+		&lt;/select>
+	&lt;/div>
+	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
 </pre>
 
 
@@ -408,6 +432,285 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="formflex_title">
+	Checkskin (radio and checkbox)
+</div>
+
+<div class="form">
+
+<label class="formflex-checkbox checkskin">
+	<span class="input">
+		<i class="fa fa-check"></i>
+		<input type="checkbox" name="test3">
+	</span>
+	<span class="name">Mercredi 19 fé fg sdfgdfg dfg dfgdf gd gdfg dfgd fsdfsdf sdfsdf sdfsdfsdfsdfsdfsdfsdf sdfsdfsdfsdfsd fsdfs fsdfsdfsdfdgdfgdfgdfgdfg dfg dfgdfg dfg dfg dgdgdfgdgdfgdfg dfg dfg dgdfgd dfg dfgdf gdg dfg</span>
+
+	<span class="customErrorValidation"></span>
+	<span class="clear"></span>
+</label>
+
+<fieldset>
+	<legend>Enchainement horizontal classique de checkskins</legend>
+	<spoan class="clear"></spoan>
+	<label class="formflex-radio checkskin">
+		<span class="input">
+			<i class="fa fa-check"></i>
+			<input type="radio" name="test3">
+		</span>
+		<span class="name">radio1</span>
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+	<label class="formflex-radio checkskin">
+		<span class="input">
+			<i class="fa fa-check"></i>
+			<input type="radio" name="test3">
+		</span>
+		<span class="name">radio2</span>
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+</fieldset>
+
+<fieldset class="no_float">
+	<legend>Enchainement vertical utilisant la class no_float</legend>
+	<span class="clear"></span>
+	<label class="formflex-radio checkskin">
+		<span class="input">
+			<i class="fa fa-check"></i>
+			<input type="radio" name="test3">
+		</span>
+		<span class="name">radio1</span>
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+	<label class="formflex-radio checkskin">
+		<span class="input">
+			<i class="fa fa-check"></i>
+			<input type="radio" name="test3">
+		</span>
+		<span class="name">radio2</span>
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+</fieldset>
+
+<fieldset>
+	<legend>Enchainement horizontal d'un checkskin sans name et d'un input text</legend>
+	<span class="clear"></span>
+	<label class="formflex-checkbox checkskin">
+		<span class="input">
+			<i class="fa fa-check"></i>
+			<input type="checkbox" name="test3">
+		</span>
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+	<label>
+		<input type="text" size="30">
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+</fieldset>
+
+</div><!-- /form -->
+<pre>
+&lt;label class="formflex-checkbox checkskin">
+	&lt;span class="input">
+		&lt;i class="fa fa-check">&lt;/i>
+		&lt;input type="checkbox" name="test3">
+	&lt;/span>
+	&lt;span class="name">Mercredi 19 fé fg sdfgdfg dfg dfgdf gd gdfg dfgd fsdfsdf sdfsdf sdfsdfsdfsdfsdfsdfsdf sdfsdfsdfsdfsd fsdfs fsdfsdfsdfdgdfgdfgdfgdfg dfg dfgdfg dfg dfg dgdgdfgdgdfgdfg dfg dfg dgdfgd dfg dfgdf gdg dfg&lt;/span>
+
+	&lt;span class="customErrorValidation">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
+
+&lt;fieldset>
+	&lt;legend>Enchainement horizontal classique de checkskins&lt;/legend>
+	&lt;spoan class="clear">&lt;/spoan>
+	&lt;label class="formflex-radio checkskin">
+		&lt;span class="input">
+			&lt;i class="fa fa-check">&lt;/i>
+			&lt;input type="radio" name="test3">
+		&lt;/span>
+		&lt;span class="name">radio1&lt;/span>
+
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;label class="formflex-radio checkskin">
+		&lt;span class="input">
+			&lt;i class="fa fa-check">&lt;/i>
+			&lt;input type="radio" name="test3">
+		&lt;/span>
+		&lt;span class="name">radio2&lt;/span>
+
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+&lt;/fieldset>
+
+&lt;fieldset class="no_float">
+	&lt;legend>Enchainement vertical utilisant la class no_float&lt;/legend>
+	&lt;span class="clear">&lt;/span>
+	&lt;label class="formflex-radio checkskin">
+		&lt;span class="input">
+			&lt;i class="fa fa-check">&lt;/i>
+			&lt;input type="radio" name="test3">
+		&lt;/span>
+		&lt;span class="name">radio1&lt;/span>
+
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;label class="formflex-radio checkskin">
+		&lt;span class="input">
+			&lt;i class="fa fa-check">&lt;/i>
+			&lt;input type="radio" name="test3">
+		&lt;/span>
+		&lt;span class="name">radio2&lt;/span>
+
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+&lt;/fieldset>
+
+&lt;fieldset>
+	&lt;legend>Enchainement horizontal d'un checkskin sans name et d'un input text&lt;/legend>
+	&lt;span class="clear">&lt;/span>
+	&lt;label class="formflex-checkbox checkskin">
+		&lt;span class="input">
+			&lt;i class="fa fa-check">&lt;/i>
+			&lt;input type="checkbox" name="test3">
+		&lt;/span>
+
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;label>
+		&lt;input type="text" size="30">
+
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+&lt;/fieldset>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="formflex_title">
+	Checkskins en mode equalize
+</div>
+
+<div class="form">
+
+<fieldset class="bd_sep equalize">
+	<legend>class equalize utilisée, ainsi que bd_sep (utilisation non liée)</legend>
+	<span class="clear"></span>
+
+	<?php for($i=1;$i<=10;$i++){ ?>
+	<label class="formflex-radio checkskin">
+		<span class="input">
+			<i class="fa fa-check"></i>
+			<input type="radio" name="test3">
+		</span>
+		<span class="name"><?php echo generateRandomString(); ?></span>
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+	<?php } ?>
+</fieldset>
+
+</div><!-- /form -->
+<pre>
+&ltfieldset class="bd_sep equalize">
+	&ltlegend>Est-ce une habitation modeste ?&lt/legend>
+	&ltspan class="clear">&lt/span>
+
+	&lt?php for($i=1;$i&lt=10;$i++){ ?>
+	&ltlabel class="formflex-radio checkskin">
+		&ltspan class="input">
+			&lti class="fa fa-check">&lt/i>
+			&ltinput type="radio" name="test3">
+		&lt/span>
+		&ltspan class="name">&lt?php echo generateRandomString(); ?>&lt/span>
+
+		&ltspan class="customErrorValidation">&lt/span>
+		&ltspan class="clear">&lt/span>
+	&lt/label>
+	&lt?php } ?>
+&lt/fieldset>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="formflex_section_title">
+	Éléments composés
+</div>
 
 <div class="formflex_title">
 	Exemples de formulaires complexes
@@ -724,35 +1027,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
 
-<label class="to_the_right">
-	<span class="name">Statut</span>
-	<div class="classic_select">
-		<select name="" id="">
-			<option value="">Homme</option>
-		</select>
-	</div>
-	<span class="customErrorValidation" data-name="street"></span>
-	<span class="clear"></span>
-</label>
-
-</div><!-- /form -->
-<pre>
-&ltlabel class="to_the_right">
-	&ltspan class="name">Statut&lt/span>
-	&ltdiv class="classic_select">
-		&ltselect name="" id="">
-			&ltoption value="">Homme&lt/option>
-		&lt/select>
-	&lt/div>
-	&ltspan class="customErrorValidation" data-name="street">&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
-</pre>
-<blockquote>
-- arrow_full sur le classic_select pour une fleche carré à fond plein.
-</blockquote>
 
 
 
@@ -953,334 +1228,6 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-
-<fieldset>
-	<legend>Est-ce une habitation modeste ?sdf</legend>
-	<label class="formflex-radio checkskin">
-		<span class="input">
-			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
-		</span>
-		<span class="name">Mercredi 19 fé</span>
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-	<label class="formflex-radio checkskin">
-		<span class="input">
-			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
-		</span>
-		<span class="name">Mercredi 19 février -</span>
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-</fieldset>
-
-</div><!-- /form -->
-<pre>
-&ltfieldset>
-	&ltlegend>Est-ce une habitation modeste ?&lt/legend>
-	&ltlabel class="formflex-radio checkskin">
-		&ltspan class="input">
-			&lti class="fa fa-check">&lt/i>
-			&ltinput type="radio" name="test3">
-		&lt/span>
-		&ltspan class="name">Mercredi 19 fé&lt/span>
-
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel class="formflex-radio checkskin">
-		&ltspan class="input">
-			&lti class="fa fa-check">&lt/i>
-			&ltinput type="radio" name="test3">
-		&lt/span>
-		&ltspan class="name">Mercredi 19 février -&lt/span>
-
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-&lt/fieldset>
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-
-<fieldset>
-	<?php for ($i = 1; $i <= 6; $i++) { ?>
-		<label class="formflex-radio checkskin">
-			<span class="illu">
-				<img src="<?php echo $pathLinkFile; ?>img/lignes/<?php echo $i; ?>.png">
-			</span>
-			<span class="input">
-				<i class="fa fa-check"></i>
-				<input required  type="radio" name="user[survey_json][line_corporation]" value="<?php echo $i; ?>">
-			</span>
-
-			<span class="customErrorValidation"></span>
-			<span class="clear"></span>
-		</label>
-	<?php } ?>
-</fieldset>
-
-</div><!-- \form -->
-<pre>
-&ltfieldset>
-	&lt?php for ($i = 1; $i &lt= 6; $i++) { ?>
-		&ltlabel class="formflex-radio checkskin">
-			&ltspan class="illu">
-				&ltimg src="&lt?php echo $pathLinkFile; ?>img/lignes/&lt?php echo $i; ?>.png">
-			&lt/span>
-			&ltspan class="input">
-				&lti class="fa fa-check">&lt/i>
-				&ltinput required  type="radio" name="user[survey_json][line_corporation]" value="&lt?php echo $i; ?>">
-			&lt/span>
-
-			&ltspan class="customErrorValidation">&lt/span>
-			&ltspan class="clear">&lt/span>
-		&lt/label>
-	&lt?php } ?>
-&lt/fieldset>
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-
-<fieldset class="bd_sep equalize">
-	<legend>Est-ce une habitation modeste ?</legend>
-	<span class="clear"></span>
-
-	<?php for($i=1;$i<=10;$i++){ ?>
-	<label class="formflex-radio checkskin">
-		<span class="input">
-			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
-		</span>
-		<span class="name"><?php echo generateRandomString(); ?></span>
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-	<?php } ?>
-</fieldset>
-
-</div><!-- /form -->
-<pre>
-&ltfieldset class="bd_sep equalize">
-	&ltlegend>Est-ce une habitation modeste ?&lt/legend>
-	&ltspan class="clear">&lt/span>
-
-	&lt?php for($i=1;$i&lt=10;$i++){ ?>
-	&ltlabel class="formflex-radio checkskin">
-		&ltspan class="input">
-			&lti class="fa fa-check">&lt/i>
-			&ltinput type="radio" name="test3">
-		&lt/span>
-		&ltspan class="name">&lt?php echo generateRandomString(); ?>&lt/span>
-
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&lt?php } ?>
-&lt/fieldset>
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-
-<fieldset class="no_float">
-	<legend>Est-ce une habitation modeste ?</legend>
-	<label class="formflex-radio checkskin">
-		<span class="input">
-			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
-		</span>
-		<span class="name">Mercredi 19 fé</span>
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-	<label class="formflex-radio checkskin">
-		<span class="input">
-			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
-		</span>
-		<span class="name">Mercredi 19 février -</span>
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-</fieldset>
-
-</div><!-- /form -->
-<pre>
-&ltfieldset class="no_float">
-	&ltlegend>Est-ce une habitation modeste ?&lt/legend>
-	&ltlabel class="formflex-radio checkskin">
-		&ltspan class="input">
-			&lti class="fa fa-check">&lt/i>
-			&ltinput type="radio" name="test3">
-		&lt/span>
-		&ltspan class="name">Mercredi 19 fé&lt/span>
-
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel class="formflex-radio checkskin">
-		&ltspan class="input">
-			&lti class="fa fa-check">&lt/i>
-			&ltinput type="radio" name="test3">
-		&lt/span>
-		&ltspan class="name">Mercredi 19 février -&lt/span>
-
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-&lt/fieldset>
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-
-<label class="formflex-checkbox checkskin">
-	<span class="input">
-		<i class="fa fa-check"></i>
-		<input type="checkbox" name="test3">
-	</span>
-	<span class="name">Mercredi 19 fé fg sdfgdfg dfg dfgdf gd gdfg dfgd fsdfsdf sdfsdf sdfsdfsdfsdfsdfsdfsdf sdfsdfsdfsdfsd fsdfs fsdfsdfsdfdgdfgdfgdfgdfg dfg dfgdfg dfg dfg dgdgdfgdgdfgdfg dfg dfg dgdfgd dfg dfgdf gdg dfg</span>
-
-	<span class="customErrorValidation"></span>
-	<span class="clear"></span>
-</label>
-
-</div><!-- /form -->
-<pre>
-&ltlabel class="formflex-checkbox checkskin">
-	&ltspan class="input">
-		&lti class="fa fa-check">&lt/i>
-		&ltinput type="checkbox" name="test3">
-	&lt/span>
-	&ltspan class="name">Mercredi 19 fé&lt/span>
-
-	&ltspan class="customErrorValidation">&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-
-<fieldset>
-	<label class="formflex-checkbox checkskin">
-		<span class="input">
-			<i class="fa fa-check"></i>
-			<input type="checkbox" name="test3">
-		</span>
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-	<label>
-		<input type="text" size="30">
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-</fieldset>
-
-</div><!-- /form -->
-<pre>
-&ltfieldset>
-	&ltlabel class="formflex-checkbox checkskin">
-		&ltspan class="input">
-			&lti class="fa fa-check">&lt/i>
-			&ltinput type="checkbox" name="test3">
-		&lt/span>
-
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel>
-		&ltinput type="text" size="30">
-
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-&lt/fieldset>
-</pre>
 
 
 
