@@ -24,7 +24,6 @@ function generateRandomString() {
 	<link href="<?php echo $pathLinkFile; ?>css/style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
 	<link href="<?php echo $pathLinkFile; ?>img/favicon.png" rel="shortcut icon" type="image/png" />
 	<link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
 </head>
@@ -708,42 +707,6 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-
-<label>
-	<span class="name">Statut</span>
-	<div class="classic_select">
-		<select class="select2-base">
-			<option value="">select 2</option>
-		</select>
-	</div>
-	<span class="customErrorValidation" data-name="street"></span>
-	<span class="clear"></span>
-</label>
-
-</div><!-- /form -->
-<pre>
-
-</pre>
-<blockquote>
-
-</blockquote>
 
 
 
@@ -2517,7 +2480,6 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 <script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/jquery-validation/jquery.validate.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?php echo $pathLinkFile; ?>/../../../formflex.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/monjquery.js"></script>
 </body>

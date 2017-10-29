@@ -1,4 +1,4 @@
-//fonction permettant de rafraichir les calculs du 
+//fonction permettant de rafraichir les calculs du
 //formulaire dans un cas de création en ajax
 function formflex_refresh(){
 	$.event.trigger({
@@ -36,7 +36,7 @@ function checkbox_checking() {
         if ($(this).is(":checked")) {
 			var checkskin =  $(this).parents(".checkskin");
             checkskin.addClass("checked");
-			
+
 			//condition spéciale dans le cas d'une "star"
 			if(checkskin.is(".star") && checkskin.parent().is("fieldset")){
 				checkskin.prevAll().addClass("checked");
@@ -67,7 +67,7 @@ $("body").on("click",".tips_hover",function(event){
 	}else{
 		$(this).addClass("mobile_active");
 	}
-	
+
 	event.stopPropagation();
 	return false;
 });
@@ -99,7 +99,7 @@ function align_names() {
 
         $(v).find(type_of_names).not(".no_size").each(function () {
 			$(this).removeAttr("style");
-			
+
 			if($(this).next().is(".clear")){
 				$(this).addClass("no_size");
 			}else if ($(this).actual('width') >= max_width) {
@@ -129,12 +129,12 @@ $(document).on("formflex_refresh", function(options){
 function to_the_right() {
     $("label.to_the_right").each(function (k, v) {
 		var element = $(this).find("input, .classic_select");
-		
+
         var wrapper_width = $(this).width();
 		var element_pos_left = element.position().left+parseInt(element.css("margin-left"));
 		//var element_marg_left = parseInt(element.css("margin-left"));
 		var element_dead_width = element.outerWidth()-element.width();
-		
+
 		element.width(wrapper_width-element_dead_width-element_pos_left);
     });
 };
@@ -147,20 +147,6 @@ function to_the_right() {
 
 
 
-
-
-//ajuster les selects de type "select 2"
-$(document).ready(function () {
-    select2_normalize();
-});//ready
-$(document).on("formflex_refresh", function(options){
-	select2_normalize();
-});
-function select2_normalize(){
-	$(".select2-base, .select2-ajax").parent(".classic_select").each(function(){
-		$(this).addClass("select2_style");
-	});
-}
 
 
 
@@ -191,7 +177,7 @@ function equalize_fieldset() {
         });
 
 		$(v).find("label .name").width(max_width+1);
-		//le +1 est une sécurité car parfois les navigateurs bug un peu 
+		//le +1 est une sécurité car parfois les navigateurs bug un peu
 		//et quand j'applique la taille actuelle ça passe en deux lignes.
 		//testable sur firebug en jouant avec la largeur dynamiquement.
     });
@@ -248,7 +234,7 @@ $('body').on('change', "[data-radio-auto-menu] input", function () {
 function radio_auto_menu() {
     $("[data-radio-auto-menu] input").each(function () {
 		var prechecked = $(this).parents("fieldset").find("input:checked").length;
-		
+
 		if (prechecked==1) {
 			if ($(this).is(":checked")) {
 				radio_auto_menu_target($(this).parents("[data-radio-auto-menu]"));
@@ -267,13 +253,13 @@ function radio_auto_menu_target(v) {
     $(v).parents("fieldset").find("[data-radio-auto-menu]").each(function () {
         no_targets.push($(this).attr("data-radio-auto-menu"));
     });
-	
+
     //cacher les lignes qui contiennent un mot clé
     for (i = 0; i < no_targets.length; i++) {
 		//met en tableau les items qui contiennent cet attribut
 		var item_notargets =  $("[data-target~=" + no_targets[i] + "]");
-		
-		
+
+
 		item_notargets.each(function(){
 			$(this).hide();
 			$(this).not(".no_disabled").find("input,select,textarea").attr("disabled","disabled");
@@ -324,14 +310,14 @@ function checkbox_auto_menu() {
 
 function checkbox_auto_menu_target(v,state) {
     var target = $(v).attr("data-checkbox-auto-menu");
-	
+
 	$("[data-target=" + target + "-yes]").hide();
 	$("[data-target=" + target + "-no]").hide();
 	if($(v).is(".checkbox-disabled")){
 	$("[data-target=" + target + "-yes]").find("input, textarea, select").attr("disabled","disabled");
 	$("[data-target=" + target + "-no]").find("input, textarea, select").attr("disabled","disabled");
 	}
-	
+
 	$("[data-target=" + target + state + "]").show();
 	if($(v).is(".checkbox-disabled")){
 	$("[data-target=" + target + state + "]").find("input, textarea, select").removeAttr("disabled");
@@ -369,13 +355,13 @@ function select_auto_menu_target(v,w) {
     $(v).find("option").each(function () {
         no_targets.push($(v).attr("data-select-auto-menu")+"-"+$(this).attr("data-key"));
     });
-	
+
     //cacher les lignes qui contiennent un mot clé
     for (i = 0; i < no_targets.length; i++) {
 		//met en tableau les items qui contiennent cet attribut
 		var item_notargets =  $("[data-target~=" + no_targets[i] + "]");
-		
-		
+
+
 		item_notargets.each(function(){
 			$(this).hide();
 			$(this).not(".no_disabled").find("input,select,textarea").attr("disabled","disabled");
@@ -426,7 +412,7 @@ function lang_menu() {
     $("[data-lang-menu] [data-lang]").each(function () {
 		//trouver le bouton de langue enfoncé apr defaut (si y en a un)
 		var preselected = $(this).parents("[data-lang-menu]").find("[data-lang].selected").length;
-		
+
 		//si y en a un, lancer la fonction avec cette valeur, sinon lancer avec le premier bouton
 		if (preselected==1) {
 			if ($(this).is(".selected")) {
@@ -446,11 +432,11 @@ function lang_menu_target(v) {
 	var target_extension = $(v).attr("data-lang");
 	//créer l'id des éléments à matcher en combinant l'id et la langue à afficher
     var target = target_general+"-"+target_extension;
-	
+
 	//gerer le menu en lui meme (selected etc)
 	$(v).parents("[data-lang-menu]").find("[data-lang]").removeClass("selected");
 	$(v).addClass("selected");
-	
+
 	//cacher tous les éléments liés à cet ID langue
 	$("[data-lang-category=" + target_general + "]").hide();
 
@@ -470,7 +456,7 @@ $('body').on('click', "[data-lang-target] input[type=text],[data-lang-target] te
 	var id_lang_verif = $(this).parents("[data-lang-category]").attr("data-lang-category");
 	if($("[data-lang-menu="+id_lang_verif+"]").is(".mode_popup")){
 		if($(this).is("[readonly]")){
-		
+
 		}else{
 			if($("[data-lang-menu="+id_lang_verif+"]>li").length>1){
 				lang_auto_popup($(this));
@@ -486,7 +472,7 @@ function lang_auto_popup(input){
 	//Le texte de l'input clické, dans la langue cliquée
 	var label_text = input.closest("label").find(".name").text();
 	//stocker l'index de l'input par rapport à son parent (afin de trouver ses équivalents plus tard)
-	var index_input = input.closest("[data-lang-target]").find("input,textarea").index(input); 
+	var index_input = input.closest("[data-lang-target]").find("input,textarea").index(input);
 	//stockage des inputs équivalents
 	var array_input_multilang = [];
 	input.parents("[data-lang-category]").parent().find("[data-lang-category="+id_lang+"]").each(function(){
@@ -500,8 +486,8 @@ function lang_auto_popup(input){
 	$("[data-lang-menu="+id_lang+"] li").each(function(){
 		lang_name.push($(this).html());
 	});
-	
-	
+
+
 
 	$("#popup_lang_zoom").remove();
 	$("body").append('<div id="popup_lang_zoom" class="autopopup new m15 w500">');
@@ -521,27 +507,27 @@ function lang_auto_popup(input){
 		$("#popup_lang_zoom .form label:last").append('<span class="clear"></span>');
 	});
 	$("#popup_lang_zoom").append('<div class="popup_buttons"><div class="left"><span class="popup_cancel close">Annuler</span></div><div class="right"><span class="popup_validate">Valider</span></div></div>');
-	
+
 	align_names();
-	
+
 	var active_input = $("#popup_lang_zoom input[type=text]:first, #popup_lang_zoom textarea:first");
 	show_popup("popup_lang_zoom");
-	
+
 	active_input.focus();
 }
 
 //FERMETURE ET RESTITUTION
 $('body').on('click', ".popup_validate", function () {
 	var inputs_array = $(this).parents(".content_wrapper").find(".form").find("input,textarea");
-	
+
 	inputs_array.each(function(){
 		var unique_id = $(this).attr("data-unique-input-id");
 		$(this).removeAttr("data-unique-input-id");
-		
+
 		$(this).insertAfter($("[data-unique-input-id="+unique_id+"]"));
 		$("[data-unique-input-id="+unique_id+"]").remove();
 	});
-	
+
 	$(this).parents("#popup_lang_zoom").fadeOut();
 });
 
@@ -581,17 +567,17 @@ function uncheck_safe(v) {
 		$(v).attr("name",$(v).attr("data-name-safe"));
 		$(v).removeAttr("data-name-safe");
 	}
-	
+
     var name = $(v).attr("name");
 
     var name_wo_special = name.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
     $(v).parents('label').next("input.uncheck-safe[name='" + name_wo_special + "']").remove();
-	
+
     if ($(v).is(":checked")) {
 
     } else {
         $('<input class="uncheck-safe" type="hidden" name="' + name + '" value="0">').insertAfter($(v).parents("label"));
-		
+
 		$(v).attr("data-name-safe",name);
 		$(v).removeAttr("name");
     }
@@ -626,8 +612,8 @@ function position_each_customErrorValidation(){
 			var conteneur = $(this).parents(".lane, fieldset");
 		}
 
-		
-		
+
+
 		//si plusieurs input dans le même parent, on se base sur le name pour les associer
 		/*
 		if(conteneur.find("input").length == 1){
@@ -638,11 +624,11 @@ function position_each_customErrorValidation(){
 		}
 		*/
 		var input = conteneur.find("input, select, textarea");
-		
+
 		if(input.length > 0){
 			var deca_left = input.offset().left - conteneur.offset().left;
 			var deca_top = input.offset().top-21 - conteneur.offset().top;
-			
+
 			$(this).css({
 			left: deca_left+"px",
 			top: deca_top+"px",
@@ -700,23 +686,23 @@ function insert_from_exterior(v){
 	//definir le template à duppliquer
 	var template_name = $(v).attr("data-child-template-cmd");
 	var template = $("[data-child-template=" + template_name + "]");
-	
+
 	//definir les elements references (premier et dernier element appartenant au même groupe)
 	var group_target = $(v).attr("data-group-target");
 	var last_group_target = $("[data-group="+group_target+"]:last");
 	var original = $("[data-group="+group_target+"]:first");
-	
+
 	//definir l'element, c'est à dire le groupe créé et ajouté
 	var element = template.clone(true).removeAttr("data-child-template").attr("data-group",group_target).addClass("clone");
-	
+
 	//insérer l'élément à la fin de la liste
 	element.insertAfter(last_group_target);
-	
+
 	//en cas d'incrementation des names en manuel (optionnel)
 	if(last_group_target.is(".manual_increment")){
 		input_names_auto(element,original,group_target,last_group_target);
 	};
-	
+
 	//REMISE EN PLACE DES ELEMENTS DE LANGUE
 	//recuperation de la catégorie de langue
 	original_category = original.find("[data-lang-iso]").attr("data-lang-category");
@@ -725,9 +711,9 @@ function insert_from_exterior(v){
 		$(this).attr("data-lang-category",original_category);
 		$(this).attr("data-lang-target",original_category+"-"+$(this).attr("data-lang-iso"));
 	});
-	
+
 	lang_menu();
-	
+
 	if(element.is(".auto_child_on_inclusion")){
 		element.find(".children_add:visible").trigger("click");
 	}
@@ -775,10 +761,10 @@ function input_names_auto(element,original,group,last){
 	//original: est le premier élément utilisant le nom de groupe ciblé
 	//group: l'id unique du groupe ciblé, n'est pas récuperé de la même façon en fonction du type de clonage/insertion
 	//last: dernier élément portant l'id du groupe en cours (contraire de original)
-	
+
 	//le nouvel element est forcément en manuel lui aussi (non nécessaire si clonage depuis un élément adjacent, mais nécessaire depuis une inclusion externe)
 	element.addClass("manual_increment");
-	
+
 	//GESTION DU COMPTEUR
 	//récuperer le cpt de groupe (ou le créer si il n'existe pas) et le tenir à jour
 	if(original.is("[data-group-cpt]")){
@@ -789,7 +775,7 @@ function input_names_auto(element,original,group,last){
 		var prev_brother_cpt = element.prevAll("[data-group=" + group + "]").length;
 		var new_item_cpt = prev_brother_cpt;
 	}
-	
+
 	//réappliquer les valeurs de cpt aux éléments
 	$("[data-group=" + group + "]").attr("data-group-cpt",new_item_cpt);
 	element.attr("data-this-cpt",new_item_cpt);
@@ -801,28 +787,28 @@ function input_names_auto(element,original,group,last){
 	//console.log("data-form-base : "+structure_width_new_level);
 	//réappliquer à l'élément nouvellement créé
 	element.find("[data-lang-iso]").attr("data-form-base",structure_width_new_level);
-	
+
 	var base_structure_and_id = structure_width_new_level+"["+new_item_cpt+"]";
 	//console.log("data-form-base + cpt d'item : "+base_structure_and_id);
-	
+
 	if(element.find("[data-lang-iso]").length >= 1){
 		element.find("[data-form-base]").each(function(){
 			var lang_iso = $(this).attr("data-lang-iso");
 
 			$(this).find("[data-name]").each(function(){
 				var actual_input_name = $(this).attr("data-name");
-				
+
 				//inner-child est un mode spécial où l'ordre des éléments du nouveau name est différent et un mot est inséré en plus
 				if($(this).is("[data-inner_child]")){
 					var inner_child_data = $(this).attr("data-inner_child");
 					var inner_child_structure = base_structure_and_id+"["+inner_child_data+"]"+"["+lang_iso+"]"+"[0]["+actual_input_name+"]";
 					//console.log("inner child structure : "+inner_child_structure);
-					
+
 					$(this).attr("name",inner_child_structure);
 				}else{
 					var base_id_name_lang = base_structure_and_id+"["+actual_input_name+"]"+"["+lang_iso+"]";
 					//console.log("base + id + name + lang : "+base_id_name_lang);
-					
+
 					$(this).attr("name",base_id_name_lang);
 				}
 			});
@@ -833,14 +819,14 @@ function input_names_auto(element,original,group,last){
 				$(this).find("[data-name]").each(function(){
 					var actual_input_name = $(this).attr("data-name");
 					var base_id_name = base_structure_and_id+"["+actual_input_name+"]";
-					
+
 					$(this).attr("name",base_id_name);
 					//console.log("base + id + name : "+base_id_name_lang);
 				});
 			}else{
 				$(this).find("input, textarea, select").each(function(){
 					$(this).attr("name",base_structure_and_id)
-					
+
 					//console.log("base sans ajouts : "+base_id_name_lang);
 				});
 			}
@@ -886,10 +872,10 @@ function input_names_auto(element,original,group,last){
 function insert_child(v){
 	var template_name = $(v).attr("data-child-template-cmd");
 	var template = $("[data-child-template=" + template_name + "]");
-	
+
 	//si le div "children_wrapper" rassemblant les enfants de l'élémen
 	//est inexistant, le créer, avec ou sans déclarer la fonction de tri (jquery ui sortable)
-	
+
 	if($(v).closest(".category").find(".children_wrapper").length<1){
 		if($(v).parents(".sortable").length>=1){
 			$(v).closest(".category").append('<div class="sortable children_wrapper">');
@@ -898,26 +884,26 @@ function insert_child(v){
 			$(v).closest(".category").append('<div class="children_wrapper">');
 		}
 	}
-	
+
 	//trouver le groupe d'enfant relatif à cet élément
 	var children_wrapper = $(v).closest(".category").find(".children_wrapper:first");
 	//trouver l'élément faisant office de parent au niveau de la logique de la structure
 	var parent = $(v).closest(".category");
 	//cloner le template adéquat et le mettre en variable, prêt pour la suite
 	var element = $(template).clone(true).removeAttr("data-child-template");
-	
+
 	//insérer l'élément dans le groupe d'enfants
 	children_wrapper.append(element);
-	
+
 	//aller au parent logique et prendre, dans un attribut préparé, la mise en forme de la structure créee jusque là
 	/*
 	$(parent).find("[data-form-base]").each(function(){
 		console.log( $(this).attr("data-form-base") );
 	});
 	*/
-	
+
 	var ancestor_name_structure = $(v).closest("[data-form-base]").attr("data-form-base");
-	
+
 	//récuperation du compteur d'enfants
 	//si il n'est aps encore définit, se baser sur le nombre de frères existants
 	//sinon, récuperer le cpt sur l'attribut du groupe d'enfant, l'incrementer et l'écraser.
@@ -930,7 +916,7 @@ function insert_child(v){
 		var new_item_cpt = prev_brother_cpt;
 	}
 	children_wrapper.attr("data-child-cpt",new_item_cpt);
-	
+
 	//stocker l'id de langue pour l'insérer dans les enfants créés
 	var langue_id = parent.find("[data-lang-category]").attr("data-lang-category");
 	//remplacer l'attribut de selection de langue avec l'id du nouveau parent
@@ -940,14 +926,14 @@ function insert_child(v){
 
 		$(this).attr("data-lang-target",langue_id+"-"+lang_iso)
 		$(this).attr("data-lang-category",langue_id)
-		
+
 		//créer la base du nouveau name en assemblant les pièces récuperées (il manque le nom du champs)
 		//puis stocker cette valeur au niveau actuel afin qu'elle soit dispo pour les sous niveaux suivants.
 		var structure_width_new_level = ancestor_name_structure+"["+parent_cpt+"][children]["+lang_iso+"]["+new_item_cpt+"]";
-		
+
 		$(this).find("input, textarea").attr("data-structure",structure_width_new_level);
 	});
-	
+
 	element.find("[data-name]").each(function(){
 		$(this).attr("name",$(this).attr("data-structure")+"["+$(this).attr("data-name")+"]")
 	});
@@ -955,9 +941,9 @@ function insert_child(v){
 	//rafraichir le menu des langues (masquer les non selectionnées)
 	lang_menu();
 	organize_sortable_position(parent.find(".category"));
-	
-	
-	
+
+
+
 	$.event.trigger({
 		type: "child_added",
 		new_item: element,
@@ -972,24 +958,24 @@ function clone_form_element(v){
 	var original = $("[data-group=" + group + "]").first();
 	var last = $("[data-group=" + group + "]").last();
 	var element = $(original).clone(true).addClass("clone");
-	
+
 	$.event.trigger({
 	type: "form_element_before_cloned",
 	original: original,
 	});
-	
+
 	empty_the_inputs(element);
-	
+
 	$(element).insertAfter(last);
-	
+
 	initialize_form_add_remove_buttons(v);
-	
+
 	//en cas d'incrementation des names en manuel (optionnel)
 	if($(element).is(".manual_increment")){
 		input_names_auto(element,original,group,last);
 	};
 	organize_sortable_position($("[data-group=" + group + "]"));
-	
+
 	$.event.trigger({
 	type: "form_element_cloned",
 	element: element,
@@ -1000,10 +986,10 @@ function clone_form_element(v){
 function organize_sortable_position(targets){
 	var cpt = 0;
 	var depth = 0;
-	
+
 	targets.each(function(){
 		var this_target = $(this).find(".sortable_get_position:first");
-		
+
 		this_target.val(cpt);
 		cpt++;
 	});
@@ -1012,11 +998,11 @@ function organize_sortable_position(targets){
 function delete_form_element(v){
 	var stock_parent = v.parent();
 	v.remove();
-	
+
 	initialize_form_add_remove_buttons(v);
-	
+
 	organize_sortable_position(stock_parent.children(".category"));
-	
+
 	$.event.trigger({
 		type: "element_deleted",
 		new_item: v,
@@ -1100,15 +1086,15 @@ $("body").on("click", ".form .delete", function(){
 
 $(element).find("[name]").each(function(){
 	var name = $(this).attr("name");
-	name = name.replace("[0]","["+cpt+"]"); 
-	
+	name = name.replace("[0]","["+cpt+"]");
+
 	$(this).attr("name",name);
 });
 
 $(element).find("[data-target]").each(function(){
 	var name = $(this).attr("data-target");
-	name = name.replace("_0_","_"+cpt+"_"); 
-	
+	name = name.replace("_0_","_"+cpt+"_");
+
 	$(this).attr("data-target",name);
 });
 
@@ -1124,14 +1110,14 @@ $(original).attr("data-manual-increment",cpt);
 
 $(element).find("[name]").each(function(){
 	var name = $(this).attr("name");
-	name = name.replace("[0]","["+cpt+"]"); 
-	
+	name = name.replace("[0]","["+cpt+"]");
+
 	$(this).attr("name",name);
 });
 $(element).find("[data-target]").each(function(){
 	var name = $(this).attr("data-target");
-	name = name.replace("_0_","_"+cpt+"_"); 
-	
+	name = name.replace("_0_","_"+cpt+"_");
+
 	$(this).attr("data-target",name);
 });
 

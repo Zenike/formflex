@@ -9,11 +9,6 @@ $(".replace_names_link").click(function(){
 });
 
 
-$(document).ready(function() {
-	$('.select2-base').select2();
-});
-
-
 
 
 
@@ -128,6 +123,3 @@ $(".customErrorValidation").each(function () {
         top: deca_top + "px",
     });
 });
-
-
-
