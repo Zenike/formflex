@@ -2076,7 +2076,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 </div><!-- /sortable -->
 
 <div class="zone_add_from_ext">
-	<span class="round_icon big green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
+	<span class="round_icon green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
 		<i class="fa fa-plus"></i>
 	</span>
 	<span class="text">
@@ -2142,7 +2142,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 &lt/div>&lt!-- /sortable -->
 
 &ltdiv class="zone_add_from_ext">
-	&ltspan class="round_icon big green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
+	&ltspan class="round_icon green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
 		&lti class="fa fa-plus">&lt/i>
 	&lt/span>
 	&ltspan class="text">

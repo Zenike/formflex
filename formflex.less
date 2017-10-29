@@ -207,8 +207,8 @@ overflow: hidden;
 	}
 	.classic_file_btn {
 	background-color: @formflex_main_color_theme;
-	height: @formflex_input_height + 2;
-	line-height: @formflex_input_height + 2;
+	height: @formflex_input_height;
+	line-height: @formflex_input_height;
 	float: left;
 	cursor: pointer;
 	color: #fff;
@@ -253,8 +253,8 @@ margin: 0;
 		font-size: @formflex_input_font_size;
 		overflow: hidden;
 		display: block;
-		height: @formflex_input_height + 2;
-		line-height: @formflex_input_height + 2;
+		height: @formflex_input_height;
+		line-height: @formflex_input_height;
 		text-decoration: none;
 			&:hover {
 			text-decoration: underline;
@@ -264,8 +264,8 @@ margin: 0;
 		position: absolute;
 		right: 5px;
 		top: 0px;
-		height: @formflex_input_height + 2;
-		line-height: @formflex_input_height + 2;
+		height: @formflex_input_height;
+		line-height: @formflex_input_height;
 		color: @formflex_main_color_theme;
 		cursor: pointer;
 			i {
@@ -296,9 +296,9 @@ display: none;
 
 .round_icon {
 display: block;
-height: @formflex_input_height + 2;
-line-height: @formflex_input_height + 2;
-width: @formflex_input_height + 2;
+height: @formflex_input_height;
+line-height: @formflex_input_height;
+width: @formflex_input_height;
 text-align: center;
 background-color: @formflex_main_color_theme;
 font-size: @formflex_icons_fz;
@@ -341,12 +341,6 @@ border: none;
 		background-color: #C61111;
 		}
 	}
-	&.big {
-	height: 40px;
-	line-height: 40px;
-	width: 40px;
-	font-size: 24px;
-	}
 }
 
 label.formflex-radio, label.formflex-checkbox {
@@ -362,9 +356,9 @@ cursor: pointer;
 	&.checked {
 		span.input {
 		background-color: @formflex_checkskin_bg_color_checked;
-		height: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
-		line-height: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
-		width: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
+		height: @formflex_input_height + @formflex_checkskin_input_size_decal;
+		line-height: @formflex_input_height + @formflex_checkskin_input_size_decal;
+		width: @formflex_input_height + @formflex_checkskin_input_size_decal;
 		border: none;
 			i {
 			display: inline;
@@ -379,9 +373,9 @@ cursor: pointer;
 	&.mousedown {
 		span.input {
 		background-color: @formflex_checkskin_bg_color_mousedown !important;
-		height: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
-		line-height: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
-		width: @formflex_input_height + 2 + @formflex_checkskin_input_size_decal;
+		height: @formflex_input_height + @formflex_checkskin_input_size_decal;
+		line-height: @formflex_input_height + @formflex_checkskin_input_size_decal;
+		width: @formflex_input_height + @formflex_checkskin_input_size_decal;
 		border: none;
 		}
 	}
@@ -476,8 +470,8 @@ label.star {
 	}
 	span.input {
 	float: left;
-	height: @formflex_input_height + 2;
-	line-height: @formflex_input_height + 2;
+	height: @formflex_input_height;
+	line-height: @formflex_input_height;
 	width: 22px;
 	text-align: center;
 	color: @formflex_main_color_theme;
@@ -523,31 +517,12 @@ padding: 0;
 /******* STRUCTURE FORM *********/
 
 .form {
-	textarea:hover,
-	input:hover,
-	textarea:active,
-	input:active,
-	textarea:focus,
-	input:focus,
-	button:focus,
-	button:active,
-	button:hover
-	{
-	outline:0px !important;
-	-webkit-appearance:none;
-	}
-	* {
-	box-sizing: content-box;
-	}
-	&.mg {
-	margin: 15px;
-	}
 	.simple_text {
 	display: block;
-	height: 29px;
-	line-height: 29px;
-	font-size: 12px;
-	color: @formflex_input_fontcolor;
+	height: @formflex_input_height;
+	line-height: @formflex_input_height;
+	font-size: @formflex_name_fz;
+	color: @formflex_name_color;
 		&.bdb {
 		border-bottom: 1px solid @formflex_bd;
 		padding-bottom: 5px;
@@ -653,6 +628,8 @@ padding: 0;
 	display: block;
 		label {
 		float: left;
+		margin-top: 0;
+		margin-bottom: 0;
 			&.bdr {
 			border-right: 1px solid @formflex_bd;
 			margin-right: 5px;
@@ -665,12 +642,6 @@ padding: 0;
 		}
 		.clear+label {
 			.name:first-child {
-			margin-left: 0;
-			}
-		}
-		label.formflex-radio, label.formflex-checkbox {
-		margin-bottom: 3px;
-			&:first-child {
 			margin-left: 0;
 			}
 		}
@@ -764,9 +735,9 @@ padding: 0;
 		position: absolute;
 		z-index: 2;
 		top: 0px;
-		height: @formflex_input_height + 2;
-		width: @formflex_input_height + 2;
-		line-height: @formflex_input_height + 2;
+		height: @formflex_input_height ;
+		width: @formflex_input_height;
+		line-height: @formflex_input_height;
 		left: 0px;
 		padding: 0;
 		font-size: @formflex_icons_fz;
@@ -780,7 +751,7 @@ padding: 0;
 		}
 		label {
 			input {
-			padding-left: @formflex_input_height + 2;
+			padding-left: @formflex_input_height;
 			margin-left: 0;
 			}
 		}
@@ -791,7 +762,7 @@ padding: 0;
 			label {
 				input {
 				padding-left: 5px;
-				margin-left: @formflex_input_height + 2;
+				margin-left: @formflex_input_height;
 				border-top-color: transparent;
 				border-left-color: transparent;
 				border-right-color: transparent;
@@ -803,8 +774,8 @@ padding: 0;
 	padding: 0;
 	display: block;
 	margin: 0 10px;
-	min-height: @formflex_input_height + 2;
-	line-height: @formflex_input_height + 2;
+	min-height: @formflex_input_height;
+	line-height: @formflex_input_height;
 	float: left;
 	font-size: @formflex_name_fz;
 	color: @formflex_name_color;
@@ -849,14 +820,6 @@ padding: 0;
 	.clear+label {
 		.classic_select:first-child {
 		margin-left: 0;
-		}
-	}
-	.white {
-		.name, legend {
-		color: #fff;
-			em {
-			color: @formflex_main_color_theme;
-			}
 		}
 	}
 	/*
