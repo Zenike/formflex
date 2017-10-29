@@ -69,17 +69,6 @@ border-radius: @formflex_input_round;
 	background-position: bottom right;
 	border-color: @formflex_bd_hover;
 	}
-	&.gray {
-	background-color: #888;
-	border: none;
-	padding: 1px;
-		&:hover {
-		background-color: #333;
-		}
-		select {
-		color: #fff;
-		}
-	}
 	select {
 	border: none;
 	height: @formflex_input_height;
@@ -96,6 +85,9 @@ border-radius: @formflex_input_round;
 	padding-left: 5px;
 	position: relative;
 	font-weight: @formflex_input_font_weight;
+		option {
+		background-color: @formflex_input_bgcolor;
+		}
 	}
 	select:disabled {
 	background-color: #eee;
