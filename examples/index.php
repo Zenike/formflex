@@ -52,7 +52,6 @@ function generateRandomString() {
 <!-- /FIN DU HEADER ------------------------------------------------------------------------------->
 <!-- /FIN DU HEADER ------------------------------------------------------------------------------->
 
-
 <div class="formflex_section_title">
 	Éléments de base
 </div>
@@ -91,7 +90,7 @@ function generateRandomString() {
 <label>
 	<span class="name">à la ligne extensible (css uniquement)</span>
 	<span class="clear"></span>
-	<span class="full"><input type="text" size="30"></span>
+	<input class="formflex_full_width" type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
@@ -99,39 +98,39 @@ function generateRandomString() {
 
 </div><!-- /form -->
 <pre>
-&ltlabel>
-	&ltspan class="name">horizontal simple&lt/span>
-	&ltinput type="text" size="30">
+&lt;label>
+	&lt;span class="name">horizontal simple&lt;/span>
+	&lt;input type="text" size="30" placeholder="mon test 1">
 
-	&ltspan class="customErrorValidation">&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
+	&lt;span class="customErrorValidation">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
 
-&ltlabel class="to_the_right">
-	&ltspan class="name">horizontal extensible (script)&lt/span>
-	&ltinput type="text" size="30">
+&lt;label class="to_the_right">
+	&lt;span class="name">horizontal extensible (script)&lt;/span>
+	&lt;input type="text" size="30">
 
-	&ltspan class="customErrorValidation">&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
+	&lt;span class="customErrorValidation">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
 
-&ltlabel>
-	&ltspan class="name">à la ligne simple&lt/span>
-	&ltspan class="clear">&lt/span>
-	&ltinput type="text" size="30">
+&lt;label>
+	&lt;span class="name">à la ligne simple&lt;/span>
+	&lt;span class="clear">&lt;/span>
+	&lt;input type="text" size="30">
 
-	&ltspan class="customErrorValidation">&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
+	&lt;span class="customErrorValidation">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
 
-&ltlabel>
-	&ltspan class="name">à la ligne extensible (css uniquement)&lt/span>
-	&ltspan class="clear">&lt/span>
-	&ltspan class="full">&ltinput type="text" size="30">&lt/span>
+&lt;label>
+	&lt;span class="name">à la ligne extensible (css uniquement)&lt;/span>
+	&lt;span class="clear">&lt;/span>
+	&lt;input class="formflex_full_width" type="text" size="30">
 
-	&ltspan class="customErrorValidation">&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
+	&lt;span class="customErrorValidation">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
 </pre>
 
 
@@ -724,7 +723,8 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <label>
 	<span class="name">textarea full width</span>
-	<span class="textarea"><textarea name="" id="" cols="30" rows="10"></textarea></span>
+	<span class="clear"></span>
+	<textarea class="formflex_full_width" name="" id="" cols="30" rows="10"></textarea>
 
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
@@ -742,7 +742,8 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 &lt;label>
 	&lt;span class="name">textarea full width&lt;/span>
-	&lt;span class="textarea">&lt;textarea name="" id="" cols="30" rows="10">&lt;/textarea>&lt;/span>
+	&lt;span class="clear">&lt;/span>
+	&lt;textarea class="formflex_full_width" name="" id="" cols="30" rows="10">&lt;/textarea>
 
 	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
 	&lt;span class="clear">&lt;/span>

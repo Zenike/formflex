@@ -790,6 +790,10 @@ padding: 0;
 		border-color: @formflex_bd !important;
 		cursor: text;
 		}
+		&.formflex_full_width {
+		width: 100%;
+		margin: 0;
+		}
 	}
 	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 	color: @formflex_input_fontcolor;
@@ -830,28 +834,6 @@ padding: 0;
 			&:first-child {
 			margin-left: 0;
 			}
-		}
-	}
-	.full {
-	display: block;
-	padding: 0 5px;
-	overflow: hidden;
-	background-color: @formflex_input_bgcolor;
-	border: 1px solid @formflex_bd;
-	clear: both;
-	border-radius: @formflex_input_round;
-		input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="date"],input[type="email"],.classic_select {
-		width: 100%;
-		padding: 0;
-		margin: 0;
-		border: none;
-			select {
-			width: 100%;
-			padding-left: 0;
-			}
-		}
-		&:hover {
-		border-color: @formflex_bd_hover;
 		}
 	}
 	.to_the_right {
@@ -900,37 +882,18 @@ padding: 0;
 		&:hover {
 		border-color: @formflex_bd_hover;
 		}
+		&.formflex_full_width {
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		margin: 0;
+		}
 	}
 	textarea[disabled=disabled] {
 	background-color: #eee;
 	}
 	.clear+textarea {
 	margin-left: 0;
-	}
-	.textarea {
-	border: 1px solid @formflex_bd;
-	display: block;
-	clear: both;
-	border-radius: @formflex_input_round;
-		&.no_wrap {
-		border: none;
-			textarea {
-			padding: 0;
-			width: 100%;
-			}
-		}
-		textarea {
-		border: none;
-		float: none;
-		margin: 0;
-		padding: 10px;
-		width: 100%;
-		max-width: 100%;
-		min-width: 100%;
-		}
-		&:hover {
-		border-color: @formflex_bd_hover;
-		}
 	}
 	&.off_form {
 		.classic_select {
