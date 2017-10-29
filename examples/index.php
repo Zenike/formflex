@@ -64,7 +64,7 @@ function generateRandomString() {
 
 <label>
 	<span class="name">horizontal simple</span>
-	<input type="text" size="30">
+	<input type="text" size="30" placeholder="mon test 1">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
@@ -328,6 +328,90 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
+<div class="formflex_title">
+	Select
+</div>
+
+<div class="form">
+
+<label>
+	<span class="name">select inline</span>
+	<span class="classic_select">
+		<select name="" id="">
+			<option value="">option1</option>
+			<option value="">option2</option>
+			<option value="">option3</option>
+		</select>
+	</span>
+
+	<span class="customErrorValidation" data-name="street_nbr"></span>
+	<span class="clear"></span>
+</label>
+
+<label>
+	<span class="name">select full</span>
+	<span class="full">
+		<span class="classic_select">
+			<select name="" id="">
+				<option value="">option1</option>
+				<option value="">option2</option>
+				<option value="">option3</option>
+			</select>
+		</span>
+	</span>
+
+	<span class="customErrorValidation" data-name="street_nbr"></span>
+	<span class="clear"></span>
+</label>
+
+</div><!-- /form -->
+<pre>
+&lt;label>
+	&lt;span class="name">select inline&lt;/span>
+	&lt;span class="classic_select">
+		&lt;select name="" id="">
+			&lt;option value="">option1&lt;/option>
+			&lt;option value="">option2&lt;/option>
+			&lt;option value="">option3&lt;/option>
+		&lt;/select>
+	&lt;/span>
+
+	&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
+
+&lt;label>
+	&lt;span class="name">select full&lt;/span>
+	&lt;span class="full">
+		&lt;span class="classic_select">
+			&lt;select name="" id="">
+				&lt;option value="">option1&lt;/option>
+				&lt;option value="">option2&lt;/option>
+				&lt;option value="">option3&lt;/option>
+			&lt;/select>
+		&lt;/span>
+	&lt;/span>
+
+	&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="form">
 
 <fieldset>
@@ -535,7 +619,6 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&lt;span class="clear">&lt;/span>
 &lt;/fieldset>
 </pre>
-
 
 
 
