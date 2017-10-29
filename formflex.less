@@ -722,6 +722,20 @@ padding: 0;
 			margin-left: 0!important;
 			margin-right: 0!important;
 			}
+			label:first-child {
+				input,.classic_select {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				border-right: 0;
+				}
+			}
+			label + label {
+				input,.classic_select {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				border-left: 0;
+				}
+			}
 		}
 		&.bd_sep {
 			label {
