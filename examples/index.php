@@ -1004,7 +1004,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <fieldset>
 	<legend>Est-ce une habitation modeste ?sdf</legend>
-	<label class="radio checkskin">
+	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test3">
@@ -1014,7 +1014,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
-	<label class="radio checkskin">
+	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test3">
@@ -1030,7 +1030,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <pre>
 &ltfieldset>
 	&ltlegend>Est-ce une habitation modeste ?&lt/legend>
-	&ltlabel class="radio checkskin">
+	&ltlabel class="formflex-radio checkskin">
 		&ltspan class="input">
 			&lti class="fa fa-check">&lt/i>
 			&ltinput type="radio" name="test3">
@@ -1040,7 +1040,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
-	&ltlabel class="radio checkskin">
+	&ltlabel class="formflex-radio checkskin">
 		&ltspan class="input">
 			&lti class="fa fa-check">&lt/i>
 			&ltinput type="radio" name="test3">
@@ -1070,7 +1070,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <fieldset>
 	<?php for ($i = 1; $i <= 6; $i++) { ?>
-		<label class="radio checkskin">
+		<label class="formflex-radio checkskin">
 			<span class="illu">
 				<img src="<?php echo $pathLinkFile; ?>img/lignes/<?php echo $i; ?>.png">
 			</span>
@@ -1089,7 +1089,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <pre>
 &ltfieldset>
 	&lt?php for ($i = 1; $i &lt= 6; $i++) { ?>
-		&ltlabel class="radio checkskin">
+		&ltlabel class="formflex-radio checkskin">
 			&ltspan class="illu">
 				&ltimg src="&lt?php echo $pathLinkFile; ?>img/lignes/&lt?php echo $i; ?>.png">
 			&lt/span>
@@ -1124,7 +1124,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 
 	<?php for($i=1;$i<=10;$i++){ ?>
-	<label class="radio checkskin">
+	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test3">
@@ -1144,7 +1144,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	&ltspan class="clear">&lt/span>
 
 	&lt?php for($i=1;$i&lt=10;$i++){ ?>
-	&ltlabel class="radio checkskin">
+	&ltlabel class="formflex-radio checkskin">
 		&ltspan class="input">
 			&lti class="fa fa-check">&lt/i>
 			&ltinput type="radio" name="test3">
@@ -1175,7 +1175,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <fieldset class="no_float">
 	<legend>Est-ce une habitation modeste ?</legend>
-	<label class="radio checkskin">
+	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test3">
@@ -1185,7 +1185,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
-	<label class="radio checkskin">
+	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test3">
@@ -1201,7 +1201,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <pre>
 &ltfieldset class="no_float">
 	&ltlegend>Est-ce une habitation modeste ?&lt/legend>
-	&ltlabel class="radio checkskin">
+	&ltlabel class="formflex-radio checkskin">
 		&ltspan class="input">
 			&lti class="fa fa-check">&lt/i>
 			&ltinput type="radio" name="test3">
@@ -1211,7 +1211,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		&ltspan class="customErrorValidation">&lt/span>
 		&ltspan class="clear">&lt/span>
 	&lt/label>
-	&ltlabel class="radio checkskin">
+	&ltlabel class="formflex-radio checkskin">
 		&ltspan class="input">
 			&lti class="fa fa-check">&lt/i>
 			&ltinput type="radio" name="test3">
@@ -1240,7 +1240,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <div class="form">
 
-<label class="checkbox checkskin">
+<label class="formflex-checkbox checkskin">
 	<span class="input">
 		<i class="fa fa-check"></i>
 		<input type="checkbox" name="test3">
@@ -1253,7 +1253,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 </div><!-- /form -->
 <pre>
-&ltlabel class="checkbox checkskin">
+&ltlabel class="formflex-checkbox checkskin">
 	&ltspan class="input">
 		&lti class="fa fa-check">&lt/i>
 		&ltinput type="checkbox" name="test3">
@@ -1281,7 +1281,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <div class="form">
 
 <fieldset>
-	<label class="checkbox checkskin">
+	<label class="formflex-checkbox checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="checkbox" name="test3">
@@ -1301,7 +1301,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </div><!-- /form -->
 <pre>
 &ltfieldset>
-	&ltlabel class="checkbox checkskin">
+	&ltlabel class="formflex-checkbox checkskin">
 		&ltspan class="input">
 			&lti class="fa fa-check">&lt/i>
 			&ltinput type="checkbox" name="test3">
@@ -1559,7 +1559,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 
 <fieldset>
 	<legend>j'affiche la suite ?</legend>
-	<label class="radio checkskin" data-radio-auto-menu="afficher_suite_oui">
+	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_oui">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test3">
@@ -1567,7 +1567,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 		<span class="name">oui</span>
 		<span class="clear"></span>
 	</label>
-	<label class="radio checkskin" data-radio-auto-menu="afficher_suite_non">
+	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_non">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" checked name="test3">
@@ -1575,7 +1575,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 		<span class="name">non</span>
 		<span class="clear"></span>
 	</label>
-	<label class="radio checkskin" data-radio-auto-menu="afficher_suite_ptet">
+	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_ptet">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test3">
@@ -1620,7 +1620,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 
 <fieldset>
 	<legend>j'affiche la suite ?</legend>
-	<label class="radio checkskin" data-radio-auto-menu="afficher_suite_2_oui">
+	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_2_oui">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test223">
@@ -1628,7 +1628,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 		<span class="name">oui</span>
 		<span class="clear"></span>
 	</label>
-	<label class="radio checkskin uncheck_default" data-radio-auto-menu="afficher_suite_2_non">
+	<label class="formflex-radio checkskin uncheck_default" data-radio-auto-menu="afficher_suite_2_non">
 		<span class="input">
 			<i class="fa fa-check"></i>
 			<input type="radio" name="test223">
@@ -1655,7 +1655,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 </div><!-- /form -->
 <blockquote>
 - utiliser l'attribut "data-radio-auto-menu" sur chaque élément
-de commande (label.radio) et y spécifier le mot clé lié à ce choix<br />
+de commande (label.formflex-radio) et y spécifier le mot clé lié à ce choix<br />
 <br />
 - mettre ce mot clé sur chaque élément qui devra être affiché quand ce choix est actif.<br />
 Le mot clé doit être mis dans un attribut "data-target".<br />
@@ -1693,7 +1693,7 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 
 <div class="form">
 
-<label class="checkbox checkskin" data-checkbox-auto-menu="afficher_checkbox_suite">
+<label class="formflex-checkbox checkskin" data-checkbox-auto-menu="afficher_checkbox_suite">
 	<span class="input">
 		<i class="fa fa-check"></i>
 		<input type="checkbox" name="test3">
@@ -2268,7 +2268,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 <div class="form">
 <div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
 	<fieldset data-form-base="form[pages][1295]">
-		<label class="radio checkskin">
+		<label class="formflex-radio checkskin">
 			<span class="input">
 				<i class="fa fa-check"></i>
 				<input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
@@ -2279,7 +2279,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			<span class="clear"></span>
 		</label>
 
-		<label class="radio checkskin">
+		<label class="formflex-radio checkskin">
 			<span class="input">
 				<i class="fa fa-check"></i>
 				<input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
@@ -2300,7 +2300,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 <pre>
 &ltdiv class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
 	&ltfieldset data-form-base="form[pages][1295]">
-		&ltlabel class="radio checkskin">
+		&ltlabel class="formflex-radio checkskin">
 			&ltspan class="input">
 				&lti class="fa fa-check">&lt/i>
 				&ltinput type="radio" name="form[pages][1295][0][radio]" data-name="radio">
@@ -2311,7 +2311,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			&ltspan class="clear">&lt/span>
 		&lt/label>
 
-		&ltlabel class="radio checkskin">
+		&ltlabel class="formflex-radio checkskin">
 			&ltspan class="input">
 				&lti class="fa fa-check">&lt/i>
 				&ltinput type="radio" name="form[pages][1295][0][radio]" data-name="radio">
