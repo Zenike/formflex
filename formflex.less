@@ -415,6 +415,17 @@ padding: 0;
 /******* STRUCTURE FORM *********/
 
 .form {
+	textarea:hover,
+	input:hover,
+	textarea:active,
+	input:active,
+	textarea:focus,
+	input:focus,
+	button:focus,
+	button:active,
+	button:hover {
+		outline:0px !important;
+	}
 	.simple_text {
 	display: block;
 	height: @formflex_input_height;
@@ -772,6 +783,9 @@ padding: 0;
 		border-color: transparent !important;
 		background-color: #fff !important;
 		}
+		&:hover {
+		border-color: @formflex_bd_hover;
+		}
 		&.picker__input {
 		border-color: @formflex_bd !important;
 		cursor: text;
@@ -836,6 +850,9 @@ padding: 0;
 			padding-left: 0;
 			}
 		}
+		&:hover {
+		border-color: @formflex_bd_hover;
+		}
 	}
 	.to_the_right {
 		input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="date"],input[type="email"],.classic_select {
@@ -880,6 +897,9 @@ padding: 0;
 	min-width: 400px;
 	max-width: 400px;
 	border-radius: @formflex_input_round;
+		&:hover {
+		border-color: @formflex_bd_hover;
+		}
 	}
 	textarea[disabled=disabled] {
 	background-color: #eee;
@@ -903,10 +923,13 @@ padding: 0;
 		border: none;
 		float: none;
 		margin: 0;
-		padding: 10px 1%;
-		width: 98%;
-		max-width: 98%;
-		min-width: 98%;
+		padding: 10px;
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+		}
+		&:hover {
+		border-color: @formflex_bd_hover;
 		}
 	}
 	&.off_form {
