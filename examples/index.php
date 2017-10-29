@@ -410,7 +410,9 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-
+<div class="formflex_title">
+	Exemples de formulaires complexes
+</div>
 
 <div class="form">
 
@@ -715,51 +717,6 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
-
-<label>
-	<span class="name">Statut</span>
-	<span class="classic_select">
-		<select>
-			<option value="">Homme</option>
-		</select>
-	</span>
-	<span class="customErrorValidation" data-name="street"></span>
-	<span class="clear"></span>
-</label>
-
-<label>
-	<span class="full">
-		<span class="classic_select">
-			<select>
-				<option value="">Homme</option>
-			</select>
-		</span>
-	</span>
-	<span class="customErrorValidation" data-name="street"></span>
-	<span class="clear"></span>
-</label>
-
-</div><!-- /form -->
-<pre>
-&lt;label>
-	&lt;span class="name">Statut&lt;/span>
-	&lt;div class="classic_select">
-		&lt;select name="" id="">
-			&lt;option value="">Homme&lt;/option>
-		&lt;/select>
-	&lt;/div>
-	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-</pre>
-<blockquote>
-- arrow_full sur le classic_select pour une fleche carré à fond plein.
-</blockquote>
-
-
-
-
 
 
 
@@ -970,81 +927,6 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-
-<fieldset>
-	<legend>Quand la commercialisation a t-elle débuté ?</legend>
-	<span class="clear"></span>
-	<label>
-		<div class="classic_select">
-			<select name="" id="">
-				<option value="">mois</option>
-			</select>
-
-			<span class="customErrorValidation"></span>
-			<span class="clear"></span>
-		</div>
-		<span class="customErrorValidation" data-name="street"></span>
-		<span class="clear"></span>
-	</label>
-	<label>
-		<span class="clear"></span>
-		<input type="text" size="5" placeholder="année">
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-</fieldset>
-
-</div><!-- /form -->
-<pre>
-&ltfieldset>
-	&ltlegend>Quand la commercialisation a t-elle débuté ?&lt/legend>
-	&ltspan class="clear">&lt/span>
-	&ltlabel>
-		&ltdiv class="classic_select">
-			&ltselect name="" id="">
-				&ltoption value="">mois&lt/option>
-			&lt/select>
-
-			&ltspan class="customErrorValidation">&lt/span>
-			&ltspan class="clear">&lt/span>
-		&lt/div>
-		&ltspan class="customErrorValidation" data-name="street">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel>
-		&ltspan class="clear">&lt/span>
-		&ltinput type="text" size="5" placeholder="année">
-
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-&lt/fieldset>
-</pre>
 
 
 
