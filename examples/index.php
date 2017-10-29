@@ -708,6 +708,66 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
+<div class="formflex_title">
+	Textareas
+</div>
+
+<div class="form">
+
+<label>
+	<span class="name">textarea horizontal</span>
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+
+	<span class="customErrorValidation" data-name="street"></span>
+	<span class="clear"></span>
+</label>
+
+<label>
+	<span class="name">textarea full width</span>
+	<span class="textarea"><textarea name="" id="" cols="30" rows="10"></textarea></span>
+
+	<span class="customErrorValidation" data-name="street"></span>
+	<span class="clear"></span>
+</label>
+
+</div><!-- /form -->
+<pre>
+&lt;label>
+	&lt;span class="name">textarea horizontal&lt;/span>
+	&lt;textarea name="" id="" cols="30" rows="10">&lt;/textarea>
+
+	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
+
+&lt;label>
+	&lt;span class="name">textarea full width&lt;/span>
+	&lt;span class="textarea">&lt;textarea name="" id="" cols="30" rows="10">&lt;/textarea>&lt;/span>
+
+	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="formflex_section_title">
 	Éléments composés
 </div>
@@ -1334,57 +1394,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
-
-<label>
-	<span class="name">Commentaire</span>
-	<textarea name="" id="" cols="30" rows="10"></textarea>
-
-	<span class="customErrorValidation" data-name="street"></span>
-	<span class="clear"></span>
-</label>
-
-</div><!-- /form -->
-<pre>
-&lt;label>
-	&lt;span class="name">Commentaire&lt;/span>
-	&lt;textarea name="" id="" cols="30" rows="10">&lt;/textarea>
-	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-</pre>
 
 
 
 
 
-
-
-
-
-
-
-
-<div class="form">
-
-<label>
-	<span class="name">Commentaire</span>
-	<span class="textarea"><textarea name="" id="" cols="30" rows="10"></textarea></span>
-
-	<span class="customErrorValidation" data-name="street"></span>
-	<span class="clear"></span>
-</label>
-
-</div><!-- /form -->
-<pre>
-&lt;label>
-	&lt;span class="name">Commentaire&lt;/span>
-	&lt;span class="textarea">&lt;textarea name="" id="" cols="30" rows="10">&lt;/textarea>&lt;/span>
-
-	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-</pre>
 
 
 
