@@ -350,14 +350,13 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <label>
 	<span class="name">select full</span>
-	<span class="full">
-		<span class="classic_select">
-			<select name="" id="">
-				<option value="">option1</option>
-				<option value="">option2</option>
-				<option value="">option3</option>
-			</select>
-		</span>
+	<span class="clear"></span>
+	<span class="classic_select formflex_full_width">
+		<select name="" id="">
+			<option value="">option1</option>
+			<option value="">option2</option>
+			<option value="">option3</option>
+		</select>
 	</span>
 
 	<span class="customErrorValidation" data-name="street_nbr"></span>
@@ -365,7 +364,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </label>
 
 <label class="to_the_right">
-	<span class="name">Statut</span>
+	<span class="name">select to the right</span>
 	<div class="classic_select">
 		<select name="" id="">
 			<option value="">Homme</option>
@@ -393,14 +392,13 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 &lt;label>
 	&lt;span class="name">select full&lt;/span>
-	&lt;span class="full">
-		&lt;span class="classic_select">
-			&lt;select name="" id="">
-				&lt;option value="">option1&lt;/option>
-				&lt;option value="">option2&lt;/option>
-				&lt;option value="">option3&lt;/option>
-			&lt;/select>
-		&lt;/span>
+	&lt;span class="clear">&lt;/span>
+	&lt;span class="classic_select formflex_full_width">
+		&lt;select name="" id="">
+			&lt;option value="">option1&lt;/option>
+			&lt;option value="">option2&lt;/option>
+			&lt;option value="">option3&lt;/option>
+		&lt;/select>
 	&lt;/span>
 
 	&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
@@ -408,7 +406,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 &lt;/label>
 
 &lt;label class="to_the_right">
-	&lt;span class="name">Statut&lt;/span>
+	&lt;span class="name">select to the right&lt;/span>
 	&lt;div class="classic_select">
 		&lt;select name="" id="">
 			&lt;option value="">Homme&lt;/option>
@@ -672,23 +670,23 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 </div><!-- /form -->
 <pre>
-&ltfieldset class="bd_sep equalize">
-	&ltlegend>Est-ce une habitation modeste ?&lt/legend>
-	&ltspan class="clear">&lt/span>
+&lt;fieldset class="bd_sep equalize">
+	&lt;legend>class equalize utilisée, ainsi que bd_sep (utilisation non liée)&lt;/legend>
+	&lt;span class="clear">&lt;/span>
 
-	&lt?php for($i=1;$i&lt=10;$i++){ ?>
-	&ltlabel class="formflex-radio checkskin">
-		&ltspan class="input">
-			&lti class="fa fa-check">&lt/i>
-			&ltinput type="radio" name="test3">
-		&lt/span>
-		&ltspan class="name">&lt?php echo generateRandomString(); ?>&lt/span>
+	&lt;?php for($i=1;$i&lt;=10;$i++){ ?>
+	&lt;label class="formflex-radio checkskin">
+		&lt;span class="input">
+			&lt;i class="fa fa-check">&lt;/i>
+			&lt;input type="radio" name="test3">
+		&lt;/span>
+		&lt;span class="name">&lt;?php echo generateRandomString(); ?>&lt;/span>
 
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&lt?php } ?>
-&lt/fieldset>
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;?php } ?>
+&lt;/fieldset>
 </pre>
 
 
@@ -854,14 +852,16 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <fieldset>
 	<label class="cols">
 		<span class="name">CP*</span>
-		<span class="full"><input type="text" size="10" name="street"></span>
+		<span class="clear"></span>
+		<input class="formflex_full_width" type="text" size="10" name="street">
 
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
 	<label class="cols">
 		<span class="name">Localité*</span>
-		<span class="full"><input type="text" size="10" name="street"></span>
+		<span class="clear"></span>
+		<input class="formflex_full_width" type="text" size="10" name="street">
 
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
@@ -889,41 +889,43 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 </div><!-- /form -->
 <pre>
-&ltfieldset>
-	&ltlabel class="cols">
-		&ltspan class="name">CP*&lt/span>
-		&ltspan class="full">&ltinput type="text" size="10" name="street">&lt/span>
+&lt;fieldset>
+	&lt;label class="cols">
+		&lt;span class="name">CP*&lt;/span>
+		&lt;span class="clear">&lt;/span>
+		&lt;input class="formflex_full_width" type="text" size="10" name="street">
 
-		&ltspan class="customErrorValidation" data-name="street">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel class="cols">
-		&ltspan class="name">Localité*&lt/span>
-		&ltspan class="full">&ltinput type="text" size="10" name="street">&lt/span>
+		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;label class="cols">
+		&lt;span class="name">Localité*&lt;/span>
+		&lt;span class="clear">&lt;/span>
+		&lt;input class="formflex_full_width" type="text" size="10" name="street">
 
-		&ltspan class="customErrorValidation" data-name="street_nbr">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltspan class="clear">&lt/span>
-&lt/fieldset>
+		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;span class="clear">&lt;/span>
+&lt;/fieldset>
 
-&ltfieldset>
-	&ltlabel class="cols to_the_right">
-		&ltspan class="name forced_align">CP*&lt/span>
-		&ltinput type="text" size="10" name="street">
+&lt;fieldset>
+	&lt;label class="cols to_the_right">
+		&lt;span class="name forced_align">CP*&lt;/span>
+		&lt;input type="text" size="10" name="street">
 
-		&ltspan class="customErrorValidation" data-name="street">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel class="cols to_the_right">
-		&ltspan class="name">Localité*&lt/span>
-		&ltinput type="text" size="10" name="street_nbr">
+		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;label class="cols to_the_right">
+		&lt;span class="name">Localité*&lt;/span>
+		&lt;input type="text" size="10" name="street_nbr">
 
-		&ltspan class="customErrorValidation" data-name="street_nbr">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltspan class="clear">&lt/span>
-&lt/fieldset>
+		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;span class="clear">&lt;/span>
+&lt;/fieldset>
 </pre>
 
 
@@ -1135,32 +1137,32 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 </div><!-- /form -->
 <pre>
-&ltlabel>
-	&ltspan class="name">Upload des fichiers&lt/span>
-	&ltspan class="clear">&lt/span>
-	&ltdiv class="classic_file">
-		&ltspan class="infos">Fichier pdf...&lt/span>
-		&ltspan class="btn">Parcourir&lt/span>
-		&ltinput type="file">
-	&lt/div>
-	&ltspan class="customErrorValidation" data-name="street">&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
+&lt;label>
+	&lt;span class="name">Upload des fichiers&lt;/span>
+	&lt;span class="clear">&lt;/span>
+	&lt;div class="classic_file">
+		&lt;span class="classic_file_infos">Fichier pdf...&lt;/span>
+		&lt;span class="classic_file_btn">Parcourir&lt;/span>
+		&lt;input type="file">
+	&lt;/div>
+	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
 
-&ltul class="files_uploaded" id="ma_liste_de_fichiers">
-	&ltli class="template">
-		&lta href="">&lt/a>
-		&ltspan data-url="" class="delete_uploaded_file">&lti class="fa fa-times-circle">&lt/i>&lt/span>
-		&ltinput type="hidden">
-	&lt/li>
-	&lt?php for($i=1;$i&lt=3;$i++){ ?>
-	&ltli>
-		&lta href="">fichier_pdf_numero_xxxx.pdf&lt/a>
-		&ltspan data-url="" class="delete_uploaded_file">&lti class="fa fa-times-circle">&lt/i>&lt/span>
-		&ltinput type="hidden">
-	&lt/li>
-	&lt?php } ?>
-&lt/ul>
+&lt;ul class="files_uploaded" id="ma_liste_de_fichiers">
+	&lt;li class="template">
+		&lt;a href="">&lt;/a>
+		&lt;span data-url="" class="delete_uploaded_file">&lt;i class="fa fa-times-circle">&lt;/i>&lt;/span>
+		&lt;input type="hidden">
+	&lt;/li>
+	&lt;?php for($i=1;$i&lt;=3;$i++){ ?>
+	&lt;li>
+		&lt;a href="">fichier_pdf_numero_xxxx.pdf&lt;/a>
+		&lt;span data-url="" class="delete_uploaded_file">&lt;i class="fa fa-times-circle">&lt;/i>&lt;/span>
+		&lt;input type="hidden">
+	&lt;/li>
+	&lt;?php } ?>
+&lt;/ul>
 </pre>
 
 
@@ -1201,24 +1203,24 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 </div><!-- /form -->
 <pre>
-&ltspan class="pickadate_button">
-	Ajouter une date &lti class="fa fa-calendar">&lt/i>
-&lt/span>
+&lt;span class="pickadate_button">
+	Ajouter une date &lt;i class="fa fa-calendar">&lt;/i>
+&lt;/span>
 
-&ltul class="dates_uploaded" id="ma_liste_de_dates">
-	&ltli class="template">
-		&lta href="">&lt/a>
-		&ltspan data-url="" class="delete_uploaded_file">&lti class="fa fa-times-circle">&lt/i>&lt/span>
-		&ltinput type="hidden">
-	&lt/li>
-	&lt?php for($i=1;$i&lt=3;$i++){ ?>
-	&ltli>
-		&lta href="">fichier_pdf_numero_xxxx.pdf&lt/a>
-		&ltspan data-url="" class="delete_uploaded_file">&lti class="fa fa-times-circle">&lt/i>&lt/span>
-		&ltinput type="hidden">
-	&lt/li>
-	&lt?php } ?>
-&lt/ul>
+&lt;ul class="dates_uploaded" id="ma_liste_de_dates">
+	&lt;li class="template">
+		&lt;a href="">&lt;/a>
+		&lt;span data-url="" class="delete_uploaded_file">&lt;i class="fa fa-times-circle">&lt;/i>&lt;/span>
+		&lt;input type="hidden">
+	&lt;/li>
+	&lt;?php for($i=1;$i&lt;=3;$i++){ ?>
+	&lt;li>
+		&lt;a href="">fichier_pdf_numero_xxxx.pdf&lt;/a>
+		&lt;span data-url="" class="delete_uploaded_file">&lt;i class="fa fa-times-circle">&lt;/i>&lt;/span>
+		&lt;input type="hidden">
+	&lt;/li>
+	&lt;?php } ?>
+&lt;/ul>
 </pre>
 
 
@@ -1265,24 +1267,24 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 </div><!-- /form -->
 <pre>
-&ltfieldset class="unify">
-	&ltlabel>
-		&ltinput type="text" size="12" placeholder="Votre commune">
+&lt;fieldset class="unify">
+	&lt;label>
+		&lt;input type="text" size="12" placeholder="Votre commune">
 
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel>
-		&ltspan class="classic_select gray">
-			&ltselect name="" id="">
-				&ltoption value="">+ 0 km&lt/option>
-			&lt/select>
-		&lt/span>
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;label>
+		&lt;span class="classic_select gray">
+			&lt;select name="" id="">
+				&lt;option value="">+ 0 km&lt;/option>
+			&lt;/select>
+		&lt;/span>
 
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-&lt/fieldset>
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+&lt;/fieldset>
 </pre>
 
 
@@ -1328,15 +1330,24 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 </div><!-- /form -->
 <pre>
-&ltlabel class="star checkskin">
-	&ltspan class="input">
-		&lti class="fa fa-star">&lt/i>
-		&lti class="fa fa-star-o">&lt/i>
-		&ltinput type="checkbox" name="test3">
-	&lt/span>
-	&ltspan class="name">Mercredi 19 fé&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
+&lt;label class="star checkskin">
+	&lt;span class="input">
+		&lt;i class="fa fa-star">&lt;/i>
+		&lt;i class="fa fa-star-o">&lt;/i>
+		&lt;input type="checkbox" name="test3">
+	&lt;/span>
+	&lt;span class="name">Mercredi 19 fé&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
+&lt;label class="star checkskin other">
+	&lt;span class="name no_size">Mercredi 19 fé&lt;/span>
+	&lt;span class="input">
+		&lt;i class="fa fa-star">&lt;/i>
+		&lt;i class="fa fa-star-o">&lt;/i>
+		&lt;input type="checkbox" name="test3">
+	&lt;/span>
+	&lt;span class="clear">&lt;/span>
+&lt;/label>
 </pre>
 
 
@@ -1370,18 +1381,18 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 </div><!-- /form -->
 <pre>
-&ltfieldset>
-	&lt?php for($i=1;$i&lt=5;$i++){ ?>
-	&ltlabel class="star checkskin">
-		&ltspan class="input">
-			&lti class="fa fa-star">&lt/i>
-			&lti class="fa fa-star-o">&lt/i>
-			&ltinput type="radio" name="test3">
-		&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&lt?php } ?>
-&lt/fieldset>
+&lt;fieldset>
+	&lt;?php for($i=1;$i&lt;=5;$i++){ ?>
+	&lt;label class="star checkskin">
+		&lt;span class="input">
+			&lt;i class="fa fa-star">&lt;/i>
+			&lt;i class="fa fa-star-o">&lt;/i>
+			&lt;input type="radio" name="test3">
+		&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;?php } ?>
+&lt;/fieldset>
 </pre>
 
 
@@ -1805,57 +1816,59 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 </div><!-- /form -->
 
 <pre>
-&lt!-- EXEMPLE 1 : sans tri -->
+&lt;fieldset data-group="simple1">
+	&lt;label>
+		&lt;span class="name">champs-1&lt;/span>
+		&lt;input type="text" size="30">
 
-&ltfieldset data-group="simple1">
-	&ltlabel>
-		&ltspan class="name">champs-1&lt/span>
-		&ltinput type="text" size="30">
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;label>
+		&lt;span class="name">champs-2&lt;/span>
+		&lt;input type="text" size="30">
 
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel>
-		&ltspan class="name">champs-2&lt/span>
-		&ltinput type="text" size="30">
+		&lt;span class="customErrorValidation">&lt;/span>
+		&lt;span class="clear">&lt;/span>
+	&lt;/label>
+	&lt;label>
+		&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
+		&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
+	&lt;/label>
+&lt;/fieldset>
+&lt;/div>&lt;!-- /form -->
 
-		&ltspan class="customErrorValidation">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-	&ltlabel>
-		&ltspan class="round_icon red delete">&lti class="fa fa-trash">&lt/i>&lt/span>
-		&ltspan class="round_icon green dupplicate">&lti class="fa fa-plus">&lt/i>&lt/span>
-	&lt/label>
-&lt/fieldset>
+&lt;div class="formflex_title_2">
+	Exemple 2 : identique, avec le système de tri en plus
+&lt;/div>
 
-&lt!-- EXEMPLE 2 : avec tri -->
+&lt;div class="form">
+&lt;div class="sortable">
+	&lt;fieldset data-group="simple1_tri">
+		&lt;label>
+			&lt;input type="hidden" value="0" class="sortable_get_position">
+			&lt;span class="round_icon gray_on_white move">&lt;i class="fa fa-arrows">&lt;/i>&lt;/span>
+		&lt;/label>
+		&lt;label>
+			&lt;span class="name">champs-1&lt;/span>
+			&lt;input type="text" size="30">
 
-&ltdiv class="sortable">
-	&ltfieldset data-group="simple1_tri">
-		&ltlabel>
-			&ltinput type="hidden" value="0" class="sortable_get_position">
-			&ltspan class="round_icon gray_on_white move">&lti class="fa fa-arrows">&lt/i>&lt/span>
-		&lt/label>
-		&ltlabel>
-			&ltspan class="name">champs-1&lt/span>
-			&ltinput type="text" size="30">
+			&lt;span class="customErrorValidation">&lt;/span>
+			&lt;span class="clear">&lt;/span>
+		&lt;/label>
+		&lt;label>
+			&lt;span class="name">champs-2&lt;/span>
+			&lt;input type="text" size="30">
 
-			&ltspan class="customErrorValidation">&lt/span>
-			&ltspan class="clear">&lt/span>
-		&lt/label>
-		&ltlabel>
-			&ltspan class="name">champs-2&lt/span>
-			&ltinput type="text" size="30">
-
-			&ltspan class="customErrorValidation">&lt/span>
-			&ltspan class="clear">&lt/span>
-		&lt/label>
-		&ltlabel>
-			&ltspan class="round_icon red delete">&lti class="fa fa-trash">&lt/i>&lt/span>
-			&ltspan class="round_icon green dupplicate">&lti class="fa fa-plus">&lt/i>&lt/span>
-		&lt/label>
-	&lt/fieldset>
-&lt/div>&lt!-- \sortable -->
+			&lt;span class="customErrorValidation">&lt;/span>
+			&lt;span class="clear">&lt;/span>
+		&lt;/label>
+		&lt;label>
+			&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
+			&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
+		&lt;/label>
+	&lt;/fieldset>
+&lt;/div>&lt;!-- \sortable -->
 </pre>
 <blockquote>
 - commencez par identifier un groupe dupplicable en lui ajoutant l'attribut data-group, contenant un identifiant unique.<br />
@@ -1944,6 +1957,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 <div class="replace_names_link">afficher names</div>
 
 <div class="form">
+
 <ul class="lang_menu mode_popup" data-lang-menu="children_test">
 	<li data-lang="fr">fr</li>
 	<li data-lang="nl">nl</li>
@@ -2008,72 +2022,73 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		Morbi sed augue nisi. Vivamus vehicula eros in lorem auctor, adipiscing pretium urna pulvinar. Praesent vitae imperdiet ante. Mauris eu pellentesque magna. Donec consectetur mauris orci, ultricies congue mauris ultricies vel. Aliquam ac lectus massa. Ut ac est turpis.
 	</span>
 </div>
+
 </div><!-- /form -->
 <pre>
-&ltul class="lang_menu mode_popup" data-lang-menu="children_test">
-	&ltli data-lang="fr">fr&lt/li>
-	&ltli data-lang="nl">nl&lt/li>
-	&ltli data-lang="en">en&lt/li>
-&lt/ul>
+&lt;ul class="lang_menu mode_popup" data-lang-menu="children_test">
+	&lt;li data-lang="fr">fr&lt;/li>
+	&lt;li data-lang="nl">nl&lt;/li>
+	&lt;li data-lang="en">en&lt;/li>
+&lt;/ul>
 
-&ltdiv class="sortable">
-&ltdiv class="category manual_increment" data-group-cpt="999" data-group="children_group_erer" data-this-cpt="0">
-	&ltdiv>
-		&lt?php for($i=1;$i&lt=3;$i++) : ?>
-		&lt?php
+&lt;div class="sortable">
+&lt;div class="category manual_increment" data-group-cpt="999" data-group="children_group_erer" data-this-cpt="0">
+	&lt;div>
+		&lt;?php for($i=1;$i&lt;=3;$i++) : ?>
+		&lt;?php
 			if($i==1){$lang="fr";}
 			if($i==2){$lang="nl";}
 			if($i==3){$lang="en";}
 		?>
-		&ltfieldset data-lang-target="children_test-&lt?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="&lt?php echo $lang; ?>" data-form-base="form[pages][1295]">
-			&ltlabel>
-				&ltinput type="hidden" value="0" class="sortable_get_position">
-				&ltspan class="round_icon gray_on_white move">&lti class="fa fa-arrows">&lt/i>&lt/span>
-			&lt/label>
+		&lt;fieldset data-lang-target="children_test-&lt;?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="&lt;?php echo $lang; ?>" data-form-base="form[pages][1295]">
+			&lt;label>
+				&lt;input type="hidden" value="0" class="sortable_get_position">
+				&lt;span class="round_icon gray_on_white move">&lt;i class="fa fa-arrows">&lt;/i>&lt;/span>
+			&lt;/label>
 
-			&ltlabel>
-				&ltspan class="name">rue&lt/span>
-				&ltinput type="text" name="form[pages][1295][0][street][&lt?php echo $lang; ?>]" data-name="street" size="30" value="">
+			&lt;label>
+				&lt;span class="name">rue&lt;/span>
+				&lt;input type="text" name="form[pages][1295][0][street][&lt;?php echo $lang; ?>]" data-name="street" size="30" value="">
 
-				&ltspan class="customErrorValidation">&lt/span>
-				&ltspan class="clear">&lt/span>
-			&lt/label>
+				&lt;span class="customErrorValidation">&lt;/span>
+				&lt;span class="clear">&lt;/span>
+			&lt;/label>
 
-			&ltlabel>
-				&ltspan class="name">numero&lt/span>
-				&ltinput type="text" name="form[pages][1295][0][number][&lt?php echo $lang; ?>]" data-name="number" size="5" value="">
+			&lt;label>
+				&lt;span class="name">numero&lt;/span>
+				&lt;input type="text" name="form[pages][1295][0][number][&lt;?php echo $lang; ?>]" data-name="number" size="5" value="">
 
-				&ltspan class="customErrorValidation">&lt/span>
-				&ltspan class="clear">&lt/span>
-			&lt/label>
+				&lt;span class="customErrorValidation">&lt;/span>
+				&lt;span class="clear">&lt;/span>
+			&lt;/label>
 
-			&ltlabel>
-				&ltspan class="name">Ville&lt/span>
-				&ltinput type="text" name="form[pages][1295][0][city][&lt?php echo $lang; ?>]" data-name="city" size="20" value="">
+			&lt;label>
+				&lt;span class="name">Ville test&lt;/span>
+				&lt;input type="text" name="form[pages][1295][0][city][&lt;?php echo $lang; ?>]" data-name="city" size="20" value="">
 
-				&ltspan class="customErrorValidation">&lt/span>
-				&ltspan class="clear">&lt/span>
-			&lt/label>
+				&lt;span class="customErrorValidation">&lt;/span>
+				&lt;span class="clear">&lt;/span>
+			&lt;/label>
 
-			&ltlabel>
-				&ltspan class="round_icon blue children_add" data-child-template-cmd="classic_child1">&lti class="fa fa-caret-square-o-down">&lt/i>&lt/span>
-				&ltspan class="round_icon red delete">&lti class="fa fa-trash">&lt/i>&lt/span>
-				&ltspan class="round_icon green dupplicate">&lti class="fa fa-plus">&lt/i>&lt/span>
-			&lt/label>
-		&lt/fieldset>
-		&lt?php endfor; ?>
-	&lt/div>
-&lt/div>&lt!-- /category -->
-&lt/div>&lt!-- /sortable -->
+			&lt;label>
+				&lt;span class="round_icon blue children_add" data-child-template-cmd="classic_child1">&lt;i class="fa fa-caret-square-o-down">&lt;/i>&lt;/span>
+				&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
+				&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
+			&lt;/label>
+		&lt;/fieldset>
+		&lt;?php endfor; ?>
+	&lt;/div>
+&lt;/div>&lt;!-- /category -->
+&lt;/div>&lt;!-- /sortable -->
 
-&ltdiv class="zone_add_from_ext">
-	&ltspan class="round_icon green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
-		&lti class="fa fa-plus">&lt/i>
-	&lt/span>
-	&ltspan class="text">
+&lt;div class="zone_add_from_ext">
+	&lt;span class="round_icon green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
+		&lt;i class="fa fa-plus">&lt;/i>
+	&lt;/span>
+	&lt;span class="text">
 		Morbi sed augue nisi. Vivamus vehicula eros in lorem auctor, adipiscing pretium urna pulvinar. Praesent vitae imperdiet ante. Mauris eu pellentesque magna. Donec consectetur mauris orci, ultricies congue mauris ultricies vel. Aliquam ac lectus massa. Ut ac est turpis.
-	&lt/span>
-&lt/div>
+	&lt;/span>
+&lt;/div>
 </pre>
 <blockquote>
 - commencez par identifier un groupe dupplicable en lui ajoutant l'attribut data-group, contenant un identifiant unique.<br />
@@ -2103,6 +2118,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 <div class="form">
+
 <ul class="lang_menu" data-lang-menu="testation">
 	<li data-lang="fr">fr</li>
 	<li data-lang="nl">nl</li>
@@ -2142,42 +2158,42 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 </div><!-- /form -->
 <pre>
-&ltul class="lang_menu" data-lang-menu="testation">
-	&ltli data-lang="fr">fr&lt/li>
-	&ltli data-lang="nl">nl&lt/li>
-	&ltli data-lang="en">en&lt/li>
-&lt/ul>
+&lt;ul class="lang_menu" data-lang-menu="testation">
+	&lt;li data-lang="fr">fr&lt;/li>
+	&lt;li data-lang="nl">nl&lt;/li>
+	&lt;li data-lang="en">en&lt;/li>
+&lt;/ul>
 
-&ltdiv class="sortable">
-&ltdiv class="category manual_increment" data-group="testation">
-	&lt?php for($i=1;$i&lt=3;$i++) : ?>
-	&lt?php
+&lt;div class="sortable">
+&lt;div class="category manual_increment" data-group="testation">
+	&lt;?php for($i=1;$i&lt;=3;$i++) : ?>
+	&lt;?php
 		if($i==1){$lang="fr";}
 		if($i==2){$lang="nl";}
 		if($i==3){$lang="en";}
 	?>
-	&ltfieldset data-lang-target="testation-&lt?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="&lt?php echo $lang; ?>" data-form-base="form[pages][1295]">
-		&ltlabel>
-			&ltinput type="hidden" value="0" class="sortable_get_position">
-			&ltspan class="round_icon gray_on_white move">&lti class="fa fa-arrows">&lt/i>&lt/span>
-		&lt/label>
+	&lt;fieldset data-lang-target="testation-&lt;?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="&lt;?php echo $lang; ?>" data-form-base="form[pages][1295]">
+		&lt;label>
+			&lt;input type="hidden" value="0" class="sortable_get_position">
+			&lt;span class="round_icon gray_on_white move">&lt;i class="fa fa-arrows">&lt;/i>&lt;/span>
+		&lt;/label>
 
-		&ltlabel>
-			&ltspan class="name">Ville&lt/span>
-			&ltinput type="text" name="form[pages][1295][0][city]" data-name="city" size="50" value="">
+		&lt;label>
+			&lt;span class="name">Ville&lt;/span>
+			&lt;input type="text" name="form[pages][1295][0][city]" data-name="city" size="50" value="">
 
-			&ltspan class="customErrorValidation">&lt/span>
-			&ltspan class="clear">&lt/span>
-		&lt/label>
+			&lt;span class="customErrorValidation">&lt;/span>
+			&lt;span class="clear">&lt;/span>
+		&lt;/label>
 
-		&ltlabel>
-			&ltspan class="round_icon red delete">&lti class="fa fa-trash">&lt/i>&lt/span>
-			&ltspan class="round_icon green dupplicate">&lti class="fa fa-plus">&lt/i>&lt/span>
-		&lt/label>
-	&lt/fieldset>
-	&lt?php endfor; ?>
-&lt/div>&lt!-- /category -->
-&lt/div>&lt!-- /sortable -->
+		&lt;label>
+			&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
+			&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
+		&lt;/label>
+	&lt;/fieldset>
+	&lt;?php endfor; ?>
+&lt;/div>&lt;!-- /category -->
+&lt;/div>&lt;!-- /sortable -->
 </pre>
 
 
@@ -2191,6 +2207,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 <div class="form">
+
 <div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
 	<fieldset data-form-base="form[pages][1295]">
 		<label class="formflex-radio checkskin">
@@ -2221,38 +2238,39 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		</label>
 	</fieldset>
 </div><!-- /category -->
+
 </div><!-- /form -->
 <pre>
-&ltdiv class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
-	&ltfieldset data-form-base="form[pages][1295]">
-		&ltlabel class="formflex-radio checkskin">
-			&ltspan class="input">
-				&lti class="fa fa-check">&lt/i>
-				&ltinput type="radio" name="form[pages][1295][0][radio]" data-name="radio">
-			&lt/span>
-			&ltspan class="name">dsfgsdf&lt/span>
+&lt;div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
+	&lt;fieldset data-form-base="form[pages][1295]">
+		&lt;label class="formflex-radio checkskin">
+			&lt;span class="input">
+				&lt;i class="fa fa-check">&lt;/i>
+				&lt;input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
+			&lt;/span>
+			&lt;span class="name">oui&lt;/span>
 
-			&ltspan class="customErrorValidation">&lt/span>
-			&ltspan class="clear">&lt/span>
-		&lt/label>
+			&lt;span class="customErrorValidation">&lt;/span>
+			&lt;span class="clear">&lt;/span>
+		&lt;/label>
 
-		&ltlabel class="formflex-radio checkskin">
-			&ltspan class="input">
-				&lti class="fa fa-check">&lt/i>
-				&ltinput type="radio" name="form[pages][1295][0][radio]" data-name="radio">
-			&lt/span>
-			&ltspan class="name">dsfgsdf&lt/span>
+		&lt;label class="formflex-radio checkskin">
+			&lt;span class="input">
+				&lt;i class="fa fa-check">&lt;/i>
+				&lt;input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
+			&lt;/span>
+			&lt;span class="name">non&lt;/span>
 
-			&ltspan class="customErrorValidation">&lt/span>
-			&ltspan class="clear">&lt/span>
-		&lt/label>
+			&lt;span class="customErrorValidation">&lt;/span>
+			&lt;span class="clear">&lt;/span>
+		&lt;/label>
 
-		&ltlabel>
-			&ltspan class="round_icon red delete">&lti class="fa fa-trash">&lt/i>&lt/span>
-			&ltspan class="round_icon green dupplicate">&lti class="fa fa-plus">&lt/i>&lt/span>
-		&lt/label>
-	&lt/fieldset>
-&lt/div>&lt!-- /category -->
+		&lt;label>
+			&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
+			&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
+		&lt;/label>
+	&lt;/fieldset>
+&lt;/div>&lt;!-- /category -->
 </pre>
 <blockquote>
 si on supprime l'attribut "data-name" des inputs, le système marche toujours mais n'ajoute pas les derniers crochets. Ca se finit donc sur le nombre incrémenté

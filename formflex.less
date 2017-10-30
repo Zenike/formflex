@@ -95,6 +95,9 @@ border-radius: @formflex_input_round;
 	select:focus {
 	outline: none;
 	}
+	&.formflex_full_width {
+	width: 100%;
+	}
 }
 
 .classic_file {
@@ -820,6 +823,10 @@ padding: 0;
 	float: left;
 		&:first-child {
 		margin-left: 0;
+		}
+		&.formflex_full_width {
+		margin-left: 0;
+		margin-right: 0;
 		}
 	}
 	.classic_file {
