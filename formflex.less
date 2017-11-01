@@ -54,7 +54,7 @@ overflow: hidden;
 	}
 }
 
-.classic_select {
+.ffx-select {
 border: 1px solid @formflex_bd;
 overflow: hidden;
 background-image: url(../img/select_handler.png);
@@ -65,37 +65,31 @@ height: @formflex_input_height;
 background-color: @formflex_input_bgcolor;
 display: block;
 border-radius: @formflex_input_round;
+height: @formflex_input_height;
+line-height: normal !important;
+min-width: 100px;
+color: @formflex_input_fontcolor;
+-webkit-appearance:none;
+-moz-appearance : none;
+appearance: none;
+font-size: @formflex_input_font_size;
+padding-left: 5px;
+font-weight: @formflex_input_font_weight;
+position: relative;
 	&:hover {
 	background-position: bottom right;
 	border-color: @formflex_bd_hover;
 	}
-	select {
-	border: none;
-	height: @formflex_input_height;
-	line-height: normal !important;
-	min-width: 100px;
-	background: transparent;
-	color: @formflex_input_fontcolor;
-	-webkit-appearance:none;
-	-moz-appearance : none;
-	font-size: @formflex_input_font_size;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	padding-left: 5px;
-	position: relative;
-	font-weight: @formflex_input_font_weight;
-		option {
-		background-color: @formflex_input_bgcolor;
-		}
+	option {
+	background-color: @formflex_input_bgcolor;
 	}
-	select:disabled {
+	&:disabled {
 	background-color: #eee;
 	}
-	select:focus {
+	&:focus {
 	outline: none;
 	}
-	&.formflex_full_width {
+	&.ffx-select--maximize {
 	width: 100%;
 	}
 }

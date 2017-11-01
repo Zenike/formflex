@@ -336,13 +336,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <label>
 	<span class="name">select inline</span>
-	<span class="classic_select">
-		<select name="" id="">
-			<option value="">option1</option>
-			<option value="">option2</option>
-			<option value="">option3</option>
-		</select>
-	</span>
+	<select name="" id="" class="ffx-select">
+		<option value="">option1</option>
+		<option value="">option2</option>
+		<option value="">option3</option>
+	</select>
 
 	<span class="customErrorValidation" data-name="street_nbr"></span>
 	<span class="clear"></span>
@@ -351,13 +349,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <label>
 	<span class="name">select full</span>
 	<span class="clear"></span>
-	<span class="classic_select formflex_full_width">
-		<select name="" id="">
-			<option value="">option1</option>
-			<option value="">option2</option>
-			<option value="">option3</option>
-		</select>
-	</span>
+	<select name="" id="" class="ffx-select ffx-select--maximize">
+		<option value="">option1</option>
+		<option value="">option2</option>
+		<option value="">option3</option>
+	</select>
 
 	<span class="customErrorValidation" data-name="street_nbr"></span>
 	<span class="clear"></span>
@@ -365,11 +361,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <label class="to_the_right">
 	<span class="name">select to the right</span>
-	<div class="classic_select">
-		<select name="" id="">
-			<option value="">Homme</option>
-		</select>
-	</div>
+	<select name="" id="" class="ffx-select">
+		<option value="">option1</option>
+		<option value="">option2</option>
+		<option value="">option3</option>
+	</select>
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
 </label>

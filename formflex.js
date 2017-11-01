@@ -128,7 +128,7 @@ $(document).on("formflex_refresh", function(options){
 });
 function to_the_right() {
     $("label.to_the_right").each(function (k, v) {
-		var element = $(this).find("input, .classic_select");
+		var element = $(this).find("input, .ffx-select");
 
         var wrapper_width = $(this).width();
 		var element_pos_left = element.position().left+parseInt(element.css("margin-left"));
