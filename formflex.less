@@ -38,7 +38,7 @@ display: none;
 	}
 }
 
-.zone_add_from_ext {
+.ffx-add-item-from-exterior {
 border-top: 1px solid @formflex_bd;
 margin-top: 10px;
 padding-top: 10px;
@@ -105,33 +105,31 @@ right: 0;
 	}
 }
 
-.classic_file {
+.ffx-in-file {
 position: relative;
 overflow: hidden;
-	.classic_file_infos {
+	.ffx-in-file__infos {
 	border: 1px solid @formflex_bd;
 	border-right: 0;
 	height: @formflex_input_height;
 	line-height: @formflex_input_height;
 	display: block;
 	float: left;
-	min-width: 149px;
+	min-width: 150px;
 	padding: 0 5px;
 	font-size: @formflex_input_font_size;
 	color: @formflex_input_fontcolor;
 	background-color: @formflex_input_bgcolor;
 	font-weight: @formflex_input_font_weight;
 	}
-	.classic_file_btn {
+	.ffx-in-file__btn {
 	background-color: @formflex_main_color_theme;
 	height: @formflex_input_height;
 	line-height: @formflex_input_height;
 	float: left;
-	cursor: pointer;
 	color: #fff;
 	font-size: @formflex_input_font_size;
 	width: 100px;
-	cursor: pointer;
 	text-align: center;
 	cursor: pointer;
 	}
@@ -145,21 +143,21 @@ overflow: hidden;
 	transform: translate(-200px, 0) scale(6);
 	font-size: 400px;
 	direction: ltr;
-	cursor: pointer;
+	cursor: default;
 	}
 	&:hover {
-		.classic_file_btn {
+		.ffx-in-file__btn {
 		background-color: @formflex_main_color_theme_hover;
 		}
 	}
 }
 
-ul.files_uploaded, ul.dates_uploaded {
+.ffx-list-items {
 list-style-type: none;
 padding: 0;
 margin: 0;
-	li {
-	width: 260px;
+	.ffx-list-items__item {
+	width: 250px;
 	margin: 5px 0;
 	position: relative;
 	background-color: #eee;
@@ -177,7 +175,7 @@ margin: 0;
 			text-decoration: underline;
 			}
 		}
-		.delete_uploaded_file {
+		.ffx-list-items__delete {
 		position: absolute;
 		right: 5px;
 		top: 0px;
@@ -193,12 +191,12 @@ margin: 0;
 			color: @formflex_main_color_theme_hover;
 			}
 		}
-		&.template {
+		&.ffx-list-items__item--hidden {
 		display: none;
 		}
 	}
-	&.dates_uploaded {
-		li {
+	&.ffx-list-items--full-width {
+		.ffx-list-items__item {
 		width: auto;
 		}
 	}
@@ -335,20 +333,6 @@ cursor: pointer;
 	float: none !important;
 	padding-left: @formflex_input_height + 10 + @formflex_checkskin_input_size_decal !important;
 	margin-left: 0 !important;
-	}
-}
-
-.pickadate_button {
-background-color: @formflex_main_color_theme;
-font-size: 18px;
-font-weight: bold;
-text-align: center;
-display: block;
-color: #fff;
-cursor: pointer !important;
-padding: 5px 0;
-	&:hover {
-	background-color: @formflex_main_color_theme_hover;
 	}
 }
 
@@ -515,7 +499,7 @@ padding: 0;
 		margin-right: 20px;
 		}
 	}
-	label.clone, fieldset.clone {
+	label.clone, .ffx-fieldset.clone {
 		.icon.delete {
 		display: block;
 		}
@@ -523,7 +507,7 @@ padding: 0;
 		display: none;
 		}
 	}
-	fieldset, label {
+	.ffx-fieldset, label {
 		&.sup_option_hidden {
 		display: none !important;
 		}
@@ -537,7 +521,7 @@ padding: 0;
 	.children_wrapper {
 	margin-left: 50px;
 	}
-	fieldset {
+	.ffx-fieldset {
 	padding: 0;
 	border: none;
 	margin: 5px 0;
@@ -547,10 +531,6 @@ padding: 0;
 		float: left;
 		margin-top: 0;
 		margin-bottom: 0;
-			&.bdr {
-			border-right: 1px solid @formflex_bd;
-			margin-right: 5px;
-			}
 		}
 		label:first-child {
 			.name:first-child {
@@ -560,11 +540,6 @@ padding: 0;
 		.clear+label {
 			.name:first-child {
 			margin-left: 0;
-			}
-		}
-		&.equalize {
-			label.formflex-radio, label.formflex-checkbox {
-			margin-left: 3px;
 			}
 		}
 		&.no_float {
@@ -594,18 +569,7 @@ padding: 0;
 				}
 			}
 		}
-		&.bdb {
-		border-bottom: 1px solid @formflex_bd;
-		padding-bottom: 10px;
-		}
-		&.bdt {
-		border-top: 1px solid @formflex_bd;
-		padding-top: 5px;
-		}
-		&.mgl {
-		margin-left: 50px;
-		}
-		&.unify {
+		&.ffx-fieldset--unify {
 			input,.ffx-select {
 			margin-left: 0!important;
 			margin-right: 0!important;
@@ -625,29 +589,8 @@ padding: 0;
 				}
 			}
 		}
-		&.bd_sep {
-			label {
-			border-right: 1px solid @formflex_bd;
-			padding-right: 5px;
-			margin-right: 5px;
-			}
-			label:last-child {
-			border-right: 0;
-			}
-		}
-		.cols {
-		display: block;
-		float: right;
-		width: 49%;
-			&:first-child {
-			float: left;
-			}
-			.name {
-			margin-left: 0;
-			}
-		}
 	}
-	fieldset.search {
+	.search {
 		button {
 		position: absolute;
 		z-index: 2;
@@ -861,7 +804,7 @@ padding: 0;
 			float: left;
 			}
 		}
-		fieldset {
+		.ffx-fieldset {
 		margin: 0;
 		}
 		.ffx-select {

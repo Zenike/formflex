@@ -156,6 +156,7 @@ function to_the_right() {
 
 
 //équilibrer les tailles dees radio/checkboxs dans un fieldset trop long
+/*
 $(document).ready(function () {
     equalize_fieldset();
 });
@@ -178,6 +179,7 @@ function equalize_fieldset() {
 		//testable sur firebug en jouant avec la largeur dynamiquement.
     });
 };
+*/
 
 
 

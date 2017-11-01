@@ -383,7 +383,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </label>
 
-<fieldset>
+<fieldset class="ffx-fieldset">
 	<legend>Enchainement horizontal classique de checkskins</legend>
 	<spoan class="clear"></spoan>
 	<label class="formflex-radio checkskin">
@@ -408,7 +408,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	</label>
 </fieldset>
 
-<fieldset class="no_float">
+<fieldset class="ffx-fieldset no_float">
 	<legend>Enchainement vertical utilisant la class no_float</legend>
 	<span class="clear"></span>
 	<label class="formflex-radio checkskin">
@@ -433,7 +433,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	</label>
 </fieldset>
 
-<fieldset>
+<fieldset class="ffx-fieldset">
 	<legend>Enchainement horizontal d'un checkskin sans name et d'un input text</legend>
 	<span class="clear"></span>
 	<label class="formflex-checkbox checkskin">
@@ -478,41 +478,6 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-
-
-
-
-<div class="formflex_title">
-	Checkskins en mode equalize
-</div>
-
-<div class="form">
-<?php ob_start(); ?>
-
-<fieldset class="bd_sep equalize">
-	<legend>class equalize utilisée, ainsi que bd_sep (utilisation non liée)</legend>
-	<span class="clear"></span>
-
-	<?php for($i=1;$i<=10;$i++){ ?>
-	<label class="formflex-radio checkskin">
-		<span class="input">
-			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
-		</span>
-		<span class="name"><?php echo generateRandomString(); ?></span>
-
-		<span class="customErrorValidation"></span>
-		<span class="clear"></span>
-	</label>
-	<?php } ?>
-</fieldset>
-
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-</div><!-- /form -->
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
 
 
 
@@ -572,6 +537,38 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
+<div class="formflex_title">
+	Input file
+</div>
+
+<div class="form">
+<?php ob_start(); ?>
+
+<label>
+	<span class="name">Upload des fichiers</span>
+	<span class="clear"></span>
+	<div class="ffx-in-file">
+		<span class="ffx-in-file__infos">Fichier pdf...</span>
+		<span class="ffx-in-file__btn">Parcourir</span>
+		<input type="file">
+	</div>
+	<span class="customErrorValidation" data-name="street"></span>
+	<span class="clear"></span>
+</label>
+
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
+</div><!-- /form -->
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
+
+
+
+
+
+
+
 
 
 
@@ -591,7 +588,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <div class="form">
 <?php ob_start(); ?>
 
-<fieldset>
+<fieldset class="ffx-fieldset">
 	<legend>Adresse</legend>
 	<label>
 		<span class="name">Rue</span>
@@ -639,64 +636,12 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
-<?php ob_start(); ?>
-
-<fieldset>
-	<label class="cols">
-		<span class="name">CP*</span>
-		<span class="clear"></span>
-		<input class="formflex_full_width" type="text" size="10" name="street">
-
-		<span class="customErrorValidation" data-name="street"></span>
-		<span class="clear"></span>
-	</label>
-	<label class="cols">
-		<span class="name">Localité*</span>
-		<span class="clear"></span>
-		<input class="formflex_full_width" type="text" size="10" name="street">
-
-		<span class="customErrorValidation" data-name="street_nbr"></span>
-		<span class="clear"></span>
-	</label>
-	<span class="clear"></span>
-</fieldset>
-
-<fieldset>
-	<label class="cols">
-		<span class="name forced_align">CP*</span>
-		<span class="ffx-righting-box">
-			<input type="text" size="10" name="street">
-		</span>
-
-		<span class="customErrorValidation" data-name="street"></span>
-		<span class="clear"></span>
-	</label>
-	<label class="cols">
-		<span class="name">Localité*</span>
-		<span class="ffx-righting-box">
-			<input type="text" size="10" name="street">
-		</span>
-
-		<span class="customErrorValidation" data-name="street_nbr"></span>
-		<span class="clear"></span>
-	</label>
-	<span class="clear"></span>
-</fieldset>
-
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-</div><!-- /form -->
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
-
 
 
 <div class="form">
 <?php ob_start(); ?>
 
-<fieldset class="semi_float">
+<fieldset class="ffx-fieldset semi_float">
 	<legend>Adresse</legend>
 	<label>
 		<span class="name">Rue</span>
@@ -746,7 +691,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <div class="form">
 <?php ob_start(); ?>
 
-<fieldset class="semi_float">
+<fieldset class="ffx-fieldset semi_float">
 	<label>
 		<span class="name">Rue</span>
 		<input type="text" size="30" name="street">
@@ -820,78 +765,43 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
+
+
+
+
+
+
+<div class="formflex_title">
+	Items list
+</div>
+
 <div class="form">
 <?php ob_start(); ?>
 
-<label>
-	<span class="name">Upload des fichiers</span>
-	<span class="clear"></span>
-	<div class="classic_file">
-		<span class="classic_file_infos">Fichier pdf...</span>
-		<span class="classic_file_btn">Parcourir</span>
-		<input type="file">
-	</div>
-	<span class="customErrorValidation" data-name="street"></span>
-	<span class="clear"></span>
-</label>
-
-<ul class="files_uploaded" id="ma_liste_de_fichiers">
-	<li class="template">
-		<a href=""></a>
-		<span data-url="" class="delete_uploaded_file"><i class="fa fa-times-circle"></i></span>
+<ul class="ffx-list-items">
+	<li class="ffx-list-items__item">
+		<a href="">fichier_pdf_numero_001.pdf</a>
+		<span class="ffx-list-items__delete"><i class="fa fa-times-circle"></i></span>
 		<input type="hidden">
 	</li>
-	<?php for($i=1;$i<=3;$i++){ ?>
-	<li>
-		<a href="">fichier_pdf_numero_xxxx.pdf</a>
-		<span data-url="" class="delete_uploaded_file"><i class="fa fa-times-circle"></i></span>
+	<li class="ffx-list-items__item">
+		<a href="">fichier_pdf_numero_002.pdf</a>
+		<span class="ffx-list-items__delete"><i class="fa fa-times-circle"></i></span>
 		<input type="hidden">
 	</li>
-	<?php } ?>
 </ul>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-</div><!-- /form -->
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="form">
-<?php ob_start(); ?>
-
-<span class="pickadate_button">
-	Ajouter une date <i class="fa fa-calendar"></i>
-</span>
-
-<ul class="dates_uploaded" id="ma_liste_de_dates">
-	<li class="template">
-		<a href=""></a>
-		<span data-url="" class="delete_uploaded_file"><i class="fa fa-times-circle"></i></span>
+<ul class="ffx-list-items ffx-list-items--full-width">
+	<li class="ffx-list-items__item">
+		<a href="">fichier_pdf_numero_001.pdf</a>
+		<span class="ffx-list-items__delete"><i class="fa fa-times-circle"></i></span>
 		<input type="hidden">
 	</li>
-	<?php for($i=1;$i<=3;$i++){ ?>
-	<li>
-		<a href="">fichier_pdf_numero_xxxx.pdf</a>
-		<span data-url="" class="delete_uploaded_file"><i class="fa fa-times-circle"></i></span>
+	<li class="ffx-list-items__item">
+		<a href="">fichier_pdf_numero_002.pdf</a>
+		<span class="ffx-list-items__delete"><i class="fa fa-times-circle"></i></span>
 		<input type="hidden">
 	</li>
-	<?php } ?>
 </ul>
 
 <?php $ffx_example_code = ob_get_clean(); ?>
@@ -922,10 +832,29 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="formflex_title">
+	Combo double input
+</div>
+
 <div class="form">
 <?php ob_start(); ?>
 
-<fieldset class="unify">
+<fieldset class="ffx-fieldset ffx-fieldset--unify">
 	<label>
 		<input type="text" size="12" placeholder="Votre commune">
 
@@ -936,6 +865,21 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		<select class="ffx-select" name="" id="">
 			<option value="">+ 0 km</option>
 		</select>
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+</fieldset>
+
+<fieldset class="ffx-fieldset ffx-fieldset--unify">
+	<label>
+		<input type="text" size="12" placeholder="Votre commune">
+
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
+	<label>
+		<input type="text" size="6" placeholder="CP">
 
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
@@ -1015,7 +959,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <div class="form">
 <?php ob_start(); ?>
 
-<fieldset>
+<fieldset class="ffx-fieldset">
 	<?php for($i=1;$i<=5;$i++){ ?>
 	<label class="star checkskin">
 		<span class="input">
@@ -1140,7 +1084,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 <div class="form">
 <?php ob_start(); ?>
 
-<fieldset>
+<fieldset class="ffx-fieldset">
 	<legend>j'affiche la suite ?</legend>
 	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_oui">
 		<span class="input">
@@ -1201,7 +1145,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
  2 ème exemple : spécifier un choix par défaut si rien n'est coché
 </div>
 
-<fieldset>
+<fieldset class="ffx-fieldset">
 	<legend>j'affiche la suite ?</legend>
 	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_2_oui">
 		<span class="input">
@@ -1334,7 +1278,7 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 <div class="form">
 <?php ob_start(); ?>
 
-<fieldset>
+<fieldset class="ffx-fieldset">
 	<legend>j'affiche la suite ? (select)</legend>
 	<select class="ffx-select" name="" id="">
 		<option value="" data-key="">-</option>
@@ -1422,7 +1366,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 
 <div class="form">
 <?php ob_start(); ?>
-<fieldset data-group="simple1">
+<fieldset class="ffx-fieldset" data-group="simple1">
 	<label>
 		<span class="name">champs-1</span>
 		<input type="text" size="30">
@@ -1456,7 +1400,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 <div class="form">
 <?php ob_start(); ?>
 <div class="sortable">
-	<fieldset data-group="simple1_tri">
+	<fieldset class="ffx-fieldset" data-group="simple1_tri">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1529,7 +1473,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 				if($i==2){$lang="nl";}
 				if($i==3){$lang="en";}
 			?>
-			<fieldset data-lang-iso="<?php echo $lang; ?>">
+			<fieldset class="ffx-fieldset" data-lang-iso="<?php echo $lang; ?>">
 				<label>
 					<input type="hidden" value="0" class="sortable_get_position">
 					<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1597,7 +1541,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			if($i==2){$lang="nl";}
 			if($i==3){$lang="en";}
 		?>
-		<fieldset data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-form-base="form[pages][1295]">
+		<fieldset class="ffx-fieldset" data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-form-base="form[pages][1295]">
 			<label>
 				<input type="hidden" value="0" class="sortable_get_position">
 				<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1638,7 +1582,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 </div><!-- /category -->
 </div><!-- /sortable -->
 
-<div class="zone_add_from_ext">
+<div class="ffx-add-item-from-exterior">
 	<span class="round_icon green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
 		<i class="fa fa-plus"></i>
 	</span>
@@ -1697,7 +1641,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		if($i==2){$lang="nl";}
 		if($i==3){$lang="en";}
 	?>
-	<fieldset data-lang-target="testation-<?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="<?php echo $lang; ?>" data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-lang-target="testation-<?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="<?php echo $lang; ?>" data-form-base="form[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1741,7 +1685,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 <?php ob_start(); ?>
 
 <div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
-	<fieldset data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-form-base="form[pages][1295]">
 		<label class="formflex-radio checkskin">
 			<span class="input">
 				<i class="fa fa-check"></i>
@@ -1804,7 +1748,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 <div class="sortable">
 <div class="category manual_increment" data-group-cpt="2" data-group="children_group_efgdgfrer" data-this-cpt="0">
-	<fieldset data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-form-base="form[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1835,7 +1779,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	</fieldset>
 </div><!-- /category -->
 <div class="category manual_increment" data-group-cpt="2" data-group="children_group_efgdgfrer" data-this-cpt="1">
-	<fieldset data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-form-base="form[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1866,7 +1810,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	</fieldset>
 </div><!-- /category -->
 <div class="category manual_increment" data-group-cpt="2" data-group="children_group_efgdgfrer" data-this-cpt="2">
-	<fieldset data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-form-base="form[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1929,7 +1873,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 <div class="form">
 <?php ob_start(); ?>
 
-<fieldset class="category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-form-base="form[pages][1295]">
+<fieldset class="ffx-fieldset category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-form-base="form[pages][1295]">
 	<label>
 		<span class="name">rue</span>
 		<input type="text" name="sdfsdfsdf" data-name="street" size="30" value="">
