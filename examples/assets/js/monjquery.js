@@ -22,6 +22,10 @@ $(".replace_names_link").click(function(){
 
 
 
+
+
+
+
 $("pre, blockquote").on("click","span",function(){
 	target = $(this).parents("pre, blockquote");
 
@@ -46,6 +50,8 @@ $(document).ready(function() {
 		$(this).append('<span>infos <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></span>');
 	});
 });
+
+
 
 
 

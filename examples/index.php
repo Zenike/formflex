@@ -61,6 +61,7 @@ function generateRandomString() {
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <label>
 	<span class="name">horizontal simple</span>
@@ -98,41 +99,11 @@ function generateRandomString() {
 	<span class="clear"></span>
 </label>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;label>
-	&lt;span class="name">horizontal simple&lt;/span>
-	&lt;input type="text" size="30" placeholder="mon test 1">
-
-	&lt;span class="customErrorValidation">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-
-&lt;label class="to_the_right">
-	&lt;span class="name">horizontal extensible (script)&lt;/span>
-	&lt;input type="text" size="30">
-
-	&lt;span class="customErrorValidation">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-
-&lt;label>
-	&lt;span class="name">à la ligne simple&lt;/span>
-	&lt;span class="clear">&lt;/span>
-	&lt;input type="text" size="30">
-
-	&lt;span class="customErrorValidation">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-
-&lt;label>
-	&lt;span class="name">à la ligne extensible (css uniquement)&lt;/span>
-	&lt;span class="clear">&lt;/span>
-	&lt;input class="formflex_full_width" type="text" size="30">
-
-	&lt;span class="customErrorValidation">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -168,6 +139,7 @@ function generateRandomString() {
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <div class="bloc_intermediaire_embetant relay">
 <?php for($i=1;$i<=3;$i++){ ?>
@@ -188,15 +160,11 @@ function generateRandomString() {
 	</label>
 </div>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&ltlabel>
-	&ltspan class="name no_size">label non aligné aux autres grace à la class no_size (voir infos)&lt/span>
-	&ltinput type="text" size="30">
-
-	&ltspan class="customErrorValidation">&lt/span>
-	&ltspan class="clear">&lt/span>
-&lt/label>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 <blockquote>
 - les blocs alignent la taille de leurs intitulés automatiquement grace à la fonction align_name (rien à ajouter).<br />
@@ -264,6 +232,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset class="search">
 	<button type="submit">
@@ -289,31 +258,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	</label>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&ltfieldset class="search">
-	&ltbutton type="submit">
-		&lti class="fa fa-search">&lt/i>
-	&lt/button>
-	&ltlabel>
-		&ltinput type="text" size="30" name="street">
-
-		&ltspan class="customErrorValidation" data-name="street">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-&lt/fieldset>
-
-&ltfieldset class="search under_style">
-	&ltbutton type="submit">
-		&lti class="fa fa-search">&lt/i>
-	&lt/button>
-	&ltlabel>
-		&ltinput type="text" size="30" name="street">
-
-		&ltspan class="customErrorValidation" data-name="street">&lt/span>
-		&ltspan class="clear">&lt/span>
-	&lt/label>
-&lt/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -335,6 +284,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <label>
 	<span class="name">select inline</span>
@@ -374,47 +324,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </label>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;label>
-	&lt;span class="name">select inline&lt;/span>
-	&lt;span class="classic_select">
-		&lt;select name="" id="">
-			&lt;option value="">option1&lt;/option>
-			&lt;option value="">option2&lt;/option>
-			&lt;option value="">option3&lt;/option>
-		&lt;/select>
-	&lt;/span>
-
-	&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-
-&lt;label>
-	&lt;span class="name">select full&lt;/span>
-	&lt;span class="clear">&lt;/span>
-	&lt;span class="classic_select formflex_full_width">
-		&lt;select name="" id="">
-			&lt;option value="">option1&lt;/option>
-			&lt;option value="">option2&lt;/option>
-			&lt;option value="">option3&lt;/option>
-		&lt;/select>
-	&lt;/span>
-
-	&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-
-&lt;label class="to_the_right">
-	&lt;span class="name">select to the right&lt;/span>
-	&lt;div class="classic_select">
-		&lt;select name="" id="">
-			&lt;option value="">Homme&lt;/option>
-		&lt;/select>
-	&lt;/div>
-	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -456,6 +370,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <label class="formflex-checkbox checkskin">
 	<span class="input">
@@ -538,88 +453,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	</label>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;label class="formflex-checkbox checkskin">
-	&lt;span class="input">
-		&lt;i class="fa fa-check">&lt;/i>
-		&lt;input type="checkbox" name="test3">
-	&lt;/span>
-	&lt;span class="name">Mercredi 19 fé fg sdfgdfg dfg dfgdf gd gdfg dfgd fsdfsdf sdfsdf sdfsdfsdfsdfsdfsdfsdf sdfsdfsdfsdfsd fsdfs fsdfsdfsdfdgdfgdfgdfgdfg dfg dfgdfg dfg dfg dgdgdfgdgdfgdfg dfg dfg dgdfgd dfg dfgdf gdg dfg&lt;/span>
-
-	&lt;span class="customErrorValidation">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-
-&lt;fieldset>
-	&lt;legend>Enchainement horizontal classique de checkskins&lt;/legend>
-	&lt;spoan class="clear">&lt;/spoan>
-	&lt;label class="formflex-radio checkskin">
-		&lt;span class="input">
-			&lt;i class="fa fa-check">&lt;/i>
-			&lt;input type="radio" name="test3">
-		&lt;/span>
-		&lt;span class="name">radio1&lt;/span>
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label class="formflex-radio checkskin">
-		&lt;span class="input">
-			&lt;i class="fa fa-check">&lt;/i>
-			&lt;input type="radio" name="test3">
-		&lt;/span>
-		&lt;span class="name">radio2&lt;/span>
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-&lt;/fieldset>
-
-&lt;fieldset class="no_float">
-	&lt;legend>Enchainement vertical utilisant la class no_float&lt;/legend>
-	&lt;span class="clear">&lt;/span>
-	&lt;label class="formflex-radio checkskin">
-		&lt;span class="input">
-			&lt;i class="fa fa-check">&lt;/i>
-			&lt;input type="radio" name="test3">
-		&lt;/span>
-		&lt;span class="name">radio1&lt;/span>
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label class="formflex-radio checkskin">
-		&lt;span class="input">
-			&lt;i class="fa fa-check">&lt;/i>
-			&lt;input type="radio" name="test3">
-		&lt;/span>
-		&lt;span class="name">radio2&lt;/span>
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-&lt;/fieldset>
-
-&lt;fieldset>
-	&lt;legend>Enchainement horizontal d'un checkskin sans name et d'un input text&lt;/legend>
-	&lt;span class="clear">&lt;/span>
-	&lt;label class="formflex-checkbox checkskin">
-		&lt;span class="input">
-			&lt;i class="fa fa-check">&lt;/i>
-			&lt;input type="checkbox" name="test3">
-		&lt;/span>
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;input type="text" size="30">
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-&lt;/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -649,6 +487,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset class="bd_sep equalize">
 	<legend>class equalize utilisée, ainsi que bd_sep (utilisation non liée)</legend>
@@ -668,25 +507,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<?php } ?>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;fieldset class="bd_sep equalize">
-	&lt;legend>class equalize utilisée, ainsi que bd_sep (utilisation non liée)&lt;/legend>
-	&lt;span class="clear">&lt;/span>
-
-	&lt;?php for($i=1;$i&lt;=10;$i++){ ?>
-	&lt;label class="formflex-radio checkskin">
-		&lt;span class="input">
-			&lt;i class="fa fa-check">&lt;/i>
-			&lt;input type="radio" name="test3">
-		&lt;/span>
-		&lt;span class="name">&lt;?php echo generateRandomString(); ?>&lt;/span>
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;?php } ?>
-&lt;/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -710,6 +535,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <label>
 	<span class="name">textarea horizontal</span>
@@ -728,24 +554,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </label>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;label>
-	&lt;span class="name">textarea horizontal&lt;/span>
-	&lt;textarea name="" id="" cols="30" rows="10">&lt;/textarea>
-
-	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-
-&lt;label>
-	&lt;span class="name">textarea full width&lt;/span>
-	&lt;span class="clear">&lt;/span>
-	&lt;textarea class="formflex_full_width" name="" id="" cols="30" rows="10">&lt;/textarea>
-
-	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -776,6 +589,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset>
 	<legend>Adresse</legend>
@@ -803,33 +617,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;fieldset>
-	&lt;legend>Adresse&lt;/legend>
-	&lt;label>
-		&lt;span class="name">Rue&lt;/span>
-		&lt;input type="text" size="30" name="street">
-
-		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="name">num&lt;/span>
-		&lt;input type="text" size="5" name="street_nbr">
-
-		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="name">CP&lt;/span>
-		&lt;input type="text" size="10" name="street_nbr">
-
-		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;span class="clear">&lt;/span>
-&lt;/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -848,6 +640,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset>
 	<label class="cols">
@@ -891,50 +684,17 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;fieldset>
-	&lt;label class="cols">
-		&lt;span class="name">CP*&lt;/span>
-		&lt;span class="clear">&lt;/span>
-		&lt;input class="formflex_full_width" type="text" size="10" name="street">
-
-		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label class="cols">
-		&lt;span class="name">Localité*&lt;/span>
-		&lt;span class="clear">&lt;/span>
-		&lt;input class="formflex_full_width" type="text" size="10" name="street">
-
-		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;span class="clear">&lt;/span>
-&lt;/fieldset>
-
-&lt;fieldset>
-	&lt;label class="cols to_the_right">
-		&lt;span class="name forced_align">CP*&lt;/span>
-		&lt;input type="text" size="10" name="street">
-
-		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label class="cols to_the_right">
-		&lt;span class="name">Localité*&lt;/span>
-		&lt;input type="text" size="10" name="street_nbr">
-
-		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;span class="clear">&lt;/span>
-&lt;/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset class="semi_float">
 	<legend>Adresse</legend>
@@ -962,33 +722,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;fieldset class="semi_float">
-	&lt;legend>Adresse&lt;/legend>
-	&lt;label>
-		&lt;span class="name">Rue&lt;/span>
-		&lt;input type="text" size="30" name="street">
-
-		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="name">num&lt;/span>
-		&lt;input type="text" size="5" name="street_nbr">
-
-		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="name">CP&lt;/span>
-		&lt;input type="text" size="10" name="street_nbr">
-
-		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;span class="clear">&lt;/span>
-&lt;/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -1006,6 +744,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset class="semi_float">
 	<label>
@@ -1036,38 +775,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;fieldset class="semi_float">
-	&lt;label>
-		&lt;span class="name">Rue&lt;/span>
-		&lt;input type="text" size="30" name="street">
-
-		&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="name">num&lt;/span>
-		&lt;div class="classic_select">
-			&lt;select name="" id="">
-				&lt;option value="">mois&lt;/option>
-			&lt;/select>
-		&lt;/div>
-		&lt;span class="name">mois&lt;/span>
-
-		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="name">CP&lt;/span>
-		&lt;input type="text" size="10" name="street_nbr">
-		&lt;span class="name">%&lt;/span>
-
-		&lt;span class="customErrorValidation" data-name="street_nbr">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;span class="clear">&lt;/span>
-&lt;/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -1109,6 +821,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <label>
 	<span class="name">Upload des fichiers</span>
@@ -1137,34 +850,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<?php } ?>
 </ul>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;label>
-	&lt;span class="name">Upload des fichiers&lt;/span>
-	&lt;span class="clear">&lt;/span>
-	&lt;div class="classic_file">
-		&lt;span class="classic_file_infos">Fichier pdf...&lt;/span>
-		&lt;span class="classic_file_btn">Parcourir&lt;/span>
-		&lt;input type="file">
-	&lt;/div>
-	&lt;span class="customErrorValidation" data-name="street">&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-
-&lt;ul class="files_uploaded" id="ma_liste_de_fichiers">
-	&lt;li class="template">
-		&lt;a href="">&lt;/a>
-		&lt;span data-url="" class="delete_uploaded_file">&lt;i class="fa fa-times-circle">&lt;/i>&lt;/span>
-		&lt;input type="hidden">
-	&lt;/li>
-	&lt;?php for($i=1;$i&lt;=3;$i++){ ?>
-	&lt;li>
-		&lt;a href="">fichier_pdf_numero_xxxx.pdf&lt;/a>
-		&lt;span data-url="" class="delete_uploaded_file">&lt;i class="fa fa-times-circle">&lt;/i>&lt;/span>
-		&lt;input type="hidden">
-	&lt;/li>
-	&lt;?php } ?>
-&lt;/ul>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -1183,6 +873,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <span class="pickadate_button">
 	Ajouter une date <i class="fa fa-calendar"></i>
@@ -1203,26 +894,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<?php } ?>
 </ul>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;span class="pickadate_button">
-	Ajouter une date &lt;i class="fa fa-calendar">&lt;/i>
-&lt;/span>
-
-&lt;ul class="dates_uploaded" id="ma_liste_de_dates">
-	&lt;li class="template">
-		&lt;a href="">&lt;/a>
-		&lt;span data-url="" class="delete_uploaded_file">&lt;i class="fa fa-times-circle">&lt;/i>&lt;/span>
-		&lt;input type="hidden">
-	&lt;/li>
-	&lt;?php for($i=1;$i&lt;=3;$i++){ ?>
-	&lt;li>
-		&lt;a href="">fichier_pdf_numero_xxxx.pdf&lt;/a>
-		&lt;span data-url="" class="delete_uploaded_file">&lt;i class="fa fa-times-circle">&lt;/i>&lt;/span>
-		&lt;input type="hidden">
-	&lt;/li>
-	&lt;?php } ?>
-&lt;/ul>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -1247,6 +923,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset class="unify">
 	<label>
@@ -1265,26 +942,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	</label>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;fieldset class="unify">
-	&lt;label>
-		&lt;input type="text" size="12" placeholder="Votre commune">
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="classic_select gray">
-			&lt;select name="" id="">
-				&lt;option value="">+ 0 km&lt;/option>
-			&lt;/select>
-		&lt;/span>
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-&lt;/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -1308,6 +970,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <label class="star checkskin">
 	<span class="input">
@@ -1328,26 +991,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </label>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;label class="star checkskin">
-	&lt;span class="input">
-		&lt;i class="fa fa-star">&lt;/i>
-		&lt;i class="fa fa-star-o">&lt;/i>
-		&lt;input type="checkbox" name="test3">
-	&lt;/span>
-	&lt;span class="name">Mercredi 19 fé&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
-&lt;label class="star checkskin other">
-	&lt;span class="name no_size">Mercredi 19 fé&lt;/span>
-	&lt;span class="input">
-		&lt;i class="fa fa-star">&lt;/i>
-		&lt;i class="fa fa-star-o">&lt;/i>
-		&lt;input type="checkbox" name="test3">
-	&lt;/span>
-	&lt;span class="clear">&lt;/span>
-&lt;/label>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -1365,6 +1013,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset>
 	<?php for($i=1;$i<=5;$i++){ ?>
@@ -1379,20 +1028,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<?php } ?>
 </fieldset>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;fieldset>
-	&lt;?php for($i=1;$i&lt;=5;$i++){ ?>
-	&lt;label class="star checkskin">
-		&lt;span class="input">
-			&lt;i class="fa fa-star">&lt;/i>
-			&lt;i class="fa fa-star-o">&lt;/i>
-			&lt;input type="radio" name="test3">
-		&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;?php } ?>
-&lt;/fieldset>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -1426,6 +1066,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <ul class="lang_menu" data-lang-menu="commentaires_test">
 	<li data-lang="fr">fr</li>
@@ -1455,7 +1096,12 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </label>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
 <blockquote>
 - utiliser l'attribut "data-lang-menu" sur le menu des langues et lui donner une valeur unique (ex:menu_test).<br />
 <br />
@@ -1492,6 +1138,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset>
 	<legend>j'affiche la suite ?</legend>
@@ -1588,7 +1235,12 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 	<span class="clear"></span>
 </label>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
 <blockquote>
 - utiliser l'attribut "data-radio-auto-menu" sur chaque élément
 de commande (label.formflex-radio) et y spécifier le mot clé lié à ce choix<br />
@@ -1628,6 +1280,7 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <label class="formflex-checkbox checkskin" data-checkbox-auto-menu="afficher_checkbox_suite">
 	<span class="input">
@@ -1646,8 +1299,12 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 	<span class="clear"></span>
 </label>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
-
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
 <blockquote>
 - utiliser l'attribut "data-checkbox-auto-menu" sur l'élément de commande (label.checkbox) et y spécifier le mot clé unique lié à ce choix<br />
 <br />
@@ -1675,6 +1332,7 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <fieldset>
 	<legend>j'affiche la suite ? (select)</legend>
@@ -1714,7 +1372,12 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 	<span class="clear"></span>
 </label>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
 <blockquote>
 - utiliser l'attribut "data-select-auto-menu" sur le "classic_select"
 et y spécifier le mot clé lié à cette question (sans la terminaison)<br />
@@ -1758,6 +1421,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 <fieldset data-group="simple1">
 	<label>
 		<span class="name">champs-1</span>
@@ -1778,13 +1442,19 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 		<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
 	</label>
 </fieldset>
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
 
 <div class="formflex_title_2">
 	Exemple 2 : identique, avec le système de tri en plus
 </div>
 
 <div class="form">
+<?php ob_start(); ?>
 <div class="sortable">
 	<fieldset data-group="simple1_tri">
 		<label>
@@ -1811,62 +1481,11 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 		</label>
 	</fieldset>
 </div><!-- \sortable -->
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
-
 <pre>
-&lt;fieldset data-group="simple1">
-	&lt;label>
-		&lt;span class="name">champs-1&lt;/span>
-		&lt;input type="text" size="30">
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="name">champs-2&lt;/span>
-		&lt;input type="text" size="30">
-
-		&lt;span class="customErrorValidation">&lt;/span>
-		&lt;span class="clear">&lt;/span>
-	&lt;/label>
-	&lt;label>
-		&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
-		&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
-	&lt;/label>
-&lt;/fieldset>
-&lt;/div>&lt;!-- /form -->
-
-&lt;div class="formflex_title_2">
-	Exemple 2 : identique, avec le système de tri en plus
-&lt;/div>
-
-&lt;div class="form">
-&lt;div class="sortable">
-	&lt;fieldset data-group="simple1_tri">
-		&lt;label>
-			&lt;input type="hidden" value="0" class="sortable_get_position">
-			&lt;span class="round_icon gray_on_white move">&lt;i class="fa fa-arrows">&lt;/i>&lt;/span>
-		&lt;/label>
-		&lt;label>
-			&lt;span class="name">champs-1&lt;/span>
-			&lt;input type="text" size="30">
-
-			&lt;span class="customErrorValidation">&lt;/span>
-			&lt;span class="clear">&lt;/span>
-		&lt;/label>
-		&lt;label>
-			&lt;span class="name">champs-2&lt;/span>
-			&lt;input type="text" size="30">
-
-			&lt;span class="customErrorValidation">&lt;/span>
-			&lt;span class="clear">&lt;/span>
-		&lt;/label>
-		&lt;label>
-			&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
-			&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
-		&lt;/label>
-	&lt;/fieldset>
-&lt;/div>&lt;!-- \sortable -->
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 <blockquote>
 - commencez par identifier un groupe dupplicable en lui ajoutant l'attribut data-group, contenant un identifiant unique.<br />
@@ -1899,6 +1518,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <div class="children_templates">
 	<div class="category" data-child-template="classic_child1">
@@ -1934,7 +1554,12 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 	</div><!-- \category -->
 </div>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
 
 
 
@@ -1955,6 +1580,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 <div class="replace_names_link">afficher names</div>
 
 <div class="form">
+<?php ob_start(); ?>
 
 <ul class="lang_menu mode_popup" data-lang-menu="children_test">
 	<li data-lang="fr">fr</li>
@@ -2021,72 +1647,11 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 	</span>
 </div>
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;ul class="lang_menu mode_popup" data-lang-menu="children_test">
-	&lt;li data-lang="fr">fr&lt;/li>
-	&lt;li data-lang="nl">nl&lt;/li>
-	&lt;li data-lang="en">en&lt;/li>
-&lt;/ul>
-
-&lt;div class="sortable">
-&lt;div class="category manual_increment" data-group-cpt="999" data-group="children_group_erer" data-this-cpt="0">
-	&lt;div>
-		&lt;?php for($i=1;$i&lt;=3;$i++) : ?>
-		&lt;?php
-			if($i==1){$lang="fr";}
-			if($i==2){$lang="nl";}
-			if($i==3){$lang="en";}
-		?>
-		&lt;fieldset data-lang-target="children_test-&lt;?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="&lt;?php echo $lang; ?>" data-form-base="form[pages][1295]">
-			&lt;label>
-				&lt;input type="hidden" value="0" class="sortable_get_position">
-				&lt;span class="round_icon gray_on_white move">&lt;i class="fa fa-arrows">&lt;/i>&lt;/span>
-			&lt;/label>
-
-			&lt;label>
-				&lt;span class="name">rue&lt;/span>
-				&lt;input type="text" name="form[pages][1295][0][street][&lt;?php echo $lang; ?>]" data-name="street" size="30" value="">
-
-				&lt;span class="customErrorValidation">&lt;/span>
-				&lt;span class="clear">&lt;/span>
-			&lt;/label>
-
-			&lt;label>
-				&lt;span class="name">numero&lt;/span>
-				&lt;input type="text" name="form[pages][1295][0][number][&lt;?php echo $lang; ?>]" data-name="number" size="5" value="">
-
-				&lt;span class="customErrorValidation">&lt;/span>
-				&lt;span class="clear">&lt;/span>
-			&lt;/label>
-
-			&lt;label>
-				&lt;span class="name">Ville test&lt;/span>
-				&lt;input type="text" name="form[pages][1295][0][city][&lt;?php echo $lang; ?>]" data-name="city" size="20" value="">
-
-				&lt;span class="customErrorValidation">&lt;/span>
-				&lt;span class="clear">&lt;/span>
-			&lt;/label>
-
-			&lt;label>
-				&lt;span class="round_icon blue children_add" data-child-template-cmd="classic_child1">&lt;i class="fa fa-caret-square-o-down">&lt;/i>&lt;/span>
-				&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
-				&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
-			&lt;/label>
-		&lt;/fieldset>
-		&lt;?php endfor; ?>
-	&lt;/div>
-&lt;/div>&lt;!-- /category -->
-&lt;/div>&lt;!-- /sortable -->
-
-&lt;div class="zone_add_from_ext">
-	&lt;span class="round_icon green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
-		&lt;i class="fa fa-plus">&lt;/i>
-	&lt;/span>
-	&lt;span class="text">
-		Morbi sed augue nisi. Vivamus vehicula eros in lorem auctor, adipiscing pretium urna pulvinar. Praesent vitae imperdiet ante. Mauris eu pellentesque magna. Donec consectetur mauris orci, ultricies congue mauris ultricies vel. Aliquam ac lectus massa. Ut ac est turpis.
-	&lt;/span>
-&lt;/div>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 <blockquote>
 - commencez par identifier un groupe dupplicable en lui ajoutant l'attribut data-group, contenant un identifiant unique.<br />
@@ -2116,6 +1681,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <ul class="lang_menu" data-lang-menu="testation">
 	<li data-lang="fr">fr</li>
@@ -2154,44 +1720,11 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 </div><!-- /category -->
 </div><!-- /sortable -->
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;ul class="lang_menu" data-lang-menu="testation">
-	&lt;li data-lang="fr">fr&lt;/li>
-	&lt;li data-lang="nl">nl&lt;/li>
-	&lt;li data-lang="en">en&lt;/li>
-&lt;/ul>
-
-&lt;div class="sortable">
-&lt;div class="category manual_increment" data-group="testation">
-	&lt;?php for($i=1;$i&lt;=3;$i++) : ?>
-	&lt;?php
-		if($i==1){$lang="fr";}
-		if($i==2){$lang="nl";}
-		if($i==3){$lang="en";}
-	?>
-	&lt;fieldset data-lang-target="testation-&lt;?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="&lt;?php echo $lang; ?>" data-form-base="form[pages][1295]">
-		&lt;label>
-			&lt;input type="hidden" value="0" class="sortable_get_position">
-			&lt;span class="round_icon gray_on_white move">&lt;i class="fa fa-arrows">&lt;/i>&lt;/span>
-		&lt;/label>
-
-		&lt;label>
-			&lt;span class="name">Ville&lt;/span>
-			&lt;input type="text" name="form[pages][1295][0][city]" data-name="city" size="50" value="">
-
-			&lt;span class="customErrorValidation">&lt;/span>
-			&lt;span class="clear">&lt;/span>
-		&lt;/label>
-
-		&lt;label>
-			&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
-			&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
-		&lt;/label>
-	&lt;/fieldset>
-	&lt;?php endfor; ?>
-&lt;/div>&lt;!-- /category -->
-&lt;/div>&lt;!-- /sortable -->
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
 
@@ -2205,6 +1738,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 <div class="form">
+<?php ob_start(); ?>
 
 <div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
 	<fieldset data-form-base="form[pages][1295]">
@@ -2237,38 +1771,11 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 	</fieldset>
 </div><!-- /category -->
 
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
 <pre>
-&lt;div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
-	&lt;fieldset data-form-base="form[pages][1295]">
-		&lt;label class="formflex-radio checkskin">
-			&lt;span class="input">
-				&lt;i class="fa fa-check">&lt;/i>
-				&lt;input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
-			&lt;/span>
-			&lt;span class="name">oui&lt;/span>
-
-			&lt;span class="customErrorValidation">&lt;/span>
-			&lt;span class="clear">&lt;/span>
-		&lt;/label>
-
-		&lt;label class="formflex-radio checkskin">
-			&lt;span class="input">
-				&lt;i class="fa fa-check">&lt;/i>
-				&lt;input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
-			&lt;/span>
-			&lt;span class="name">non&lt;/span>
-
-			&lt;span class="customErrorValidation">&lt;/span>
-			&lt;span class="clear">&lt;/span>
-		&lt;/label>
-
-		&lt;label>
-			&lt;span class="round_icon red delete">&lt;i class="fa fa-trash">&lt;/i>&lt;/span>
-			&lt;span class="round_icon green dupplicate">&lt;i class="fa fa-plus">&lt;/i>&lt;/span>
-		&lt;/label>
-	&lt;/fieldset>
-&lt;/div>&lt;!-- /category -->
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 <blockquote>
 si on supprime l'attribut "data-name" des inputs, le système marche toujours mais n'ajoute pas les derniers crochets. Ca se finit donc sur le nombre incrémenté
@@ -2293,6 +1800,8 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 <div class="replace_names_link">afficher names</div>
 
 <div class="form">
+<?php ob_start(); ?>
+
 <div class="sortable">
 <div class="category manual_increment" data-group-cpt="2" data-group="children_group_efgdgfrer" data-this-cpt="0">
 	<fieldset data-form-base="form[pages][1295]">
@@ -2311,11 +1820,9 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">num</span>
-			<div class="classic_select">
-				<select name="form[pages][1295][0][num]" data-name="num">
-					<option value="">mois</option>
-				</select>
-			</div>
+			<select class="ffx-select" name="form[pages][1295][0][num]" data-name="num">
+				<option value="">mois</option>
+			</select>
 
 			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="clear"></span>
@@ -2344,11 +1851,9 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">num</span>
-			<div class="classic_select">
-				<select name="form[pages][1295][1][num]" data-name="num">
-					<option value="">mois</option>
-				</select>
-			</div>
+			<select class="ffx-select" name="form[pages][1295][1][num]" data-name="num">
+				<option value="">mois</option>
+			</select>
 
 			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="clear"></span>
@@ -2377,11 +1882,9 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">num</span>
-			<div class="classic_select">
-				<select name="form[pages][1295][2][num]" data-name="num">
-					<option value="">mois</option>
-				</select>
-			</div>
+			<select class="ffx-select" name="form[pages][1295][2][num]" data-name="num">
+				<option value="">mois</option>
+			</select>
 
 			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="clear"></span>
@@ -2394,7 +1897,13 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	</fieldset>
 </div><!-- /category -->
 </div><!-- /sortable -->
+
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
 
 
 
@@ -2418,33 +1927,39 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 <div class="replace_names_link">afficher names</div>
 
 <div class="form">
-	<fieldset class="category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-form-base="form[pages][1295]">
-		<label>
-			<span class="name">rue</span>
-			<input type="text" name="sdfsdfsdf" data-name="street" size="30" value="">
+<?php ob_start(); ?>
 
-			<span class="customErrorValidation"></span>
-			<span class="clear"></span>
-		</label>
+<fieldset class="category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-form-base="form[pages][1295]">
+	<label>
+		<span class="name">rue</span>
+		<input type="text" name="sdfsdfsdf" data-name="street" size="30" value="">
 
-		<label>
-			<span class="name">num</span>
-			<div class="classic_select">
-				<select name="sdfsdf" data-name="num">
-					<option value="">mois</option>
-				</select>
-			</div>
+		<span class="customErrorValidation"></span>
+		<span class="clear"></span>
+	</label>
 
-			<span class="customErrorValidation" data-name="street_nbr"></span>
-			<span class="clear"></span>
-		</label>
+	<label>
+		<span class="name">num</span>
+		<select class="ffx-select" name="sdfsdf" data-name="num">
+			<option value="">mois</option>
+		</select>
 
-		<label>
-			<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-			<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
-		</label>
-	</fieldset>
+		<span class="customErrorValidation" data-name="street_nbr"></span>
+		<span class="clear"></span>
+	</label>
+
+	<label>
+		<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
+		<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+	</label>
+</fieldset>
+
+<?php $ffx_example_code = ob_get_clean(); ?>
+<?php echo $ffx_example_code; ?>
 </div><!-- /form -->
+<pre>
+<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
+</pre>
 
 </form>
 
