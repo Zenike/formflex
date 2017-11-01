@@ -119,7 +119,7 @@ function align_names() {
 
 
 
-//ajuster la largeur des champs éléments to_the_right
+//ajuster la largeur des champs éléments ffx-righting-box
 $(document).ready(function () {
     to_the_right();
 });//ready
@@ -127,15 +127,11 @@ $(document).on("formflex_refresh", function(options){
 	to_the_right();
 });
 function to_the_right() {
-    $("label.to_the_right").each(function (k, v) {
-		var element = $(this).find("input, .ffx-select");
+    $(".ffx-righting-box").each(function (k, v) {
+		var name = $(this).parent().find(".name");
+		var name_width = name.width() + 3;
 
-        var wrapper_width = $(this).width();
-		var element_pos_left = element.position().left+parseInt(element.css("margin-left"));
-		//var element_marg_left = parseInt(element.css("margin-left"));
-		var element_dead_width = element.outerWidth()-element.width();
-
-		element.width(wrapper_width-element_dead_width-element_pos_left);
+		$(this).css("left",name_width);
     });
 };
 

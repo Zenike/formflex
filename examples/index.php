@@ -70,9 +70,11 @@ function generateRandomString() {
 	<span class="clear"></span>
 </label>
 
-<label class="to_the_right">
+<label>
 	<span class="name">horizontal extensible (script)</span>
-	<input type="text" size="30">
+	<span class="ffx-righting-box">
+		<input type="text" size="30">
+	</span>
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
@@ -359,13 +361,15 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="clear"></span>
 </label>
 
-<label class="to_the_right">
+<label>
 	<span class="name">select to the right</span>
-	<select name="" id="" class="ffx-select">
-		<option value="">option1</option>
-		<option value="">option2</option>
-		<option value="">option3</option>
-	</select>
+	<span class="ffx-righting-box">
+		<select name="" id="" class="ffx-select">
+			<option value="">option1</option>
+			<option value="">option2</option>
+			<option value="">option3</option>
+		</select>
+	</span>
 	<span class="customErrorValidation" data-name="street"></span>
 	<span class="clear"></span>
 </label>
@@ -866,16 +870,20 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </fieldset>
 
 <fieldset>
-	<label class="cols to_the_right">
+	<label class="cols">
 		<span class="name forced_align">CP*</span>
-		<input type="text" size="10" name="street">
+		<span class="ffx-righting-box">
+			<input type="text" size="10" name="street">
+		</span>
 
 		<span class="customErrorValidation" data-name="street"></span>
 		<span class="clear"></span>
 	</label>
-	<label class="cols to_the_right">
+	<label class="cols">
 		<span class="name">Localité*</span>
-		<input type="text" size="10" name="street_nbr">
+		<span class="ffx-righting-box">
+			<input type="text" size="10" name="street">
+		</span>
 
 		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="clear"></span>
@@ -1009,11 +1017,9 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	</label>
 	<label>
 		<span class="name">num</span>
-		<div class="classic_select">
-			<select name="" id="">
-				<option value="">mois</option>
-			</select>
-		</div>
+		<select class="ffx-select" name="" id="">
+			<option value="">mois</option>
+		</select>
 		<span class="name">mois</span>
 
 		<span class="customErrorValidation" data-name="street_nbr"></span>
@@ -1250,11 +1256,9 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		<span class="clear"></span>
 	</label>
 	<label>
-		<span class="classic_select gray">
-			<select name="" id="">
-				<option value="">+ 0 km</option>
-			</select>
-		</span>
+		<select class="ffx-select" name="" id="">
+			<option value="">+ 0 km</option>
+		</select>
 
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
@@ -1674,14 +1678,12 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 
 <fieldset>
 	<legend>j'affiche la suite ? (select)</legend>
-	<div class="classic_select" data-select-auto-menu="afficher_suite_select">
-		<select name="" id="">
-			<option value="" data-key="">-</option>
-			<option value="" data-key="oui">oui</option>
-			<option value="" data-key="non">non</option>
-			<option value="" data-key="ptet">ptet</option>
-		</select>
-	</div>
+	<select class="ffx-select" name="" id="">
+		<option value="" data-key="">-</option>
+		<option value="" data-key="oui">oui</option>
+		<option value="" data-key="non">non</option>
+		<option value="" data-key="ptet">ptet</option>
+	</select>
 </fieldset>
 <label data-target="afficher_suite_select-oui">
 	<span class="name">oui</span>

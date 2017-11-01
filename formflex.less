@@ -94,6 +94,17 @@ position: relative;
 	}
 }
 
+.ffx-righting-box {
+position: absolute;
+top: 0;
+right: 0;
+	.ffx-select,input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="date"],input[type="email"],.ffx-select {
+	width: 100%;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	}
+}
+
 .classic_file {
 position: relative;
 overflow: hidden;
@@ -595,19 +606,19 @@ padding: 0;
 		margin-left: 50px;
 		}
 		&.unify {
-			input,.classic_select {
+			input,.ffx-select {
 			margin-left: 0!important;
 			margin-right: 0!important;
 			}
 			label:first-child {
-				input,.classic_select {
+				input,.ffx-select {
 				border-top-right-radius: 0;
 				border-bottom-right-radius: 0;
 				border-right: 0;
 				}
 			}
 			label + label {
-				input,.classic_select {
+				input,.ffx-select {
 				border-top-left-radius: 0;
 				border-bottom-left-radius: 0;
 				border-left: 0;
@@ -724,7 +735,7 @@ padding: 0;
 	margin: 0;
 	}
 	.clear+label {
-		.classic_select:first-child {
+		.ffx-select:first-child {
 		margin-left: 0;
 		}
 	}
@@ -812,7 +823,7 @@ padding: 0;
 	color: @formflex_input_fontcolor;
 	opacity: 0.8;
 	}
-	.classic_select {
+	.ffx-select {
 	margin: 0 3px;
 	float: left;
 		&:first-child {
@@ -837,15 +848,7 @@ padding: 0;
 			}
 		}
 	}
-	.to_the_right {
-		input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="date"],input[type="email"],.classic_select {
-		margin-right: 0;
-			select {
-			width: 100%;
-			}
-		}
-	}
-	.clear+input[type="text"],.clear+input[type="password"],.clear+input[type="number"],.clear+input[type="tel"],.clear+input[type="email"],.clear+input[type="date"],.clear+.classic_select,.clear+.classic_file {
+	.clear+input[type="text"],.clear+input[type="password"],.clear+input[type="number"],.clear+input[type="tel"],.clear+input[type="email"],.clear+input[type="date"],.clear+.ffx-select,.clear+.classic_file {
 	margin-left: 0;
 	}
 	.label_group {
@@ -861,7 +864,7 @@ padding: 0;
 		fieldset {
 		margin: 0;
 		}
-		.classic_select {
+		.ffx-select {
 		margin-bottom: 3px;
 		}
 	}
@@ -897,7 +900,7 @@ padding: 0;
 	margin-left: 0;
 	}
 	&.off_form {
-		.classic_select {
+		.ffx-select {
 		background: none;
 		background-color: @formflex_input_disbled_bgcolor;
 		border: 1px solid @formflex_bd;
