@@ -380,7 +380,7 @@ label.star {
 	}
 }
 
-.lang_menu {
+.ffx-lang-menu {
 overflow: hidden;
 border-bottom: 1px solid @formflex_bd;
 list-style-type: none;
@@ -391,20 +391,88 @@ padding: 0;
 	}
 	li {
 	float: left;
-	padding: 5px;
+	padding: 5px 15px;
 	background-color: @formflex_main_color_theme;
-	font-size: 14px;
+	font-size: @formflex_input_font_size;
 	color: #fff;
 	cursor: pointer;
-	margin-right: 3px;
+	margin-right: 1px;
 		&:hover, &.selected {
-		background-color: darken(@formflex_main_color_theme,30%);
+		background-color: darken(@formflex_main_color_theme,20%);
 		color: #fff;
 		}
 	}
 }
 
-/******* STRUCTURE FORM *********/
+.ffx-fieldset {
+padding: 0;
+border: none;
+margin: 5px 0;
+position: relative;
+display: block;
+	label {
+	float: left;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+	label:first-child {
+		.name:first-child {
+		margin-left: 0;
+		}
+	}
+	.clear+label {
+		.name:first-child {
+		margin-left: 0;
+		}
+	}
+	&.no_float {
+		legend {
+		float: none;
+		margin-left: 0;
+		margin-bottom: 5px;
+		}
+		label {
+		float: none;
+		margin-left: 0;
+		}
+	}
+	&.semi_float {
+		legend {
+		float: none;
+		margin-left: 0;
+		margin-bottom: 5px;
+		margin-bottom: 0;
+		}
+		label {
+			* {
+			margin-left: 0;
+			}
+			*:first-child {
+			float: none;
+			}
+		}
+	}
+	&.ffx-fieldset--unify {
+		input,.ffx-select {
+		margin-left: 0!important;
+		margin-right: 0!important;
+		}
+		label:first-child {
+			input,.ffx-select {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-right: 0;
+			}
+		}
+		label + label {
+			input,.ffx-select {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			border-left: 0;
+			}
+		}
+	}
+}//.ffx-fieldset
 
 .form {
 	textarea:hover,
@@ -520,75 +588,6 @@ padding: 0;
 	}
 	.children_wrapper {
 	margin-left: 50px;
-	}
-	.ffx-fieldset {
-	padding: 0;
-	border: none;
-	margin: 5px 0;
-	position: relative;
-	display: block;
-		label {
-		float: left;
-		margin-top: 0;
-		margin-bottom: 0;
-		}
-		label:first-child {
-			.name:first-child {
-			margin-left: 0;
-			}
-		}
-		.clear+label {
-			.name:first-child {
-			margin-left: 0;
-			}
-		}
-		&.no_float {
-			legend {
-			float: none;
-			margin-left: 0;
-			margin-bottom: 5px;
-			}
-			label {
-			float: none;
-			margin-left: 0;
-			}
-		}
-		&.semi_float {
-			legend {
-			float: none;
-			margin-left: 0;
-			margin-bottom: 5px;
-			margin-bottom: 0;
-			}
-			label {
-				* {
-				margin-left: 0;
-				}
-				*:first-child {
-				float: none;
-				}
-			}
-		}
-		&.ffx-fieldset--unify {
-			input,.ffx-select {
-			margin-left: 0!important;
-			margin-right: 0!important;
-			}
-			label:first-child {
-				input,.ffx-select {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-				border-right: 0;
-				}
-			}
-			label + label {
-				input,.ffx-select {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-				border-left: 0;
-				}
-			}
-		}
 	}
 	.search {
 		button {

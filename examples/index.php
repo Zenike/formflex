@@ -1012,7 +1012,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <div class="form">
 <?php ob_start(); ?>
 
-<ul class="lang_menu" data-lang-menu="commentaires_test">
+<ul class="ffx-lang-menu" data-lang-menu="commentaires_test">
 	<li data-lang="fr">fr</li>
 	<li data-lang="nl">nl</li>
 	<li data-lang="en">en</li>
@@ -1280,35 +1280,35 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 
 <fieldset class="ffx-fieldset">
 	<legend>j'affiche la suite ? (select)</legend>
-	<select class="ffx-select" name="" id="">
+	<select class="ffx-select" data-ffx-select-automenu="afficher_suite_select" name="" id="">
 		<option value="" data-key="">-</option>
 		<option value="" data-key="oui">oui</option>
 		<option value="" data-key="non">non</option>
 		<option value="" data-key="ptet">ptet</option>
 	</select>
 </fieldset>
-<label data-target="afficher_suite_select-oui">
+<label data-ffx-select-target="afficher_suite_select-oui">
 	<span class="name">oui</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
-<label data-target="afficher_suite_select-non">
+<label data-ffx-select-target="afficher_suite_select-non">
 	<span class="name">non</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
-<label data-target="afficher_suite_select-ptet">
+<label data-ffx-select-target="afficher_suite_select-ptet">
 	<span class="name">ptet</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
-<label data-target="afficher_suite_select-ptet afficher_suite_select-oui">
+<label data-ffx-select-target="afficher_suite_select-ptet afficher_suite_select-oui">
 	<span class="name">oui et ptet</span>
 	<input type="text" size="30">
 
@@ -1323,7 +1323,7 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 <blockquote>
-- utiliser l'attribut "data-select-auto-menu" sur le "classic_select"
+- utiliser l'attribut "data-ffx-select-automenu" sur le select
 et y spécifier le mot clé lié à cette question (sans la terminaison)<br />
 EX: couple_marie, enfants_au_domicile, etc.
 <br /><br />
@@ -1331,13 +1331,13 @@ EX: couple_marie, enfants_au_domicile, etc.
 EX: oui, non, 1, 2, celibataire, etc.
 <br /><br />
 - mettre la combinaison du mot clé et de la réponse (séparé par un tiret) sur chaque élément qui devra être affiché quand ce choix est actif.<br />
-Le mot clé doit être mis dans un attribut "data-target".<br />
+Le mot clé doit être mis dans un attribut "data-ffx-select-target".<br />
 peut importe où il se trouve sur la page et sur quel type d'élement,
 il sera commandé par le menu.<br />
 EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 <br /><br />
 - il est possible qu'on élément soit commandé par plusieurs menu, juste mettre les différents
- mots clés dans un même "data-target" séparés par des espaces
+ mots clés dans un même "data-ffx-select-target" séparés par des espaces
 </blockquote>
 
 
@@ -1519,14 +1519,16 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 
-
+<div class="formflex_title">
+	Lang mode popup
+</div>
 
 <div class="replace_names_link">afficher names</div>
 
 <div class="form">
 <?php ob_start(); ?>
 
-<ul class="lang_menu mode_popup" data-lang-menu="children_test">
+<ul class="ffx-lang-menu mode_popup" data-lang-menu="children_test">
 	<li data-lang="fr">fr</li>
 	<li data-lang="nl">nl</li>
 	<li data-lang="en">en</li>
@@ -1549,7 +1551,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 			<label>
 				<span class="name">rue</span>
-				<input type="text" name="form[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="30" value="">
+				<input type="text" name="form[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="20" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
@@ -1565,7 +1567,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 			<label>
 				<span class="name">Ville test</span>
-				<input type="text" name="form[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="20" value="">
+				<input type="text" name="form[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="15" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
@@ -1627,7 +1629,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 <div class="form">
 <?php ob_start(); ?>
 
-<ul class="lang_menu" data-lang-menu="testation">
+<ul class="ffx-lang-menu" data-lang-menu="testation">
 	<li data-lang="fr">fr</li>
 	<li data-lang="nl">nl</li>
 	<li data-lang="en">en</li>

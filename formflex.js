@@ -20,15 +20,15 @@ $(document).ready(function () {
 $(document).on("formflex_refresh", function(options){
 	checkbox_checking();
 });
-$("body").on("change", ".checkskin input", function () {
+$("body").on("change",".checkskin input",function () {
     checkbox_checking();
 });
-$("body").on("mousedown", ".checkskin", function () {
+$("body").on("mousedown",".checkskin",function () {
     if ($(this).find("input").prop('disabled') == false) {
         $(this).addClass("mousedown");
     }
 })
-$("body").mouseup(function () {
+$("body").on("mouseup",function () {
     $(".checkskin").removeClass("mousedown");
 });
 function checkbox_checking() {
@@ -339,26 +339,25 @@ $(document).ready(function () {
 $(document).on("formflex_refresh", function(options){
 	select_auto_menu();
 });
-$('body').on('change', "[data-select-auto-menu]", function () {
+$('body').on('change', "[data-ffx-select-automenu]", function () {
 	select_auto_menu_target($(this),$(this).find("option:checked"));
 });
 function select_auto_menu() {
-    $("[data-select-auto-menu]").each(function () {
+    $("[data-ffx-select-automenu]").each(function () {
 		select_auto_menu_target($(this),$(this).find("option:checked"));
     });
 };
 function select_auto_menu_target(v,w) {
-    var target = $(v).attr("data-select-auto-menu")+"-"+$(w).attr("data-key");
+    var target = $(v).attr("data-ffx-select-automenu")+"-"+$(w).attr("data-key");
     var no_targets = new Array();
     $(v).find("option").each(function () {
-        no_targets.push($(v).attr("data-select-auto-menu")+"-"+$(this).attr("data-key"));
+        no_targets.push($(v).attr("data-ffx-select-automenu")+"-"+$(this).attr("data-key"));
     });
 
     //cacher les lignes qui contiennent un mot clé
     for (i = 0; i < no_targets.length; i++) {
 		//met en tableau les items qui contiennent cet attribut
-		var item_notargets =  $("[data-target~=" + no_targets[i] + "]");
-
+		var item_notargets =  $("[data-ffx-select-target~=" + no_targets[i] + "]");
 
 		item_notargets.each(function(){
 			$(this).hide();
@@ -368,7 +367,7 @@ function select_auto_menu_target(v,w) {
     }
 
     //afficher grace au mot clé du radio checked
-	var item_target =  $("[data-target~=" + target + "]");
+	var item_target =  $("[data-ffx-select-target~=" + target + "]");
 	$(item_target).show();
 	$(item_target).find("input,select,textarea").removeAttr("disabled");
 }//select_auto_menu_target
