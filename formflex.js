@@ -95,7 +95,7 @@ $(document).on("formflex_refresh", function(options){
 function align_names() {
     $(".formflex").each(function (k, v) {
         var max_width = 0;
-		var type_of_names = ">label .name:first-child, .relay>label .name:first-child, fieldset legend, .name.forced_align";
+		var type_of_names = ">label .ffx-name:first-child, .relay>label .ffx-name:first-child, fieldset legend, .ffx-name.forced_align";
 
         $(v).find(type_of_names).not(".no_size").each(function () {
 			$(this).removeAttr("style");
@@ -128,7 +128,7 @@ $(document).on("formflex_refresh", function(options){
 });
 function to_the_right() {
     $(".ffx-righting-box").each(function (k, v) {
-		var name = $(this).parent().find(".name");
+		var name = $(this).parent().find(".ffx-name");
 		var name_width = name.width() + 3;
 
 		$(this).css("left",name_width);
@@ -467,7 +467,7 @@ function lang_auto_popup(input){
 	//Nom du regroupement (sans l'extension de la langue)
 	var id_lang = input.parents("[data-lang-target]").attr("data-lang-category");
 	//Le texte de l'input clické, dans la langue cliquée
-	var label_text = input.closest("label").find(".name").text();
+	var label_text = input.closest("label").find(".ffx-name").text();
 	//stocker l'index de l'input par rapport à son parent (afin de trouver ses équivalents plus tard)
 	var index_input = input.closest("[data-lang-target]").find("input,textarea").index(input);
 	//stockage des inputs équivalents
@@ -493,7 +493,7 @@ function lang_auto_popup(input){
 	var cpt=0;
 	$(array_input_multilang).each(function(){
 		$("#popup_lang_zoom .formflex").append("<label>");
-		$("#popup_lang_zoom .formflex label:last").append('<span class="name">'+lang_name[cpt]+'</span>');
+		$("#popup_lang_zoom .formflex label:last").append('<span class="ffx-name">'+lang_name[cpt]+'</span>');
 		cpt++;
 
 		var clone = $(this).clone();

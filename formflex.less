@@ -261,7 +261,7 @@ border: none;
 label.formflex-radio, label.formflex-checkbox {
 cursor: pointer;
 	&:hover {
-		.name {
+		.ffx-name {
 		color: @formflex_name_color_hover;
 		}
 		span.input {
@@ -329,7 +329,7 @@ cursor: pointer;
 		display: none;
 		}
 	}
-	span.name {
+	.ffx-name {
 	float: none !important;
 	padding-left: @formflex_input_height + 10 + @formflex_checkskin_input_size_decal !important;
 	margin-left: 0 !important;
@@ -338,7 +338,7 @@ cursor: pointer;
 
 label.star {
 	&:hover {
-		.name {
+		.ffx-name {
 		color: @formflex_name_color_hover;
 		}
 	}
@@ -375,7 +375,7 @@ label.star {
 		visibility: hidden;
 		}
 	}
-	span.input+.name {
+	span.input+.ffx-name {
 	margin-left: 5px;
 	}
 }
@@ -416,12 +416,12 @@ display: block;
 	margin-bottom: 0;
 	}
 	label:first-child {
-		.name:first-child {
+		.ffx-name:first-child {
 		margin-left: 0;
 		}
 	}
 	.clear+label {
-		.name:first-child {
+		.ffx-name:first-child {
 		margin-left: 0;
 		}
 	}
@@ -473,6 +473,82 @@ display: block;
 		}
 	}
 }//.ffx-fieldset
+
+.ffx-name, .ffx-legend {
+padding: 0;
+display: block;
+margin: 0 10px;
+min-height: @formflex_input_height;
+line-height: @formflex_input_height;
+float: left;
+font-size: @formflex_name_fz;
+color: @formflex_name_color;
+border: none;
+	&.little_mg {
+	margin: 0 3px;
+	}
+	i {
+	font-size: 18px;
+	color: @formflex_name_color;
+	width: 20px;
+	}
+	em {
+	color: @formflex_name_color;
+	}
+	&.no_size {
+	margin-right: 10px;
+	}
+	&.tac {
+	text-align: center;
+	}
+	&.autoheight {
+	height: auto;
+	line-height: normal;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	line-height: 20px;
+	}
+	&.no_mgl {
+	margin-left: 0;
+	}
+	&.strong {
+	font-weight: bold;
+	}
+	&.forced_align {
+	margin-right: 0;
+	}
+	&.ffx-legend {
+	margin: 0;
+	}
+}//.ffx-name, .ffx-legend
+
+.ffx-search {
+position: relative;
+	button {
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	height: @formflex_input_height ;
+	width: @formflex_input_height;
+	line-height: @formflex_input_height;
+	left: 0px;
+	padding: 0;
+	font-size: @formflex_icons_fz;
+	color: @formflex_input_fontcolor;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+		&:hover {
+		color: @formflex_main_color_theme_hover !important;
+		}
+	}
+	label {
+		input {
+		padding-left: @formflex_input_height;
+		margin-left: 0;
+		}
+	}
+}
 
 .formflex {
 	textarea:hover,
@@ -547,7 +623,7 @@ display: block;
 		&.no_mg {
 		margin: 0;
 		}
-		.name:first-child {
+		.ffx-name:first-child {
 		margin: 0;
 		}
 		&.bdb {
@@ -588,93 +664,6 @@ display: block;
 	}
 	.children_wrapper {
 	margin-left: 50px;
-	}
-	.search {
-		button {
-		position: absolute;
-		z-index: 2;
-		top: 0px;
-		height: @formflex_input_height ;
-		width: @formflex_input_height;
-		line-height: @formflex_input_height;
-		left: 0px;
-		padding: 0;
-		font-size: @formflex_icons_fz;
-		color: @formflex_input_fontcolor;
-		border: none;
-		background-color: transparent;
-		cursor: pointer;
-			&:hover {
-			color: @formflex_main_color_theme_hover !important;
-			}
-		}
-		label {
-			input {
-			padding-left: @formflex_input_height;
-			margin-left: 0;
-			}
-		}
-		&.under_style {
-			button {
-			color: @formflex_name_color;
-			}
-			label {
-				input {
-				padding-left: 5px;
-				margin-left: @formflex_input_height;
-				border-top-color: transparent;
-				border-left-color: transparent;
-				border-right-color: transparent;
-				}
-			}
-		}
-	}
-	.name, legend {
-	padding: 0;
-	display: block;
-	margin: 0 10px;
-	min-height: @formflex_input_height;
-	line-height: @formflex_input_height;
-	float: left;
-	font-size: @formflex_name_fz;
-	color: @formflex_name_color;
-	border: none;
-		&.little_mg {
-		margin: 0 3px;
-		}
-		i {
-		font-size: 18px;
-		color: @formflex_name_color;
-		width: 20px;
-		}
-		em {
-		color: @formflex_name_color;
-		}
-		&.no_size {
-		margin-right: 10px;
-		}
-		&.tac {
-		text-align: center;
-		}
-		&.autoheight {
-		height: auto;
-		line-height: normal;
-		padding-top: 3px;
-		padding-bottom: 3px;
-		line-height: 20px;
-		}
-		&.no_mgl {
-		margin-left: 0;
-		}
-		&.strong {
-		font-weight: bold;
-		}
-		&.forced_align {
-		margin-right: 0;
-		}
-	}
-	legend {
-	margin: 0;
 	}
 	.clear+label {
 		.ffx-select:first-child {

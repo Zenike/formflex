@@ -17,7 +17,7 @@ function generateRandomString() {
 <html lang="fr">
 <head>
 	<title>formflex</title>
-	<meta name="description" content="Description courte de la page" />
+	<meta ffx-name="description" content="Description courte de la page" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Language" content="fr" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -64,7 +64,7 @@ function generateRandomString() {
 <?php ob_start(); ?>
 
 <label>
-	<span class="name">horizontal simple</span>
+	<span class="ffx-name">horizontal simple</span>
 	<input type="text" size="30" placeholder="mon test 1">
 
 	<span class="customErrorValidation"></span>
@@ -72,7 +72,7 @@ function generateRandomString() {
 </label>
 
 <label>
-	<span class="name">horizontal extensible (script)</span>
+	<span class="ffx-name">horizontal extensible (script)</span>
 	<span class="ffx-righting-box">
 		<input type="text" size="30">
 	</span>
@@ -82,7 +82,7 @@ function generateRandomString() {
 </label>
 
 <label>
-	<span class="name">à la ligne simple</span>
+	<span class="ffx-name">à la ligne simple</span>
 	<span class="clear"></span>
 	<input type="text" size="30">
 
@@ -91,7 +91,7 @@ function generateRandomString() {
 </label>
 
 <label>
-	<span class="name">à la ligne extensible (css uniquement)</span>
+	<span class="ffx-name">à la ligne extensible (css uniquement)</span>
 	<span class="clear"></span>
 	<input class="formflex_full_width" type="text" size="30">
 
@@ -144,7 +144,7 @@ function generateRandomString() {
 <div class="bloc_intermediaire_embetant relay">
 <?php for($i=1;$i<=3;$i++){ ?>
 	<label>
-		<span class="name"><?php echo generateRandomString(); ?></span>
+		<span class="ffx-name"><?php echo generateRandomString(); ?></span>
 		<input type="text" size="30">
 
 		<span class="customErrorValidation"></span>
@@ -152,7 +152,7 @@ function generateRandomString() {
 	</label>
 <?php } ?>
 	<label>
-		<span class="name no_size">label non aligné aux autres grace à la class no_size (voir infos)</span>
+		<span class="ffx-name no_size">label non aligné aux autres grace à la class no_size (voir infos)</span>
 		<input type="text" size="30">
 
 		<span class="customErrorValidation"></span>
@@ -169,9 +169,9 @@ function generateRandomString() {
 <blockquote>
 - les blocs alignent la taille de leurs intitulés automatiquement grace à la fonction align_name (rien à ajouter).<br />
 <br />
-- par defaut, les names dans les fieldsets ne sont pas formatés. Il est possible de forcer le formatage (de n'importe quel name) en ajoutant la class "forced_align" sur le name en question.<br />
+- par defaut, les names dans les fieldsets ne sont pas formatés. Il est possible de forcer le formatage (de n'importe quel ffx-name) en ajoutant la class "forced_align" sur le ffx-name en question.<br />
 <br />
-- il est possible d'exclure un name de ce systeme en lui mettant la class "no_size".<br />
+- il est possible d'exclure un ffx-name de ce systeme en lui mettant la class "no_size".<br />
 <br />
 - les labels à la racine du formulaire recoivent du css particulier en tant qu'élément racine (marge, alignement etc).<br />
 Si un bloc décoratif se trouve en parent de ces éléments, il peut casser le css par defaut.<br />
@@ -234,26 +234,14 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <div class="formflex">
 <?php ob_start(); ?>
 
-<fieldset class="search">
+<fieldset class="ffx-search">
 	<button type="submit">
 		<i class="fa fa-search"></i>
 	</button>
 	<label>
-		<input type="text" size="30" name="street">
+		<input type="text" size="30" ffx-name="street">
 
-		<span class="customErrorValidation" data-name="street"></span>
-		<span class="clear"></span>
-	</label>
-</fieldset>
-
-<fieldset class="search under_style">
-	<button type="submit">
-		<i class="fa fa-search"></i>
-	</button>
-	<label>
-		<input type="text" size="30" name="street">
-
-		<span class="customErrorValidation" data-name="street"></span>
+		<span class="customErrorValidation" data-ffx-name="street"></span>
 		<span class="clear"></span>
 	</label>
 </fieldset>
@@ -287,40 +275,40 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <?php ob_start(); ?>
 
 <label>
-	<span class="name">select inline</span>
-	<select name="" id="" class="ffx-select">
+	<span class="ffx-name">select inline</span>
+	<select ffx-name="" id="" class="ffx-select">
 		<option value="">option1</option>
 		<option value="">option2</option>
 		<option value="">option3</option>
 	</select>
 
-	<span class="customErrorValidation" data-name="street_nbr"></span>
+	<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 	<span class="clear"></span>
 </label>
 
 <label>
-	<span class="name">select full</span>
+	<span class="ffx-name">select full</span>
 	<span class="clear"></span>
-	<select name="" id="" class="ffx-select ffx-select--maximize">
+	<select ffx-name="" id="" class="ffx-select ffx-select--maximize">
 		<option value="">option1</option>
 		<option value="">option2</option>
 		<option value="">option3</option>
 	</select>
 
-	<span class="customErrorValidation" data-name="street_nbr"></span>
+	<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 	<span class="clear"></span>
 </label>
 
 <label>
-	<span class="name">select to the right</span>
+	<span class="ffx-name">select to the right</span>
 	<span class="ffx-righting-box">
-		<select name="" id="" class="ffx-select">
+		<select ffx-name="" id="" class="ffx-select">
 			<option value="">option1</option>
 			<option value="">option2</option>
 			<option value="">option3</option>
 		</select>
 	</span>
-	<span class="customErrorValidation" data-name="street"></span>
+	<span class="customErrorValidation" data-ffx-name="street"></span>
 	<span class="clear"></span>
 </label>
 
@@ -375,9 +363,9 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <label class="formflex-checkbox checkskin">
 	<span class="input">
 		<i class="fa fa-check"></i>
-		<input type="checkbox" name="test3">
+		<input type="checkbox" ffx-name="test3">
 	</span>
-	<span class="name">Mercredi 19 fé fg sdfgdfg dfg dfgdf gd gdfg dfgd fsdfsdf sdfsdf sdfsdfsdfsdfsdfsdfsdf sdfsdfsdfsdfsd fsdfs fsdfsdfsdfdgdfgdfgdfgdfg dfg dfgdfg dfg dfg dgdgdfgdgdfgdfg dfg dfg dgdfgd dfg dfgdf gdg dfg</span>
+	<span class="ffx-name">Mercredi 19 fé fg sdfgdfg dfg dfgdf gd gdfg dfgd fsdfsdf sdfsdf sdfsdfsdfsdfsdfsdfsdf sdfsdfsdfsdfsd fsdfs fsdfsdfsdfdgdfgdfgdfgdfg dfg dfgdfg dfg dfg dgdgdfgdgdfgdfg dfg dfg dgdfgd dfg dfgdf gdg dfg</span>
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
@@ -389,9 +377,9 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
+			<input type="radio" ffx-name="test3">
 		</span>
-		<span class="name">radio1</span>
+		<span class="ffx-name">radio1</span>
 
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
@@ -399,9 +387,9 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
+			<input type="radio" ffx-name="test3">
 		</span>
-		<span class="name">radio2</span>
+		<span class="ffx-name">radio2</span>
 
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
@@ -414,9 +402,9 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
+			<input type="radio" ffx-name="test3">
 		</span>
-		<span class="name">radio1</span>
+		<span class="ffx-name">radio1</span>
 
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
@@ -424,9 +412,9 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<label class="formflex-radio checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
+			<input type="radio" ffx-name="test3">
 		</span>
-		<span class="name">radio2</span>
+		<span class="ffx-name">radio2</span>
 
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
@@ -434,12 +422,12 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </fieldset>
 
 <fieldset class="ffx-fieldset">
-	<legend>Enchainement horizontal d'un checkskin sans name et d'un input text</legend>
+	<legend>Enchainement horizontal d'un checkskin sans ffx-name et d'un input text</legend>
 	<span class="clear"></span>
 	<label class="formflex-checkbox checkskin">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="checkbox" name="test3">
+			<input type="checkbox" ffx-name="test3">
 		</span>
 
 		<span class="customErrorValidation"></span>
@@ -503,19 +491,19 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <?php ob_start(); ?>
 
 <label>
-	<span class="name">textarea horizontal</span>
-	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<span class="ffx-name">textarea horizontal</span>
+	<textarea ffx-name="" id="" cols="30" rows="10"></textarea>
 
-	<span class="customErrorValidation" data-name="street"></span>
+	<span class="customErrorValidation" data-ffx-name="street"></span>
 	<span class="clear"></span>
 </label>
 
 <label>
-	<span class="name">textarea full width</span>
+	<span class="ffx-name">textarea full width</span>
 	<span class="clear"></span>
-	<textarea class="formflex_full_width" name="" id="" cols="30" rows="10"></textarea>
+	<textarea class="formflex_full_width" ffx-name="" id="" cols="30" rows="10"></textarea>
 
-	<span class="customErrorValidation" data-name="street"></span>
+	<span class="customErrorValidation" data-ffx-name="street"></span>
 	<span class="clear"></span>
 </label>
 
@@ -545,14 +533,14 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <?php ob_start(); ?>
 
 <label>
-	<span class="name">Upload des fichiers</span>
+	<span class="ffx-name">Upload des fichiers</span>
 	<span class="clear"></span>
 	<div class="ffx-in-file">
 		<span class="ffx-in-file__infos">Fichier pdf...</span>
 		<span class="ffx-in-file__btn">Parcourir</span>
 		<input type="file">
 	</div>
-	<span class="customErrorValidation" data-name="street"></span>
+	<span class="customErrorValidation" data-ffx-name="street"></span>
 	<span class="clear"></span>
 </label>
 
@@ -591,24 +579,24 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <fieldset class="ffx-fieldset">
 	<legend>Adresse</legend>
 	<label>
-		<span class="name">Rue</span>
-		<input type="text" size="30" name="street">
+		<span class="ffx-name">Rue</span>
+		<input type="text" size="30" ffx-name="street">
 
-		<span class="customErrorValidation" data-name="street"></span>
+		<span class="customErrorValidation" data-ffx-name="street"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
-		<span class="name">num</span>
-		<input type="text" size="5" name="street_nbr">
+		<span class="ffx-name">num</span>
+		<input type="text" size="5" ffx-name="street_nbr">
 
-		<span class="customErrorValidation" data-name="street_nbr"></span>
+		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
-		<span class="name">CP</span>
-		<input type="text" size="10" name="street_nbr">
+		<span class="ffx-name">CP</span>
+		<input type="text" size="10" ffx-name="street_nbr">
 
-		<span class="customErrorValidation" data-name="street_nbr"></span>
+		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 	<span class="clear"></span>
@@ -644,24 +632,24 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <fieldset class="ffx-fieldset semi_float">
 	<legend>Adresse</legend>
 	<label>
-		<span class="name">Rue</span>
-		<input type="text" size="30" name="street">
+		<span class="ffx-name">Rue</span>
+		<input type="text" size="30" ffx-name="street">
 
-		<span class="customErrorValidation" data-name="street"></span>
+		<span class="customErrorValidation" data-ffx-name="street"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
-		<span class="name">num</span>
-		<input type="text" size="5" name="street_nbr">
+		<span class="ffx-name">num</span>
+		<input type="text" size="5" ffx-name="street_nbr">
 
-		<span class="customErrorValidation" data-name="street_nbr"></span>
+		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
-		<span class="name">CP</span>
-		<input type="text" size="10" name="street_nbr">
+		<span class="ffx-name">CP</span>
+		<input type="text" size="10" ffx-name="street_nbr">
 
-		<span class="customErrorValidation" data-name="street_nbr"></span>
+		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 	<span class="clear"></span>
@@ -693,28 +681,28 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <fieldset class="ffx-fieldset semi_float">
 	<label>
-		<span class="name">Rue</span>
-		<input type="text" size="30" name="street">
+		<span class="ffx-name">Rue</span>
+		<input type="text" size="30" ffx-name="street">
 
-		<span class="customErrorValidation" data-name="street"></span>
+		<span class="customErrorValidation" data-ffx-name="street"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
-		<span class="name">num</span>
-		<select class="ffx-select" name="" id="">
+		<span class="ffx-name">num</span>
+		<select class="ffx-select" ffx-name="" id="">
 			<option value="">mois</option>
 		</select>
-		<span class="name">mois</span>
+		<span class="ffx-name">mois</span>
 
-		<span class="customErrorValidation" data-name="street_nbr"></span>
+		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
-		<span class="name">CP</span>
-		<input type="text" size="10" name="street_nbr">
-		<span class="name">%</span>
+		<span class="ffx-name">CP</span>
+		<input type="text" size="10" ffx-name="street_nbr">
+		<span class="ffx-name">%</span>
 
-		<span class="customErrorValidation" data-name="street_nbr"></span>
+		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 	<span class="clear"></span>
@@ -862,7 +850,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		<span class="clear"></span>
 	</label>
 	<label>
-		<select class="ffx-select" name="" id="">
+		<select class="ffx-select" ffx-name="" id="">
 			<option value="">+ 0 km</option>
 		</select>
 
@@ -920,17 +908,17 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<span class="input">
 		<i class="fa fa-star"></i>
 		<i class="fa fa-star-o"></i>
-		<input type="checkbox" name="test3">
+		<input type="checkbox" ffx-name="test3">
 	</span>
-	<span class="name">Mercredi 19 fé</span>
+	<span class="ffx-name">Mercredi 19 fé</span>
 	<span class="clear"></span>
 </label>
 <label class="star checkskin other">
-	<span class="name no_size">Mercredi 19 fé</span>
+	<span class="ffx-name no_size">Mercredi 19 fé</span>
 	<span class="input">
 		<i class="fa fa-star"></i>
 		<i class="fa fa-star-o"></i>
-		<input type="checkbox" name="test3">
+		<input type="checkbox" ffx-name="test3">
 	</span>
 	<span class="clear"></span>
 </label>
@@ -965,7 +953,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 		<span class="input">
 			<i class="fa fa-star"></i>
 			<i class="fa fa-star-o"></i>
-			<input type="radio" name="test3">
+			<input type="radio" ffx-name="test3">
 		</span>
 		<span class="clear"></span>
 	</label>
@@ -1019,24 +1007,24 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 </ul>
 
 <label data-lang-target="commentaires_test-fr">
-	<span class="name">Commentaire fr</span>
-	<span class="textarea"><textarea name="" id="" cols="30" rows="10">fr</textarea></span>
+	<span class="ffx-name">Commentaire fr</span>
+	<span class="textarea"><textarea ffx-name="" id="" cols="30" rows="10">fr</textarea></span>
 
-	<span class="customErrorValidation" data-name="street"></span>
+	<span class="customErrorValidation" data-ffx-name="street"></span>
 	<span class="clear"></span>
 </label>
 <label data-lang-target="commentaires_test-nl">
-	<span class="name">Commentaire nl</span>
-	<span class="textarea"><textarea name="" id="" cols="30" rows="10">nl</textarea></span>
+	<span class="ffx-name">Commentaire nl</span>
+	<span class="textarea"><textarea ffx-name="" id="" cols="30" rows="10">nl</textarea></span>
 
-	<span class="customErrorValidation" data-name="street"></span>
+	<span class="customErrorValidation" data-ffx-name="street"></span>
 	<span class="clear"></span>
 </label>
 <label data-lang-target="commentaires_test-en">
-	<span class="name">Commentaire en</span>
-	<span class="textarea"><textarea name="" id="" cols="30" rows="10">en</textarea></span>
+	<span class="ffx-name">Commentaire en</span>
+	<span class="textarea"><textarea ffx-name="" id="" cols="30" rows="10">en</textarea></span>
 
-	<span class="customErrorValidation" data-name="street"></span>
+	<span class="customErrorValidation" data-ffx-name="street"></span>
 	<span class="clear"></span>
 </label>
 
@@ -1089,51 +1077,51 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_oui">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
+			<input type="radio" ffx-name="test3">
 		</span>
-		<span class="name">oui</span>
+		<span class="ffx-name">oui</span>
 		<span class="clear"></span>
 	</label>
 	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_non">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" checked name="test3">
+			<input type="radio" checked ffx-name="test3">
 		</span>
-		<span class="name">non</span>
+		<span class="ffx-name">non</span>
 		<span class="clear"></span>
 	</label>
 	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_ptet">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" name="test3">
+			<input type="radio" ffx-name="test3">
 		</span>
-		<span class="name">peut-être</span>
+		<span class="ffx-name">peut-être</span>
 		<span class="clear"></span>
 	</label>
 </fieldset>
 <label data-target="afficher_suite_oui">
-	<span class="name">oui</span>
+	<span class="ffx-name">oui</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_non">
-	<span class="name">non</span>
+	<span class="ffx-name">non</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_ptet">
-	<span class="name">ptet</span>
+	<span class="ffx-name">ptet</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_ptet afficher_suite_oui">
-	<span class="name">oui et ptet</span>
+	<span class="ffx-name">oui et ptet</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
@@ -1150,29 +1138,29 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 	<label class="formflex-radio checkskin" data-radio-auto-menu="afficher_suite_2_oui">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" name="test223">
+			<input type="radio" ffx-name="test223">
 		</span>
-		<span class="name">oui</span>
+		<span class="ffx-name">oui</span>
 		<span class="clear"></span>
 	</label>
 	<label class="formflex-radio checkskin uncheck_default" data-radio-auto-menu="afficher_suite_2_non">
 		<span class="input">
 			<i class="fa fa-check"></i>
-			<input type="radio" name="test223">
+			<input type="radio" ffx-name="test223">
 		</span>
-		<span class="name">non</span>
+		<span class="ffx-name">non</span>
 		<span class="clear"></span>
 	</label>
 </fieldset>
 <label data-target="afficher_suite_2_oui">
-	<span class="name">oui</span>
+	<span class="ffx-name">oui</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-target="afficher_suite_2_oui">
-	<span class="name">non</span>
+	<span class="ffx-name">non</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
@@ -1229,14 +1217,14 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 <label class="formflex-checkbox checkskin" data-checkbox-auto-menu="afficher_checkbox_suite">
 	<span class="input">
 		<i class="fa fa-check"></i>
-		<input type="checkbox" name="test3">
+		<input type="checkbox" ffx-name="test3">
 	</span>
-	<span class="name">Afficher la suite</span>
+	<span class="ffx-name">Afficher la suite</span>
 	<span class="clear"></span>
 </label>
 
 <label data-target="afficher_checkbox_suite-yes">
-	<span class="name">Addresse différente affichée si case cochée</span>
+	<span class="ffx-name">Addresse différente affichée si case cochée</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
@@ -1280,7 +1268,7 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 
 <fieldset class="ffx-fieldset">
 	<legend>j'affiche la suite ? (select)</legend>
-	<select class="ffx-select" data-ffx-select-automenu="afficher_suite_select" name="" id="">
+	<select class="ffx-select" data-ffx-select-automenu="afficher_suite_select" ffx-name="" id="">
 		<option value="" data-key="">-</option>
 		<option value="" data-key="oui">oui</option>
 		<option value="" data-key="non">non</option>
@@ -1288,28 +1276,28 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 	</select>
 </fieldset>
 <label data-ffx-select-target="afficher_suite_select-oui">
-	<span class="name">oui</span>
+	<span class="ffx-name">oui</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-ffx-select-target="afficher_suite_select-non">
-	<span class="name">non</span>
+	<span class="ffx-name">non</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-ffx-select-target="afficher_suite_select-ptet">
-	<span class="name">ptet</span>
+	<span class="ffx-name">ptet</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
 	<span class="clear"></span>
 </label>
 <label data-ffx-select-target="afficher_suite_select-ptet afficher_suite_select-oui">
-	<span class="name">oui et ptet</span>
+	<span class="ffx-name">oui et ptet</span>
 	<input type="text" size="30">
 
 	<span class="customErrorValidation"></span>
@@ -1361,21 +1349,21 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 </div>
 
 <div class="formflex_title_2">
-	Exemple 1 : simple, sans tri ni name automatique
+	Exemple 1 : simple, sans tri ni ffx-name automatique
 </div>
 
 <div class="formflex">
 <?php ob_start(); ?>
 <fieldset class="ffx-fieldset" data-group="simple1">
 	<label>
-		<span class="name">champs-1</span>
+		<span class="ffx-name">champs-1</span>
 		<input type="text" size="30">
 
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
 	<label>
-		<span class="name">champs-2</span>
+		<span class="ffx-name">champs-2</span>
 		<input type="text" size="30">
 
 		<span class="customErrorValidation"></span>
@@ -1406,14 +1394,14 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
 		<label>
-			<span class="name">champs-1</span>
+			<span class="ffx-name">champs-1</span>
 			<input type="text" size="30">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
 		<label>
-			<span class="name">champs-2</span>
+			<span class="ffx-name">champs-2</span>
 			<input type="text" size="30">
 
 			<span class="customErrorValidation"></span>
@@ -1480,8 +1468,8 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 				</label>
 
 				<label>
-					<span class="name">batiment</span>
-					<input type="text" size="60" name="" data-name="building" value="">
+					<span class="ffx-name">batiment</span>
+					<input type="text" size="60" ffx-name="" data-ffx-name="building" value="">
 
 					<span class="customErrorValidation"></span>
 					<span class="clear"></span>
@@ -1550,24 +1538,24 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			</label>
 
 			<label>
-				<span class="name">rue</span>
-				<input type="text" name="formflex[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="20" value="">
+				<span class="ffx-name">rue</span>
+				<input type="text" ffx-name="formflex[pages][1295][0][street][<?php echo $lang; ?>]" data-ffx-name="street" size="20" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
 			</label>
 
 			<label>
-				<span class="name">numero</span>
-				<input type="text" name="formflex[pages][1295][0][number][<?php echo $lang; ?>]" data-name="number" size="5" value="">
+				<span class="ffx-name">numero</span>
+				<input type="text" ffx-name="formflex[pages][1295][0][number][<?php echo $lang; ?>]" data-ffx-name="number" size="5" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
 			</label>
 
 			<label>
-				<span class="name">Ville test</span>
-				<input type="text" name="formflex[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="15" value="">
+				<span class="ffx-name">Ville test</span>
+				<input type="text" ffx-name="formflex[pages][1295][0][city][<?php echo $lang; ?>]" data-ffx-name="city" size="15" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
@@ -1650,8 +1638,8 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		</label>
 
 		<label>
-			<span class="name">Ville</span>
-			<input type="text" name="formflex[pages][1295][0][city]" data-name="city" size="50" value="">
+			<span class="ffx-name">Ville</span>
+			<input type="text" ffx-name="formflex[pages][1295][0][city]" data-ffx-name="city" size="50" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
@@ -1691,9 +1679,9 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		<label class="formflex-radio checkskin">
 			<span class="input">
 				<i class="fa fa-check"></i>
-				<input type="radio" name="formflex[pages][1295][0][radio]" data-name="radio">
+				<input type="radio" ffx-name="formflex[pages][1295][0][radio]" data-ffx-name="radio">
 			</span>
-			<span class="name">oui</span>
+			<span class="ffx-name">oui</span>
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
@@ -1702,9 +1690,9 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		<label class="formflex-radio checkskin">
 			<span class="input">
 				<i class="fa fa-check"></i>
-				<input type="radio" name="formflex[pages][1295][0][radio]" data-name="radio">
+				<input type="radio" ffx-name="formflex[pages][1295][0][radio]" data-ffx-name="radio">
 			</span>
-			<span class="name">non</span>
+			<span class="ffx-name">non</span>
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
@@ -1724,7 +1712,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 <blockquote>
-si on supprime l'attribut "data-name" des inputs, le système marche toujours mais n'ajoute pas les derniers crochets. Ca se finit donc sur le nombre incrémenté
+si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujours mais n'ajoute pas les derniers crochets. Ca se finit donc sur le nombre incrémenté
 </blockquote>
 
 
@@ -1757,20 +1745,20 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 		</label>
 
 		<label>
-			<span class="name">rue</span>
-			<input type="text" name="formflex[pages][1295][0][street]" data-name="street" size="30" value="">
+			<span class="ffx-name">rue</span>
+			<input type="text" ffx-name="formflex[pages][1295][0][street]" data-ffx-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
 
 		<label>
-			<span class="name">num</span>
-			<select class="ffx-select" name="formflex[pages][1295][0][num]" data-name="num">
+			<span class="ffx-name">num</span>
+			<select class="ffx-select" ffx-name="formflex[pages][1295][0][num]" data-ffx-name="num">
 				<option value="">mois</option>
 			</select>
 
-			<span class="customErrorValidation" data-name="street_nbr"></span>
+			<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 			<span class="clear"></span>
 		</label>
 
@@ -1788,20 +1776,20 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 		</label>
 
 		<label>
-			<span class="name">rue</span>
-			<input type="text" name="formflex[pages][1295][1][street]" data-name="street" size="30" value="">
+			<span class="ffx-name">rue</span>
+			<input type="text" ffx-name="formflex[pages][1295][1][street]" data-ffx-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
 
 		<label>
-			<span class="name">num</span>
-			<select class="ffx-select" name="formflex[pages][1295][1][num]" data-name="num">
+			<span class="ffx-name">num</span>
+			<select class="ffx-select" ffx-name="formflex[pages][1295][1][num]" data-ffx-name="num">
 				<option value="">mois</option>
 			</select>
 
-			<span class="customErrorValidation" data-name="street_nbr"></span>
+			<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 			<span class="clear"></span>
 		</label>
 
@@ -1819,20 +1807,20 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 		</label>
 
 		<label>
-			<span class="name">rue</span>
-			<input type="text" name="formflex[pages][1295][2][street]" data-name="street" size="30" value="">
+			<span class="ffx-name">rue</span>
+			<input type="text" ffx-name="formflex[pages][1295][2][street]" data-ffx-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
 		</label>
 
 		<label>
-			<span class="name">num</span>
-			<select class="ffx-select" name="formflex[pages][1295][2][num]" data-name="num">
+			<span class="ffx-name">num</span>
+			<select class="ffx-select" ffx-name="formflex[pages][1295][2][num]" data-ffx-name="num">
 				<option value="">mois</option>
 			</select>
 
-			<span class="customErrorValidation" data-name="street_nbr"></span>
+			<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 			<span class="clear"></span>
 		</label>
 
@@ -1877,20 +1865,20 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 <fieldset class="ffx-fieldset category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-formflex-base="formflex[pages][1295]">
 	<label>
-		<span class="name">rue</span>
-		<input type="text" name="sdfsdfsdf" data-name="street" size="30" value="">
+		<span class="ffx-name">rue</span>
+		<input type="text" ffx-name="sdfsdfsdf" data-ffx-name="street" size="30" value="">
 
 		<span class="customErrorValidation"></span>
 		<span class="clear"></span>
 	</label>
 
 	<label>
-		<span class="name">num</span>
-		<select class="ffx-select" name="sdfsdf" data-name="num">
+		<span class="ffx-name">num</span>
+		<select class="ffx-select" ffx-name="sdfsdf" data-ffx-name="num">
 			<option value="">mois</option>
 		</select>
 
-		<span class="customErrorValidation" data-name="street_nbr"></span>
+		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
 		<span class="clear"></span>
 	</label>
 
