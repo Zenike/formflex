@@ -28,11 +28,11 @@ function generateRandomString() {
 	<link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-</form>
+</formflex>
 
 <div id="wrapper">
 
-<form action="">
+<formflex action="">
 
 <ul id="buttons_dl">
 	<li>
@@ -60,7 +60,7 @@ function generateRandomString() {
 	input text
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <label>
@@ -101,7 +101,7 @@ function generateRandomString() {
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -138,7 +138,7 @@ function generateRandomString() {
 	Exclusion de l'alignement automatique
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <div class="bloc_intermediaire_embetant relay">
@@ -162,7 +162,7 @@ function generateRandomString() {
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -231,7 +231,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	Barre de recherche (search bar)
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <fieldset class="search">
@@ -260,7 +260,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -283,7 +283,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	Select
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <label>
@@ -326,7 +326,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -369,7 +369,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	Checkskin (radio and checkbox)
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <label class="formflex-checkbox checkskin">
@@ -455,7 +455,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -499,7 +499,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	Textareas
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <label>
@@ -521,7 +521,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -541,7 +541,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	Input file
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <label>
@@ -558,7 +558,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -585,7 +585,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	Exemples de formulaires complexes
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <fieldset class="ffx-fieldset">
@@ -616,7 +616,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -638,7 +638,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <fieldset class="ffx-fieldset semi_float">
@@ -669,7 +669,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -688,7 +688,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <fieldset class="ffx-fieldset semi_float">
@@ -722,7 +722,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -775,7 +775,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	Items list
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <ul class="ffx-list-items">
@@ -806,7 +806,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -851,7 +851,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	Combo double input
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <fieldset class="ffx-fieldset ffx-fieldset--unify">
@@ -888,7 +888,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -913,7 +913,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <label class="star checkskin">
@@ -937,7 +937,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -956,7 +956,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <fieldset class="ffx-fieldset">
@@ -974,7 +974,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1009,7 +1009,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <ul class="ffx-lang-menu" data-lang-menu="commentaires_test">
@@ -1042,7 +1042,7 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1081,7 +1081,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 	Systèmes d'affichage ciblé (radio)
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <fieldset class="ffx-fieldset">
@@ -1181,7 +1181,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1223,7 +1223,7 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 	Systèmes d'affichage ciblé (checkbox)
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <label class="formflex-checkbox checkskin" data-checkbox-auto-menu="afficher_checkbox_suite">
@@ -1245,7 +1245,7 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1275,7 +1275,7 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 	Systèmes d'affichage ciblé (select)
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <fieldset class="ffx-fieldset">
@@ -1318,7 +1318,7 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1364,7 +1364,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 	Exemple 1 : simple, sans tri ni name automatique
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 <fieldset class="ffx-fieldset" data-group="simple1">
 	<label>
@@ -1388,7 +1388,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 </fieldset>
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1397,7 +1397,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 	Exemple 2 : identique, avec le système de tri en plus
 </div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 <div class="sortable">
 	<fieldset class="ffx-fieldset" data-group="simple1_tri">
@@ -1427,7 +1427,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 </div><!-- \sortable -->
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1461,7 +1461,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <div class="children_templates">
@@ -1500,7 +1500,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1525,7 +1525,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 <div class="replace_names_link">afficher names</div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <ul class="ffx-lang-menu mode_popup" data-lang-menu="children_test">
@@ -1543,7 +1543,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			if($i==2){$lang="nl";}
 			if($i==3){$lang="en";}
 		?>
-		<fieldset class="ffx-fieldset" data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-form-base="form[pages][1295]">
+		<fieldset class="ffx-fieldset" data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-formflex-base="formflex[pages][1295]">
 			<label>
 				<input type="hidden" value="0" class="sortable_get_position">
 				<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1551,7 +1551,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 			<label>
 				<span class="name">rue</span>
-				<input type="text" name="form[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="20" value="">
+				<input type="text" name="formflex[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="20" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
@@ -1559,7 +1559,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 			<label>
 				<span class="name">numero</span>
-				<input type="text" name="form[pages][1295][0][number][<?php echo $lang; ?>]" data-name="number" size="5" value="">
+				<input type="text" name="formflex[pages][1295][0][number][<?php echo $lang; ?>]" data-name="number" size="5" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
@@ -1567,7 +1567,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 			<label>
 				<span class="name">Ville test</span>
-				<input type="text" name="form[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="15" value="">
+				<input type="text" name="formflex[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="15" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
@@ -1595,7 +1595,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1626,7 +1626,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <ul class="ffx-lang-menu" data-lang-menu="testation">
@@ -1643,7 +1643,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		if($i==2){$lang="nl";}
 		if($i==3){$lang="en";}
 	?>
-	<fieldset class="ffx-fieldset" data-lang-target="testation-<?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="<?php echo $lang; ?>" data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-lang-target="testation-<?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="<?php echo $lang; ?>" data-formflex-base="formflex[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1651,7 +1651,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 		<label>
 			<span class="name">Ville</span>
-			<input type="text" name="form[pages][1295][0][city]" data-name="city" size="50" value="">
+			<input type="text" name="formflex[pages][1295][0][city]" data-name="city" size="50" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
@@ -1668,7 +1668,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1683,15 +1683,15 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
-	<fieldset class="ffx-fieldset" data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
 		<label class="formflex-radio checkskin">
 			<span class="input">
 				<i class="fa fa-check"></i>
-				<input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
+				<input type="radio" name="formflex[pages][1295][0][radio]" data-name="radio">
 			</span>
 			<span class="name">oui</span>
 
@@ -1702,7 +1702,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		<label class="formflex-radio checkskin">
 			<span class="input">
 				<i class="fa fa-check"></i>
-				<input type="radio" name="form[pages][1295][0][radio]" data-name="radio">
+				<input type="radio" name="formflex[pages][1295][0][radio]" data-name="radio">
 			</span>
 			<span class="name">non</span>
 
@@ -1719,7 +1719,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1745,12 +1745,12 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 <div class="replace_names_link">afficher names</div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
 <div class="sortable">
 <div class="category manual_increment" data-group-cpt="2" data-group="children_group_efgdgfrer" data-this-cpt="0">
-	<fieldset class="ffx-fieldset" data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1758,7 +1758,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">rue</span>
-			<input type="text" name="form[pages][1295][0][street]" data-name="street" size="30" value="">
+			<input type="text" name="formflex[pages][1295][0][street]" data-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
@@ -1766,7 +1766,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">num</span>
-			<select class="ffx-select" name="form[pages][1295][0][num]" data-name="num">
+			<select class="ffx-select" name="formflex[pages][1295][0][num]" data-name="num">
 				<option value="">mois</option>
 			</select>
 
@@ -1781,7 +1781,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	</fieldset>
 </div><!-- /category -->
 <div class="category manual_increment" data-group-cpt="2" data-group="children_group_efgdgfrer" data-this-cpt="1">
-	<fieldset class="ffx-fieldset" data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1789,7 +1789,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">rue</span>
-			<input type="text" name="form[pages][1295][1][street]" data-name="street" size="30" value="">
+			<input type="text" name="formflex[pages][1295][1][street]" data-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
@@ -1797,7 +1797,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">num</span>
-			<select class="ffx-select" name="form[pages][1295][1][num]" data-name="num">
+			<select class="ffx-select" name="formflex[pages][1295][1][num]" data-name="num">
 				<option value="">mois</option>
 			</select>
 
@@ -1812,7 +1812,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	</fieldset>
 </div><!-- /category -->
 <div class="category manual_increment" data-group-cpt="2" data-group="children_group_efgdgfrer" data-this-cpt="2">
-	<fieldset class="ffx-fieldset" data-form-base="form[pages][1295]">
+	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
@@ -1820,7 +1820,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">rue</span>
-			<input type="text" name="form[pages][1295][2][street]" data-name="street" size="30" value="">
+			<input type="text" name="formflex[pages][1295][2][street]" data-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="clear"></span>
@@ -1828,7 +1828,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 		<label>
 			<span class="name">num</span>
-			<select class="ffx-select" name="form[pages][1295][2][num]" data-name="num">
+			<select class="ffx-select" name="formflex[pages][1295][2][num]" data-name="num">
 				<option value="">mois</option>
 			</select>
 
@@ -1846,7 +1846,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
@@ -1872,10 +1872,10 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 <div class="replace_names_link">afficher names</div>
 
-<div class="form">
+<div class="formflex">
 <?php ob_start(); ?>
 
-<fieldset class="ffx-fieldset category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-form-base="form[pages][1295]">
+<fieldset class="ffx-fieldset category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-formflex-base="formflex[pages][1295]">
 	<label>
 		<span class="name">rue</span>
 		<input type="text" name="sdfsdfsdf" data-name="street" size="30" value="">
@@ -1902,12 +1902,12 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
-</div><!-- /form -->
+</div><!-- /formflex -->
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 
-</form>
+</formflex>
 
 </div><!-- \wrapper -->
 

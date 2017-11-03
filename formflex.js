@@ -49,7 +49,7 @@ function checkbox_checking() {
 
 //bloquer les clicks sur les labels en eux mêmes (et pas sur le texte ou l'input)
 /*
-$("body").on("click",".form label",function(e){
+$("body").on("click",".formflex label",function(e){
    if(e.target == this){
        return false;
    }
@@ -93,7 +93,7 @@ $(document).on("formflex_refresh", function(options){
 	align_names();
 });
 function align_names() {
-    $(".form").each(function (k, v) {
+    $(".formflex").each(function (k, v) {
         var max_width = 0;
 		var type_of_names = ">label .name:first-child, .relay>label .name:first-child, fieldset legend, .name.forced_align";
 
@@ -196,7 +196,7 @@ $(window).resize(function(){
 	isolating_legend_solo();
 });
 function isolating_legend_solo(){
-	$(".form legend.solo").each(function(k,v){
+	$(".formflex legend.solo").each(function(k,v){
 		$(this).height("auto");
 		$(this).height($(this).parent().height());
 	});
@@ -492,16 +492,16 @@ function lang_auto_popup(input){
 	$("#popup_lang_zoom").append('<div class="form">');
 	var cpt=0;
 	$(array_input_multilang).each(function(){
-		$("#popup_lang_zoom .form").append("<label>");
-		$("#popup_lang_zoom .form label:last").append('<span class="name">'+lang_name[cpt]+'</span>');
+		$("#popup_lang_zoom .formflex").append("<label>");
+		$("#popup_lang_zoom .formflex label:last").append('<span class="name">'+lang_name[cpt]+'</span>');
 		cpt++;
 
 		var clone = $(this).clone();
 		//réppliquer la valeur au clone à cuase d'un bug sur les textareas
 		clone.val($(this).val());
 
-		$("#popup_lang_zoom .form label:last").append(clone);
-		$("#popup_lang_zoom .form label:last").append('<span class="clear"></span>');
+		$("#popup_lang_zoom .formflex label:last").append(clone);
+		$("#popup_lang_zoom .formflex label:last").append('<span class="clear"></span>');
 	});
 	$("#popup_lang_zoom").append('<div class="popup_buttons"><div class="left"><span class="popup_cancel close">Annuler</span></div><div class="right"><span class="popup_validate">Valider</span></div></div>');
 
@@ -515,7 +515,7 @@ function lang_auto_popup(input){
 
 //FERMETURE ET RESTITUTION
 $('body').on('click', ".popup_validate", function () {
-	var inputs_array = $(this).parents(".content_wrapper").find(".form").find("input,textarea");
+	var inputs_array = $(this).parents(".content_wrapper").find(".formflex").find("input,textarea");
 
 	inputs_array.each(function(){
 		var unique_id = $(this).attr("data-unique-input-id");
@@ -1019,7 +1019,7 @@ function initialize_form_add_remove_buttons(v){
 
 
 $(document).ready(function(){
-	$(".form [data-group]").each(function(){
+	$(".formflex [data-group]").each(function(){
 		initialize_form_add_remove_buttons($(this));
 	});
 	if($(".sortable").length>=1){
@@ -1027,7 +1027,7 @@ $(document).ready(function(){
 	}
 });
 $(document).on("formflex_refresh", function(options){
-	$(".form [data-group]").each(function(){
+	$(".formflex [data-group]").each(function(){
 		initialize_form_add_remove_buttons($(this));
 	});
 	if($(".sortable").length>=1){
@@ -1038,22 +1038,22 @@ $(document).on("formflex_refresh", function(options){
 
 
 
-$("body").on("click", ".form .dupplicate", function (e) {
+$("body").on("click", ".formflex .dupplicate", function (e) {
     e.preventDefault();
     clone_form_element($(this).closest("[data-group]"));
     return false;
 });
-$("body").on("click", ".form .children_add", function (e) {
+$("body").on("click", ".formflex .children_add", function (e) {
     e.preventDefault();
     insert_child($(this));
     return false;
 });
-$("body").on("click", ".form .exterior_add", function (e) {
+$("body").on("click", ".formflex .exterior_add", function (e) {
     e.preventDefault();
     insert_from_exterior($(this));
     return false;
 });
-$("body").on("click", ".form .delete", function(){
+$("body").on("click", ".formflex .delete", function(){
 	if($(this).parents(".category").length > 0){
 		delete_form_element($(this).closest(".category"));
 	}else{
