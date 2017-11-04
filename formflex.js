@@ -20,29 +20,29 @@ $(document).ready(function () {
 $(document).on("formflex_refresh", function(options){
 	checkbox_checking();
 });
-$("body").on("change",".checkskin input",function () {
+$("body").on("change",".ffx-checkskin input",function () {
     checkbox_checking();
 });
-$("body").on("mousedown",".checkskin",function () {
+$("body").on("mousedown",".ffx-checkskin",function () {
     if ($(this).find("input").prop('disabled') == false) {
-        $(this).addClass("mousedown");
+        $(this).addClass("ffx-checkskin--mousedown");
     }
 })
 $("body").on("mouseup",function () {
-    $(".checkskin").removeClass("mousedown");
+    $(".ffx-checkskin").removeClass("ffx-checkskin--mousedown");
 });
 function checkbox_checking() {
-    $(".checkskin input").each(function () {
+    $(".ffx-checkskin input").each(function () {
         if ($(this).is(":checked")) {
-			var checkskin =  $(this).parents(".checkskin");
-            checkskin.addClass("checked");
+			var checkskin =  $(this).parents(".ffx-checkskin");
+            checkskin.addClass("ffx-checkskin--checked");
 
 			//condition spéciale dans le cas d'une "star"
-			if(checkskin.is(".star") && checkskin.parent().is("fieldset")){
-				checkskin.prevAll().addClass("checked");
+			if(checkskin.is(".ffx-checkskin--icon") && checkskin.parent().is("fieldset")){
+				checkskin.prevAll().addClass("ffx-checkskin--checked");
 			}
         } else {
-            $(this).parents(".checkskin").removeClass("checked");
+            $(this).parents(".ffx-checkskin").removeClass("ffx-checkskin--checked");
         }
     });
 }//checkbox_checking
