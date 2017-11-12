@@ -116,7 +116,7 @@ display: none;
 	}
 }
 
-.round_icon {
+.ffx-round-icon {
 display: block;
 height: @formflex_input_height;
 line-height: @formflex_input_height;
@@ -128,6 +128,8 @@ color: #fff;
 border-radius: 100px;
 cursor: pointer;
 border: none;
+float: left;
+margin: 0 3px;
 	&:hover {
 	background-color: @formflex_main_color_theme_hover;
 	}
@@ -621,34 +623,6 @@ right: 0;
 	button:active,
 	button:hover {
 		outline:0px !important;
-	}
-	.simple_text {
-	display: block;
-	height: @formflex_input_height;
-	line-height: @formflex_input_height;
-	font-size: @formflex_name_fz;
-	color: @formflex_name_color;
-		&.bdb {
-		border-bottom: 1px solid @formflex_bd;
-		padding-bottom: 5px;
-		}
-		em {
-		color: @formflex_main_color_theme;
-		}
-	}
-	.simple_link {
-	display: inline-block;
-	font-size: 12px;
-	cursor: pointer;
-	color: @formflex_main_color_theme;
-	text-decoration: underline;
-		&:hover {
-		color: @formflex_input_fontcolor;
-		}
-	}
-	.round_icon {
-	float: left;
-	margin: 0 3px;
 	}
 	.delete {
 	display: none;
