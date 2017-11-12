@@ -1,3 +1,8 @@
+.ffx-clear {
+display: block;
+clear: both;
+}
+
 .customErrorValidation {
 position: absolute;
 display: none;
@@ -407,7 +412,7 @@ display: block;
 		margin-left: 0;
 		}
 	}
-	.clear+label {
+	.ffx-clear+label {
 		.ffx-name:first-child {
 		margin-left: 0;
 		}
@@ -567,6 +572,35 @@ font-weight: @formflex_input_font_weight;
 	}
 }
 
+.ffx-textarea {
+display: block;
+border: 1px solid @formflex_bd;
+float: left;
+margin: 0 3px;
+padding: 5px;
+font-size: @formflex_input_font_size;
+color: @formflex_input_fontcolor;
+background-color: @formflex_input_bgcolor;
+min-height: 100px;
+height: 100px;
+width: 400px;
+min-width: 400px;
+max-width: 400px;
+border-radius: @formflex_input_round;
+	&:hover {
+	border-color: @formflex_bd_hover;
+	}
+	&.ffx-textarea--full-width {
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
+	margin: 0;
+	}
+	&[disabled=disabled] {
+	background-color: #eee;
+	}
+}
+
 label:first-child {
 	.ffx-input {
 		&:first-child {
@@ -575,7 +609,7 @@ label:first-child {
 	}
 }
 
-.clear+.ffx-input,.clear+.ffx-select,.clear+.classic_file {
+.ffx-clear+.ffx-input,.ffx-clear+.ffx-select,.ffx-clear+.classic_file,.ffx-clear+.ffx-textarea {
 margin-left: 0;
 }
 
@@ -705,7 +739,7 @@ right: 0;
 	.children_wrapper {
 	margin-left: 50px;
 	}
-	.clear+label {
+	.ffx-clear+label {
 		.ffx-select:first-child {
 		margin-left: 0;
 		}
@@ -788,37 +822,6 @@ right: 0;
 		.ffx-select {
 		margin-bottom: 3px;
 		}
-	}
-	textarea {
-	display: block;
-	border: 1px solid @formflex_bd;
-	float: left;
-	margin: 0 3px;
-	padding: 5px;
-	font-size: @formflex_input_font_size;
-	color: @formflex_input_fontcolor;
-	background-color: @formflex_input_bgcolor;
-	min-height: 100px;
-	height: 100px;
-	width: 400px;
-	min-width: 400px;
-	max-width: 400px;
-	border-radius: @formflex_input_round;
-		&:hover {
-		border-color: @formflex_bd_hover;
-		}
-		&.formflex_full_width {
-		width: 100%;
-		max-width: 100%;
-		min-width: 0;
-		margin: 0;
-		}
-	}
-	textarea[disabled=disabled] {
-	background-color: #eee;
-	}
-	.clear+textarea {
-	margin-left: 0;
 	}
 	&.off_form {
 		.ffx-select {
