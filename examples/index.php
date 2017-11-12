@@ -91,6 +91,15 @@ function generateRandomString() {
 </label>
 
 <label>
+	<span class="ffx-name ffx-name--autoheight">identique mais avec un name à hauteur automatique</span>
+	<span class="ffx-clear"></span>
+	<input class="ffx-input" type="text" size="30">
+
+	<span class="customErrorValidation"></span>
+	<span class="ffx-clear"></span>
+</label>
+
+<label>
 	<span class="ffx-name">à la ligne extensible (css uniquement)</span>
 	<span class="ffx-clear"></span>
 	<input class="ffx-input ffx-input--full-width" type="text" size="30">

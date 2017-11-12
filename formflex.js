@@ -95,12 +95,12 @@ $(document).on("formflex_refresh", function(options){
 function align_names() {
     $(".formflex").each(function (k, v) {
         var max_width = 0;
-		var type_of_names = ">label .ffx-name:first-child, .relay>label .ffx-name:first-child, fieldset legend, .ffx-name.forced_align";
+		var type_of_names = ">label .ffx-name:first-child, .relay>label .ffx-name:first-child, fieldset legend";
 
         $(v).find(type_of_names).not(".no_size").each(function () {
 			$(this).removeAttr("style");
 
-			if($(this).next().is(".clear")){
+			if($(this).next().is(".ffx-clear")){
 				$(this).addClass("no_size");
 			}else if ($(this).actual('width') >= max_width) {
                 max_width = $(this).actual('width');
@@ -501,7 +501,7 @@ function lang_auto_popup(input){
 		clone.val($(this).val());
 
 		$("#popup_lang_zoom .formflex label:last").append(clone);
-		$("#popup_lang_zoom .formflex label:last").append('<span class="clear"></span>');
+		$("#popup_lang_zoom .formflex label:last").append('<span class="ffx-clear"></span>');
 	});
 	$("#popup_lang_zoom").append('<div class="popup_buttons"><div class="left"><span class="popup_cancel close">Annuler</span></div><div class="right"><span class="popup_validate">Valider</span></div></div>');
 
