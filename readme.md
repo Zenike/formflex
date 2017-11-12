@@ -17,15 +17,16 @@
 - variables less à inclure avant formflex.less
 ```css
 /* FORMFLEX GENERAL */
-@formflex_input_height: 27px;/*27px*/
-@formflex_input_bgcolor: #fff;/*#fff*/
+@formflex_input_height: 60px;/*27px*/
+@formflex_input_bgcolor: #333;/*#fff*/
 @formflex_input_font_size: 16px;/*12px*/
-@formflex_input_fontcolor: @tm;/*@tm*/
-@formflex_input_round: 0px;/*0px*/
+@formflex_input_font_weight: normal;/*12px*/
+@formflex_input_fontcolor: #fff;/*@tm*/
+@formflex_input_round: 5px;/*0px*/
 @formflex_input_disbled_bgcolor: @gris_clair;/*@gris_clair*/
 @formflex_icons_fz: 18px;/*18px*/
-@formflex_bd: #aaa;/*#aaa*/
-@formflex_bd_hover: #555;/*#555*/
+@formflex_bd: skyblue;/*#aaa*/
+@formflex_bd_hover: red;/*#555*/
 @formflex_main_color_theme: @theme;/*@theme*/
 @formflex_main_color_theme_hover: @theme_light;/*@theme_light*/
 @formflex_main_color_theme_mousedown: @theme_dark;/*@theme_dark*/
@@ -34,6 +35,7 @@
 @formflex_name_fz: 12px;/*12px*/
 @formflex_name_color: @t;/*@t*/
 @formflex_name_color_hover: #000;/*#000*/
+@formflex_name_font_weight: normal;/*#000*/
 
 /* FORMFLEX CHECKSKIN */
 @formflex_checkskin_fz: 18px;/*18px*/
