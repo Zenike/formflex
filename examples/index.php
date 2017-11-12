@@ -990,25 +990,25 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 	<li data-lang="en">en</li>
 </ul>
 
-<label data-lang-target="commentaires_test-fr">
+<label data-lang-category="commentaires_test" data-lang-target="commentaires_test-fr">
 	<span class="ffx-name">Commentaire fr</span>
-	<span class="textarea"><textarea ffx-name="" id="" cols="30" rows="10">fr</textarea></span>
+	<textarea class="ffx-textarea" name="" id="" cols="30" rows="10">fr</textarea>
 
-	<span class="customErrorValidation" data-ffx-name="street"></span>
+	<span class="customErrorValidation" data-name="street"></span>
 	<span class="ffx-clear"></span>
 </label>
-<label data-lang-target="commentaires_test-nl">
+<label data-lang-category="commentaires_test" data-lang-target="commentaires_test-nl">
 	<span class="ffx-name">Commentaire nl</span>
-	<span class="textarea"><textarea ffx-name="" id="" cols="30" rows="10">nl</textarea></span>
+	<textarea class="ffx-textarea" name="" id="" cols="30" rows="10">nl</textarea>
 
-	<span class="customErrorValidation" data-ffx-name="street"></span>
+	<span class="customErrorValidation" data-name="street"></span>
 	<span class="ffx-clear"></span>
 </label>
-<label data-lang-target="commentaires_test-en">
+<label data-lang-category="commentaires_test" data-lang-target="commentaires_test-en">
 	<span class="ffx-name">Commentaire en</span>
-	<span class="textarea"><textarea ffx-name="" id="" cols="30" rows="10">en</textarea></span>
+	<textarea class="ffx-textarea" name="" id="" cols="30" rows="10">en</textarea>
 
-	<span class="customErrorValidation" data-ffx-name="street"></span>
+	<span class="customErrorValidation" data-name="street"></span>
 	<span class="ffx-clear"></span>
 </label>
 
@@ -1023,9 +1023,11 @@ Placer la classe "relay" sur ce div (ou autre balise) dit au css et au script de
 <br />
 - utiliser l'attribut "data-lang" sur chaque bouton de ce menu et y mettre la langue (ex:fr,nl,etc).<br />
 <br />
-- Ajouter l'attribut "data-lang-target" sur chaque element commandé par ce menu.<br />
+- Ajouter l'attribut "data-lang-category" sur chaque element commandé par ce menu.<br />
+ex: menu_test<br />
 <br />
-Dans ces attributs, ecrire le mot clé composé du nom du menu et de l'extension de langue, séparés par un tiret.
+- Ajouter l'attribut "data-lang-target" sur chaque element commandé par ce menu.<br />
+Dans ce dernier attribut, ecrire le mot clé composé du nom du catégorie et de l'extension de langue, séparés par un tiret.<br />
 ex: menu_test-fr.<br />
 <br />
 PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de regrouper sous un même parent).
@@ -1354,8 +1356,8 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 		<span class="ffx-clear"></span>
 	</label>
 	<label>
-		<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-		<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+		<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+		<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 	</label>
 </fieldset>
 <?php $ffx_example_code = ob_get_clean(); ?>
@@ -1375,7 +1377,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 	<fieldset class="ffx-fieldset" data-group="simple1_tri">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
-			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
+			<span class="ffx-round-icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
 		<label>
 			<span class="ffx-name">champs-1</span>
@@ -1392,8 +1394,8 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 			<span class="ffx-clear"></span>
 		</label>
 		<label>
-			<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-			<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+			<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 		</label>
 	</fieldset>
 </div><!-- \sortable -->
@@ -1448,7 +1450,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			<fieldset class="ffx-fieldset" data-lang-iso="<?php echo $lang; ?>">
 				<label>
 					<input type="hidden" value="0" class="sortable_get_position">
-					<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
+					<span class="ffx-round-icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 				</label>
 
 				<label>
@@ -1460,9 +1462,9 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 				</label>
 
 				<label>
-					<span class="round_icon blue children_add" data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
-					<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-					<!--<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>-->
+					<span class="ffx-round-icon blue children_add" data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+					<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+					<!--<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>-->
 				</label>
 			</fieldset>
 			<?php endfor; ?>
@@ -1518,7 +1520,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		<fieldset class="ffx-fieldset" data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-formflex-base="formflex[pages][1295]">
 			<label>
 				<input type="hidden" value="0" class="sortable_get_position">
-				<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
+				<span class="ffx-round-icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 			</label>
 
 			<label>
@@ -1546,9 +1548,9 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 			</label>
 
 			<label>
-				<span class="round_icon blue children_add" data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
-				<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-				<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+				<span class="ffx-round-icon blue children_add" data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+				<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+				<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 			</label>
 		</fieldset>
 		<?php endfor; ?>
@@ -1557,7 +1559,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 </div><!-- /sortable -->
 
 <div class="ffx-add-item-from-exterior">
-	<span class="round_icon green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
+	<span class="ffx-round-icon green exterior_add" data-group-target="children_group_erer" data-child-template-cmd="classic_child1">
 		<i class="fa fa-plus"></i>
 	</span>
 	<span class="text">
@@ -1618,7 +1620,7 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 	<fieldset class="ffx-fieldset" data-lang-target="testation-<?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="<?php echo $lang; ?>" data-formflex-base="formflex[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
-			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
+			<span class="ffx-round-icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
 
 		<label>
@@ -1630,8 +1632,8 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		</label>
 
 		<label>
-			<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-			<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+			<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 		</label>
 	</fieldset>
 	<?php endfor; ?>
@@ -1683,8 +1685,8 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 		</label>
 
 		<label>
-			<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-			<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+			<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 		</label>
 	</fieldset>
 </div><!-- /category -->
@@ -1725,7 +1727,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
-			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
+			<span class="ffx-round-icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
 
 		<label>
@@ -1747,8 +1749,8 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 		</label>
 
 		<label>
-			<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-			<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+			<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 		</label>
 	</fieldset>
 </div><!-- /category -->
@@ -1756,7 +1758,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
-			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
+			<span class="ffx-round-icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
 
 		<label>
@@ -1778,8 +1780,8 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 		</label>
 
 		<label>
-			<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-			<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+			<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 		</label>
 	</fieldset>
 </div><!-- /category -->
@@ -1787,7 +1789,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
 		<label>
 			<input type="hidden" value="0" class="sortable_get_position">
-			<span class="round_icon gray_on_white move"><i class="fa fa-arrows"></i></span>
+			<span class="ffx-round-icon gray_on_white move"><i class="fa fa-arrows"></i></span>
 		</label>
 
 		<label>
@@ -1809,8 +1811,8 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 		</label>
 
 		<label>
-			<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-			<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+			<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 		</label>
 	</fieldset>
 </div><!-- /category -->
@@ -1867,8 +1869,8 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 	</label>
 
 	<label>
-		<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-		<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+		<span class="ffx-round-icon red delete"><i class="fa fa-trash"></i></span>
+		<span class="ffx-round-icon green dupplicate"><i class="fa fa-plus"></i></span>
 	</label>
 </fieldset>
 

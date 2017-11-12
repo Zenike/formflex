@@ -446,7 +446,7 @@ function lang_menu_target(v) {
 
 
 
-
+/*
 //Menu de traduction en autopopup
 //OUVERTURE ET RECUPERATION
 $('body').on('click', "[data-lang-target] input[type=text],[data-lang-target] textarea", function () {
@@ -527,7 +527,7 @@ $('body').on('click', ".popup_validate", function () {
 
 	$(this).parents("#popup_lang_zoom").fadeOut();
 });
-
+*/
 
 
 
