@@ -1222,7 +1222,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 	</label>
 
 	<label class="ffx-label">
-		<span class="ffx-round-icon red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+		<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
 		<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
 	</label>
 </fieldset>
@@ -1232,6 +1232,69 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
+
+<!--------------------------------------------------------------------------------->
+
+<div class="formflex_title">
+	Auto-naming : cas 4
+	<small class="replace_names_link">(click to show names)</small>
+</div>
+
+<ul class="ffx-lang-menu" data-lang-menu="children_test">
+	<li data-lang="fr">fr</li>
+	<li data-lang="nl">nl</li>
+	<li data-lang="en">en</li>
+</ul>
+
+<div class="sortable">
+<div class="category manual_increment" data-group-cpt="999" data-group="children_group_erer" data-this-cpt="0">
+	<div>
+		<?php for($i=1;$i<=3;$i++) : ?>
+		<?php
+			if($i==1){$lang="fr";}
+			if($i==2){$lang="nl";}
+			if($i==3){$lang="en";}
+		?>
+		<fieldset class="ffx-fieldset" data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-form-base="form[pages][1295]">
+			<label class="ffx-label">
+				<input type="hidden" value="0" class="sortable_get_position">
+				<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name">rue</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="30" value="">
+
+				<span class="customErrorValidation"></span>
+				<span class="clear"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name">numero</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][number][<?php echo $lang; ?>]" data-name="number" size="5" value="">
+
+				<span class="customErrorValidation"></span>
+				<span class="clear"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name">Ville test</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="20" value="">
+
+				<span class="customErrorValidation"></span>
+				<span class="clear"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="round_icon blue children_add" data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+				<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
+				<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+			</label>
+		</fieldset>
+		<?php endfor; ?>
+	</div>
+</div><!-- /category -->
+</div><!-- /sortable -->
 
 <!--------------------------------------------------------------------------------->
 
