@@ -47,32 +47,6 @@ function checkbox_checking() {
     });
 }//checkbox_checking
 
-//bloquer les clicks sur les labels en eux mêmes (et pas sur le texte ou l'input)
-/*
-$("body").on("click",".formflex label",function(e){
-   if(e.target == this){
-       return false;
-   }
-});
-*/
-//infobulle qui n'enclenche pas le label
-/*
-$("body").on("mousedown", ".tips_hover", function(event){
-	event.stopPropagation();
-	return false;
-});
-$("body").on("click",".tips_hover",function(event){
-	if($(this).is(".mobile_active")){
-		$(this).removeClass("mobile_active");
-	}else{
-		$(this).addClass("mobile_active");
-	}
-
-	event.stopPropagation();
-	return false;
-});
-*/
-
 
 
 
@@ -131,76 +105,6 @@ function to_the_right() {
 		$(this).css("left",name_width);
     });
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//équilibrer les tailles dees radio/checkboxs dans un fieldset trop long
-/*
-$(document).ready(function () {
-    equalize_fieldset();
-});
-$(document).on("formflex_refresh", function(options){
-	equalize_fieldset();
-});
-function equalize_fieldset() {
-    $(".equalize").each(function (k, v) {
-        var max_width = 0;
-
-        $(v).find("label .name").each(function () {
-			if ($(this).actual('width') >= max_width) {
-                max_width = $(this).actual('width');
-            }
-        });
-
-		$(v).find("label .name").width(max_width+1);
-		//le +1 est une sécurité car parfois les navigateurs bug un peu
-		//et quand j'applique la taille actuelle ça passe en deux lignes.
-		//testable sur firebug en jouant avec la largeur dynamiquement.
-    });
-};
-*/
-
-
-
-
-
-
-
-
-/*
-$(document).ready(function(){
-	isolating_legend_solo();
-});
-$(window).resize(function(){
-	isolating_legend_solo();
-});
-function isolating_legend_solo(){
-	$(".formflex legend.solo").each(function(k,v){
-		$(this).height("auto");
-		$(this).height($(this).parent().height());
-	});
-};
-*/
-
-
 
 
 
@@ -442,92 +346,6 @@ function lang_menu_target(v) {
 
 
 
-/*
-//Menu de traduction en autopopup
-//OUVERTURE ET RECUPERATION
-$('body').on('click', "[data-lang-target] input[type=text],[data-lang-target] textarea", function () {
-	var id_lang_verif = $(this).parents("[data-lang-category]").attr("data-lang-category");
-	if($("[data-lang-menu="+id_lang_verif+"]").is(".mode_popup")){
-		if($(this).is("[readonly]")){
-
-		}else{
-			if($("[data-lang-menu="+id_lang_verif+"]>li").length>1){
-				lang_auto_popup($(this));
-			}
-		}
-	}
-});
-var unique_input_id_cpt=0;
-function lang_auto_popup(input){
-	//VARIABLES ET STOCKAGE
-	//Nom du regroupement (sans l'extension de la langue)
-	var id_lang = input.parents("[data-lang-target]").attr("data-lang-category");
-	//Le texte de l'input clické, dans la langue cliquée
-	var label_text = input.closest("label").find(".ffx-name").text();
-	//stocker l'index de l'input par rapport à son parent (afin de trouver ses équivalents plus tard)
-	var index_input = input.closest("[data-lang-target]").find("input,textarea").index(input);
-	//stockage des inputs équivalents
-	var array_input_multilang = [];
-	input.parents("[data-lang-category]").parent().find("[data-lang-category="+id_lang+"]").each(function(){
-		var sibling_element = $(this).find("input,textarea").eq(index_input);
-		sibling_element.attr("data-unique-input-id",unique_input_id_cpt);
-		unique_input_id_cpt++;
-		array_input_multilang.push(sibling_element);
-	});
-	//tableau avec les noms abrégés des langues
-	var lang_name = [];
-	$("[data-lang-menu="+id_lang+"] li").each(function(){
-		lang_name.push($(this).html());
-	});
-
-
-
-	$("#popup_lang_zoom").remove();
-	$("body").append('<div id="popup_lang_zoom" class="autopopup new m15 w500">');
-	$("#popup_lang_zoom").append('<div class="popup_title">'+label_text+'</div>');
-	$("#popup_lang_zoom").append('<div class="form">');
-	var cpt=0;
-	$(array_input_multilang).each(function(){
-		$("#popup_lang_zoom .formflex").append("<label>");
-		$("#popup_lang_zoom .formflex label:last").append('<span class="ffx-name">'+lang_name[cpt]+'</span>');
-		cpt++;
-
-		var clone = $(this).clone();
-		//réppliquer la valeur au clone à cuase d'un bug sur les textareas
-		clone.val($(this).val());
-
-		$("#popup_lang_zoom .formflex label:last").append(clone);
-		$("#popup_lang_zoom .formflex label:last").append('<span class="ffx-clear"></span>');
-	});
-	$("#popup_lang_zoom").append('<div class="popup_buttons"><div class="left"><span class="popup_cancel close">Annuler</span></div><div class="right"><span class="popup_validate">Valider</span></div></div>');
-
-	align_names();
-
-	var active_input = $("#popup_lang_zoom input[type=text]:first, #popup_lang_zoom textarea:first");
-	show_popup("popup_lang_zoom");
-
-	active_input.focus();
-}
-
-//FERMETURE ET RESTITUTION
-$('body').on('click', ".popup_validate", function () {
-	var inputs_array = $(this).parents(".content_wrapper").find(".formflex").find("input,textarea");
-
-	inputs_array.each(function(){
-		var unique_id = $(this).attr("data-unique-input-id");
-		$(this).removeAttr("data-unique-input-id");
-
-		$(this).insertAfter($("[data-unique-input-id="+unique_id+"]"));
-		$("[data-unique-input-id="+unique_id+"]").remove();
-	});
-
-	$(this).parents("#popup_lang_zoom").fadeOut();
-});
-*/
-
-
-
-
 
 
 
@@ -589,7 +407,6 @@ function uncheck_safe(v) {
 
 
 
-
 $(document).ready(function () {
 	position_each_customErrorValidation();
 });
@@ -605,17 +422,6 @@ function position_each_customErrorValidation(){
 			var conteneur = $(this).parents(".lane, fieldset");
 		}
 
-
-
-		//si plusieurs input dans le même parent, on se base sur le name pour les associer
-		/*
-		if(conteneur.find("input").length == 1){
-			var input = conteneur.find("input");
-		}else{
-			var message_name = $(this).attr("data-name");
-			var input = conteneur.find('input[name="'+message_name+'"]');
-		}
-		*/
 		var input = conteneur.find("input, select, textarea");
 
 		if(input.length > 0){
@@ -638,7 +444,6 @@ function position_each_customErrorValidation(){
 
 
 
-
 function empty_the_inputs(inputs_parent){
 	$(inputs_parent).find('input[type="text"],input[type="password"],textarea').val("");
 	$(inputs_parent).find("input, textarea").removeAttr('checked');
@@ -646,6 +451,10 @@ function empty_the_inputs(inputs_parent){
 	$(inputs_parent).find(".children_wrapper").remove();
 	$(inputs_parent).find("input, textarea, select").removeAttr('readonly');
 }
+
+
+
+
 
 
 
@@ -666,6 +475,7 @@ function do_sortable(){
 		}
 	});
 };
+
 
 
 
@@ -723,15 +533,6 @@ function insert_from_exterior(v){
 
 
 
-
-
-
-
-
-
-
-
-
 //fonction de test utile pour afficher les names des inputs dans la page
 function test_names(test){
 	setTimeout(function myFunction() {
@@ -740,6 +541,9 @@ function test_names(test){
 		});
 	}, 500)
 }
+
+
+
 
 
 
@@ -826,26 +630,6 @@ function input_names_auto(element,original,group,last){
 		});
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1074,61 +858,3 @@ $("body").on("click", ".formflex .delete", function(){
 	}
     return false;
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* TRASH
-
-$(element).find("[name]").each(function(){
-	var name = $(this).attr("name");
-	name = name.replace("[0]","["+cpt+"]");
-
-	$(this).attr("name",name);
-});
-
-$(element).find("[data-target]").each(function(){
-	var name = $(this).attr("data-target");
-	name = name.replace("_0_","_"+cpt+"_");
-
-	$(this).attr("data-target",name);
-});
-
-
-
-
-
-
-
-var cpt = $(original).attr("data-manual-increment");
-cpt++;
-$(original).attr("data-manual-increment",cpt);
-
-$(element).find("[name]").each(function(){
-	var name = $(this).attr("name");
-	name = name.replace("[0]","["+cpt+"]");
-
-	$(this).attr("name",name);
-});
-$(element).find("[data-target]").each(function(){
-	var name = $(this).attr("data-target");
-	name = name.replace("_0_","_"+cpt+"_");
-
-	$(this).attr("data-target",name);
-});
-
-*/
