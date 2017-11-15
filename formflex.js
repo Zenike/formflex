@@ -580,16 +580,16 @@ function input_names_auto(element,original,group,last){
 
 	//RECREATION DU NAME
 	//recuperer la structure basique
-	var structure_width_new_level = last.find("[data-form-base]").first().addBack().attr("data-form-base");
-	//console.log("data-form-base : "+structure_width_new_level);
+	var structure_width_new_level = last.find("[data-formflex-base]").first().addBack().attr("data-formflex-base");
+	//console.log("data-formflex-base : "+structure_width_new_level);
 	//réappliquer à l'élément nouvellement créé
-	element.find("[data-lang-iso]").attr("data-form-base",structure_width_new_level);
+	element.find("[data-lang-iso]").attr("data-formflex-base",structure_width_new_level);
 
 	var base_structure_and_id = structure_width_new_level+"["+new_item_cpt+"]";
-	//console.log("data-form-base + cpt d'item : "+base_structure_and_id);
+	//console.log("data-formflex-base + cpt d'item : "+base_structure_and_id);
 
 	if(element.find("[data-lang-iso]").length >= 1){
-		element.find("[data-form-base]").each(function(){
+		element.find("[data-formflex-base]").each(function(){
 			var lang_iso = $(this).attr("data-lang-iso");
 
 			$(this).find("[data-name]").each(function(){
@@ -611,7 +611,7 @@ function input_names_auto(element,original,group,last){
 			});
 		});
 	}else{
-		element.find("[data-form-base]").addBack().each(function(){
+		element.find("[data-formflex-base]").addBack().each(function(){
 			if($(this).find("[data-name]").length >= 1){
 				$(this).find("[data-name]").each(function(){
 					var actual_input_name = $(this).attr("data-name");
@@ -674,12 +674,12 @@ function insert_child(v){
 
 	//aller au parent logique et prendre, dans un attribut préparé, la mise en forme de la structure créee jusque là
 	/*
-	$(parent).find("[data-form-base]").each(function(){
-		console.log( $(this).attr("data-form-base") );
+	$(parent).find("[data-formflex-base]").each(function(){
+		console.log( $(this).attr("data-formflex-base") );
 	});
 	*/
 
-	var ancestor_name_structure = $(v).closest("[data-form-base]").attr("data-form-base");
+	var ancestor_name_structure = $(v).closest("[data-formflex-base]").attr("data-formflex-base");
 
 	//récuperation du compteur d'enfants
 	//si il n'est aps encore définit, se baser sur le nombre de frères existants
@@ -850,7 +850,7 @@ $("body").on("click", ".formflex .exterior_add", function (e) {
     insert_from_exterior($(this));
     return false;
 });
-$("body").on("click", ".formflex .delete", function(){
+$("body").on("click", ".ffx-round-icon--delete", function(){
 	if($(this).parents(".category").length > 0){
 		delete_form_element($(this).closest(".category"));
 	}else{

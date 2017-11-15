@@ -15,7 +15,7 @@ function generateRandomString() {
 <html lang="fr">
 <head>
 	<title>formflex</title>
-	<meta ffx-name="description" content="Description courte de la page" />
+	<meta name="description" content="Description courte de la page" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Language" content="fr" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -156,18 +156,18 @@ function generateRandomString() {
 
 <label class="ffx-label">
 	<span class="ffx-name">textarea horizontal</span>
-	<textarea class="ffx-textarea" ffx-name="" id="" cols="30" rows="10"></textarea>
+	<textarea class="ffx-textarea" name="" id="" cols="30" rows="10"></textarea>
 
-	<span class="customErrorValidation" data-ffx-name="street"></span>
+	<span class="customErrorValidation" data-name="street"></span>
 	<span class="ffx-clear"></span>
 </label>
 
 <label class="ffx-label">
 	<span class="ffx-name">textarea full width</span>
 	<span class="ffx-clear"></span>
-	<textarea class="ffx-textarea ffx-textarea--full-width" ffx-name="" id="" cols="30" rows="10"></textarea>
+	<textarea class="ffx-textarea ffx-textarea--full-width" name="" id="" cols="30" rows="10"></textarea>
 
-	<span class="customErrorValidation" data-ffx-name="street"></span>
+	<span class="customErrorValidation" data-name="street"></span>
 	<span class="ffx-clear"></span>
 </label>
 
@@ -187,39 +187,39 @@ function generateRandomString() {
 
 <label class="ffx-label">
 	<span class="ffx-name">select inline</span>
-	<select ffx-name="" id="" class="ffx-select">
+	<select name="" id="" class="ffx-select">
 		<option value="">option1</option>
 		<option value="">option2</option>
 		<option value="">option3</option>
 	</select>
 
-	<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
+	<span class="customErrorValidation" data-name="street_nbr"></span>
 	<span class="ffx-clear"></span>
 </label>
 
 <label class="ffx-label">
 	<span class="ffx-name">select full</span>
 	<span class="ffx-clear"></span>
-	<select ffx-name="" id="" class="ffx-select ffx-select--maximize">
+	<select name="" id="" class="ffx-select ffx-select--maximize">
 		<option value="">option1</option>
 		<option value="">option2</option>
 		<option value="">option3</option>
 	</select>
 
-	<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
+	<span class="customErrorValidation" data-name="street_nbr"></span>
 	<span class="ffx-clear"></span>
 </label>
 
 <label class="ffx-label">
 	<span class="ffx-name">select to the right</span>
 	<span class="ffx-righting-box">
-		<select ffx-name="" id="" class="ffx-select">
+		<select name="" id="" class="ffx-select">
 			<option value="">option1</option>
 			<option value="">option2</option>
 			<option value="">option3</option>
 		</select>
 	</span>
-	<span class="customErrorValidation" data-ffx-name="street"></span>
+	<span class="customErrorValidation" data-name="street"></span>
 	<span class="ffx-clear"></span>
 </label>
 
@@ -245,7 +245,7 @@ function generateRandomString() {
 		<span class="ffx-file__btn">Parcourir</span>
 		<input type="file">
 	</div>
-	<span class="customErrorValidation" data-ffx-name="street"></span>
+	<span class="customErrorValidation" data-name="street"></span>
 	<span class="ffx-clear"></span>
 </label>
 
@@ -305,7 +305,7 @@ function generateRandomString() {
 	<label class="ffx-checkskin ffx-checkskin--checkbox">
 		<span class="ffx-checkskin__input">
 			<i class="fa fa-check"></i>
-			<input type="checkbox" ffx-name="test3">
+			<input type="checkbox" name="test3">
 		</span>
 
 		<span class="customErrorValidation"></span>
@@ -381,9 +381,9 @@ function generateRandomString() {
 		<i class="fa fa-search"></i>
 	</button>
 	<label class="ffx-label">
-		<input class="ffx-input" type="text" size="30" ffx-name="street">
+		<input class="ffx-input" type="text" size="30" name="street">
 
-		<span class="customErrorValidation" data-ffx-name="street"></span>
+		<span class="customErrorValidation" data-name="street"></span>
 		<span class="ffx-clear"></span>
 	</label>
 </fieldset>
@@ -406,23 +406,23 @@ function generateRandomString() {
 	<legend class="ffx-legend">Adresse</legend>
 	<label class="ffx-label">
 		<span class="ffx-name">Rue</span>
-		<input class="ffx-input" type="text" size="30" ffx-name="street">
+		<input class="ffx-input" type="text" size="30" name="street">
 
-		<span class="customErrorValidation" data-ffx-name="street"></span>
+		<span class="customErrorValidation" data-name="street"></span>
 		<span class="ffx-clear"></span>
 	</label>
 	<label class="ffx-label">
 		<span class="ffx-name">num</span>
-		<input class="ffx-input" type="text" size="5" ffx-name="street_nbr">
+		<input class="ffx-input" type="text" size="5" name="street_nbr">
 
-		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
+		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="ffx-clear"></span>
 	</label>
 	<label class="ffx-label">
 		<span class="ffx-name">CP</span>
-		<input class="ffx-input" type="text" size="10" ffx-name="street_nbr">
+		<input class="ffx-input" type="text" size="10" name="street_nbr">
 
-		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
+		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="ffx-clear"></span>
 	</label>
 	<span class="ffx-clear"></span>
@@ -441,7 +441,7 @@ function generateRandomString() {
 	<label class="ffx-label">
 		<span class="ffx-name">num</span>
 		<span class="ffx-clear"></span>
-		<select class="ffx-select" ffx-name="" id="">
+		<select class="ffx-select" name="" id="">
 			<option value="">mois</option>
 		</select>
 		<span class="ffx-name">mois</span>
@@ -483,7 +483,7 @@ function generateRandomString() {
 		<span class="ffx-clear"></span>
 	</label>
 	<label class="ffx-label">
-		<select class="ffx-select" ffx-name="" id="">
+		<select class="ffx-select" name="" id="">
 			<option value="">+ 0 km</option>
 		</select>
 
@@ -856,7 +856,7 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 			<span class="ffx-clear"></span>
 		</label>
 		<label class="ffx-label">
-			<span class="ffx-round-icon red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
 			<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
 		</label>
 	</fieldset>
@@ -904,7 +904,7 @@ if($i==3){$lang="en";}
 
 				<label class="ffx-label">
 					<span class="ffx-name">batiment</span>
-					<input class="ffx-input" type="text" size="60" name="" data-ffx-name="building" value="">
+					<input class="ffx-input" type="text" size="60" name="" data-name="building" value="">
 
 					<span class="customErrorValidation"></span>
 					<span class="ffx-clear"></span>
@@ -1012,7 +1012,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 
 		<label class="ffx-label">
 			<span class="ffx-name">Ville</span>
-			<input class="ffx-input" type="text" name="formflex[pages][1295][0][city]" data-ffx-name="city" size="50" value="">
+			<input class="ffx-input" type="text" name="formflex[pages][1295][0][city]" data-name="city" size="50" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="ffx-clear"></span>
@@ -1046,7 +1046,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 		<label class="ffx-checkskin ffx-checkskin--radio">
 			<span class="ffx-checkskin__input">
 				<i class="fa fa-check"></i>
-				<input type="radio" name="formflex[pages][1295][0][radio]" data-ffx-name="radio">
+				<input type="radio" name="formflex[pages][1295][0][radio]" data-name="radio">
 			</span>
 			<span class="ffx-name">oui</span>
 
@@ -1057,7 +1057,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 		<label class="ffx-checkskin ffx-checkskin--radio">
 			<span class="ffx-checkskin__input">
 				<i class="fa fa-check"></i>
-				<input type="radio" name="formflex[pages][1295][0][radio]" data-ffx-name="radio">
+				<input type="radio" name="formflex[pages][1295][0][radio]" data-name="radio">
 			</span>
 			<span class="ffx-name">non</span>
 
@@ -1078,7 +1078,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
 <blockquote>
-si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujours mais n'ajoute pas les derniers crochets. Ca se finit donc sur le nombre incrémenté
+si on supprime l'attribut "data-name" des inputs, le système marche toujours mais n'ajoute pas les derniers crochets. Ca se finit donc sur le nombre incrémenté
 </blockquote>
 
 <!--------------------------------------------------------------------------------->
@@ -1100,7 +1100,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 		<label class="ffx-label">
 			<span class="ffx-name">rue</span>
-			<input class="ffx-input" type="text" name="formflex[pages][1295][0][street]" data-ffx-name="street" size="30" value="">
+			<input class="ffx-input" type="text" name="formflex[pages][1295][0][street]" data-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="ffx-clear"></span>
@@ -1108,11 +1108,11 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 		<label class="ffx-label">
 			<span class="ffx-name">num</span>
-			<select class="ffx-select" name="formflex[pages][1295][0][num]" data-ffx-name="num">
+			<select class="ffx-select" name="formflex[pages][1295][0][num]" data-name="num">
 				<option value="">mois</option>
 			</select>
 
-			<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
+			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="ffx-clear"></span>
 		</label>
 
@@ -1131,7 +1131,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 		<label class="ffx-label">
 			<span class="ffx-name">rue</span>
-			<input class="ffx-input" type="text" name="formflex[pages][1295][1][street]" data-ffx-name="street" size="30" value="">
+			<input class="ffx-input" type="text" name="formflex[pages][1295][1][street]" data-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="ffx-clear"></span>
@@ -1139,11 +1139,11 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 		<label class="ffx-label">
 			<span class="ffx-name">num</span>
-			<select class="ffx-select" ffx-name="formflex[pages][1295][1][num]" data-ffx-name="num">
+			<select class="ffx-select" name="formflex[pages][1295][1][num]" data-name="num">
 				<option value="">mois</option>
 			</select>
 
-			<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
+			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="ffx-clear"></span>
 		</label>
 
@@ -1162,7 +1162,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 		<label class="ffx-label">
 			<span class="ffx-name">rue</span>
-			<input class="ffx-input" type="text" name="formflex[pages][1295][2][street]" data-ffx-name="street" size="30" value="">
+			<input class="ffx-input" type="text" name="formflex[pages][1295][2][street]" data-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
 			<span class="ffx-clear"></span>
@@ -1170,11 +1170,11 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 		<label class="ffx-label">
 			<span class="ffx-name">num</span>
-			<select class="ffx-select" ffx-name="formflex[pages][1295][2][num]" data-ffx-name="num">
+			<select class="ffx-select" name="formflex[pages][1295][2][num]" data-name="num">
 				<option value="">mois</option>
 			</select>
 
-			<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
+			<span class="customErrorValidation" data-name="street_nbr"></span>
 			<span class="ffx-clear"></span>
 		</label>
 
@@ -1205,7 +1205,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 <fieldset class="ffx-fieldset category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-formflex-base="formflex[pages][1295]">
 	<label class="ffx-label">
 		<span class="ffx-name">rue</span>
-		<input class="ffx-input" type="text" name="sdfsdfsdf" data-ffx-name="street" size="30" value="">
+		<input class="ffx-input" type="text" name="sdfsdfsdf" data-name="street" size="30" value="">
 
 		<span class="customErrorValidation"></span>
 		<span class="ffx-clear"></span>
@@ -1213,11 +1213,11 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 	<label class="ffx-label">
 		<span class="ffx-name">num</span>
-		<select class="ffx-select" name="sdfsdf" data-ffx-name="num">
+		<select class="ffx-select" name="sdfsdf" data-name="num">
 			<option value="">mois</option>
 		</select>
 
-		<span class="customErrorValidation" data-ffx-name="street_nbr"></span>
+		<span class="customErrorValidation" data-name="street_nbr"></span>
 		<span class="ffx-clear"></span>
 	</label>
 
@@ -1255,7 +1255,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 			if($i==2){$lang="nl";}
 			if($i==3){$lang="en";}
 		?>
-		<fieldset class="ffx-fieldset" data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-form-base="form[pages][1295]">
+		<fieldset class="ffx-fieldset" data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-formflex-base="form[pages][1295]">
 			<label class="ffx-label">
 				<input type="hidden" value="0" class="sortable_get_position">
 				<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
@@ -1263,7 +1263,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 			<label class="ffx-label">
 				<span class="ffx-name">rue</span>
-				<input class="ffx-input" type="text" name="form[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="30" value="">
+				<input class="ffx-input" type="text" name="form[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="20" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
@@ -1271,7 +1271,7 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 			<label class="ffx-label">
 				<span class="ffx-name">numero</span>
-				<input class="ffx-input" type="text" name="form[pages][1295][0][number][<?php echo $lang; ?>]" data-name="number" size="5" value="">
+				<input class="ffx-input" type="text" name="form[pages][1295][0][number][<?php echo $lang; ?>]" data-name="number" size="3" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
@@ -1279,16 +1279,16 @@ si on supprime l'attribut "data-ffx-name" des inputs, le système marche toujour
 
 			<label class="ffx-label">
 				<span class="ffx-name">Ville test</span>
-				<input class="ffx-input" type="text" name="form[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="20" value="">
+				<input class="ffx-input" type="text" name="form[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="15" value="">
 
 				<span class="customErrorValidation"></span>
 				<span class="clear"></span>
 			</label>
 
 			<label class="ffx-label">
-				<span class="round_icon blue children_add" data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
-				<span class="round_icon red delete"><i class="fa fa-trash"></i></span>
-				<span class="round_icon green dupplicate"><i class="fa fa-plus"></i></span>
+				<span class="ffx-round-icon ffx-round-icon--blue children_add" data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+				<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+				<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
 			</label>
 		</fieldset>
 		<?php endfor; ?>
