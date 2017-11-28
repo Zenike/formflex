@@ -887,8 +887,8 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 
 <?php ob_start(); ?>
 
-<div class="children_templates">
-	<div class="category" data-child-template="classic_child1">
+<div style="display:none">
+	<div class="category" data-ffx-child-template="classic_child1">
 		<div>
 <?php
 for($i=1;$i<=3;$i++) :
@@ -911,7 +911,7 @@ if($i==3){$lang="en";}
 				</label>
 
 				<label class="ffx-label">
-					<span class="ffx-round-icon ffx-round-icon--blue" data-ffx-children-add data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+					<span class="ffx-round-icon ffx-round-icon--blue" data-ffx-children-add="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
 					<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
 				</label>
 			</fieldset>
@@ -1286,7 +1286,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 			</label>
 
 			<label class="ffx-label">
-				<span class="ffx-round-icon ffx-round-icon--blue children_add" data-child-template-cmd="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+				<span class="ffx-round-icon ffx-round-icon--blue" data-ffx-children-add="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
 				<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
 				<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
 			</label>

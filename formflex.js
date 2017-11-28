@@ -647,8 +647,8 @@ function input_names_auto(element,original,group,last){
 
 //ajouter un enfant (via templates séparés)
 function insert_child(v){
-	var template_name = $(v).attr("data-child-template-cmd");
-	var template = $("[data-child-template=" + template_name + "]");
+	var template_name = $(v).attr("data-ffx-children-add");
+	var template = $("[data-ffx-child-template=" + template_name + "]");
 
 	//si le div "children_wrapper" rassemblant les enfants de l'élémen
 	//est inexistant, le créer, avec ou sans déclarer la fonction de tri (jquery ui sortable)
@@ -667,7 +667,7 @@ function insert_child(v){
 	//trouver l'élément faisant office de parent au niveau de la logique de la structure
 	var parent = $(v).closest(".category");
 	//cloner le template adéquat et le mettre en variable, prêt pour la suite
-	var element = $(template).clone(true).removeAttr("data-child-template");
+	var element = $(template).clone(true).removeAttr("data-ffx-child-template");
 
 	//insérer l'élément dans le groupe d'enfants
 	children_wrapper.append(element);
