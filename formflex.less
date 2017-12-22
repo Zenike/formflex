@@ -5,9 +5,8 @@
 display: block;
 height: @formflex_input_height;
 border: 1px solid @formflex_bd;
-float: left;
-margin: 0 3px;
 padding: 0 5px;
+margin: 0;
 font-size: @formflex_input_font_size;
 color: @formflex_input_fontcolor;
 border-radius: @formflex_input_round;
@@ -39,16 +38,13 @@ font-weight: @formflex_input_font_weight;
 }
 
 .ffx-name, .ffx-legend {
-padding: 0;
 display: block;
-margin: 0 10px;
-min-height: @formflex_input_height;
-line-height: @formflex_input_height;
-float: left;
+margin: 0;
 font-size: @formflex_name_fz;
 color: @formflex_name_color;
 border: none;
 font-weight: @formflex_name_font_weight;
+padding: 10px 0;
 	i {
 	font-size: 18px;
 	color: @formflex_name_color;
@@ -63,9 +59,18 @@ font-weight: @formflex_name_font_weight;
 	padding-bottom: 5px;
 	min-height: 0;
 	}
+	&.ffx-name--inline {
+	display: inline-block;
+	padding: 0;
+	min-height: @formflex_input_height;
+	line-height: @formflex_input_height;
+	}
 	&.ffx-legend {
 	margin: 0;
 	}
+}
+.ffx-name--inline + .ffx-input {
+display: inline-block;
 }
 
 .ffx-textarea {

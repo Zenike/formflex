@@ -90,22 +90,6 @@ function ffx_align_names() {
 
 
 
-//ajuster la largeur des champs éléments ffx-righting-box
-$(document).ready(function () {
-    to_the_right();
-});//ready
-$(document).on("formflex_refresh", function(options){
-	to_the_right();
-});
-function to_the_right() {
-    $(".ffx-righting-box").each(function (k, v) {
-		var name = $(this).parent().find(".ffx-name");
-		var name_width = name.width() + 3;
-
-		$(this).css("left",name_width);
-    });
-};
-
 
 
 

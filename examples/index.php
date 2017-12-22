@@ -54,48 +54,24 @@ function generateRandomString() {
 <?php ob_start(); ?>
 
 <label class="ffx-label">
-	<span class="ffx-name">horizontal simple</span>
+	<span class="ffx-name ffx-name--inline">horizontal simple</span>
 	<input class="ffx-input" type="text" size="30" placeholder="mon test 1">
 
 	<span class="customErrorValidation"></span>
-	<span class="ffx-clear"></span>
-</label>
-
-<label class="ffx-label">
-	<span class="ffx-name">horizontal extensible (script)</span>
-	<span class="ffx-righting-box">
-		<input class="ffx-input" type="text" size="30">
-	</span>
-
-	<span class="customErrorValidation"></span>
-	<span class="ffx-clear"></span>
 </label>
 
 <label class="ffx-label">
 	<span class="ffx-name">à la ligne simple</span>
-	<span class="ffx-clear"></span>
 	<input class="ffx-input" type="text" size="30">
 
 	<span class="customErrorValidation"></span>
-	<span class="ffx-clear"></span>
-</label>
-
-<label class="ffx-label">
-	<span class="ffx-name ffx-name--autoheight">identique mais avec un name à hauteur automatique</span>
-	<span class="ffx-clear"></span>
-	<input class="ffx-input" type="text" size="30">
-
-	<span class="customErrorValidation"></span>
-	<span class="ffx-clear"></span>
 </label>
 
 <label class="ffx-label">
 	<span class="ffx-name">à la ligne extensible (css uniquement)</span>
-	<span class="ffx-clear"></span>
 	<input class="ffx-input ffx-input--full-width" type="text" size="30">
 
 	<span class="customErrorValidation"></span>
-	<span class="ffx-clear"></span>
 </label>
 
 <?php $ffx_example_code = ob_get_clean(); ?>
@@ -116,19 +92,17 @@ function generateRandomString() {
 
 <?php for($i=1;$i<=3;$i++){ ?>
 	<label class="ffx-label">
-		<span class="ffx-name" data-ffx-align-names><?php echo generateRandomString(); ?></span>
+		<span class="ffx-name ffx-name--inline" data-ffx-align-names><?php echo generateRandomString(); ?></span>
 		<input class="ffx-input" type="text" size="30">
 
 		<span class="customErrorValidation"></span>
-		<span class="ffx-clear"></span>
 	</label>
 <?php } ?>
 <label class="ffx-label">
-	<span class="ffx-name">label non aligné aux autres</span>
+	<span class="ffx-name ffx-name--inline">label non aligné aux autres</span>
 	<input class="ffx-input" type="text" size="30">
 
 	<span class="customErrorValidation"></span>
-	<span class="ffx-clear"></span>
 </label>
 
 </div><!-- /ffx-align-names-container -->
@@ -207,19 +181,6 @@ function generateRandomString() {
 	</select>
 
 	<span class="customErrorValidation" data-name="street_nbr"></span>
-	<span class="ffx-clear"></span>
-</label>
-
-<label class="ffx-label">
-	<span class="ffx-name">select to the right</span>
-	<span class="ffx-righting-box">
-		<select name="" id="" class="ffx-select">
-			<option value="">option1</option>
-			<option value="">option2</option>
-			<option value="">option3</option>
-		</select>
-	</span>
-	<span class="customErrorValidation" data-name="street"></span>
 	<span class="ffx-clear"></span>
 </label>
 
