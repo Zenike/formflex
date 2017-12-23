@@ -61,31 +61,42 @@ padding: 10px 0;
 	}
 	&.ffx-name--inline {
 	display: inline-block;
+	width: auto;
 	padding: 0;
 	min-height: @formflex_input_height;
 	line-height: @formflex_input_height;
+	vertical-align: top;
+	}
+	&.ffx-legend--inline {
+	float: left;
+	width: auto;
+	min-height: @formflex_input_height;
+	line-height: @formflex_input_height;
+	padding: 0;
+	padding-right: 10px;
 	}
 	&.ffx-legend {
 	margin: 0;
 	}
 }
-.ffx-name--inline + .ffx-input {
+.ffx-name--inline + .ffx-input,
+.ffx-name--inline + .ffx-textarea,
+.ffx-name--inline + .ffx-file,
+.ffx-name--inline + .ffx-select {
 display: inline-block;
 }
 
 .ffx-textarea {
 display: block;
 border: 1px solid @formflex_bd;
-float: left;
-margin: 0 3px;
+margin: 0;
 padding: 5px;
 font-size: @formflex_input_font_size;
 color: @formflex_input_fontcolor;
 background-color: @formflex_input_bgcolor;
 min-height: 100px;
 height: 100px;
-width: 400px;
-min-width: 400px;
+width: 100%;
 max-width: 400px;
 border-radius: @formflex_input_round;
 font-weight: @formflex_input_font_weight;
@@ -100,10 +111,7 @@ font-weight: @formflex_input_font_weight;
 	outline:0px !important;
 	}
 	&.ffx-textarea--full-width {
-	width: 100%;
 	max-width: 100%;
-	min-width: 0;
-	margin: 0;
 	}
 	&[disabled=disabled] {
 	background-color: #eee;
@@ -130,10 +138,10 @@ color: @formflex_input_fontcolor;
 appearance: none;
 font-size: @formflex_input_font_size;
 padding-left: 5px;
+padding-right: @formflex_input_height;
 font-weight: @formflex_input_font_weight;
 position: relative;
-margin: 0 3px;
-float: left;
+margin: 0;
 	&:hover {
 	background-position: bottom right;
 	border-color: @formflex_bd_hover;
@@ -158,8 +166,8 @@ float: left;
 .ffx-file {
 position: relative;
 overflow: hidden;
-margin: 0 3px;
-float: left;
+margin: 0;
+vertical-align: top;
 	.ffx-file__infos {
 	border: 1px solid @formflex_bd;
 	border-right: 0;
@@ -214,12 +222,16 @@ display: block;
 margin: 5px 0;
 cursor: pointer;
 	.ffx-name {
-	float: none;
+	padding: 0;
 	padding-left: @formflex_input_height + 10 + @formflex_checkskin_input_size_decal;
 	margin-left: 0;
+	min-height: @formflex_input_height;
+	line-height: @formflex_input_height;
+	padding-top: 0;
+	bottom: 0;
+	vertical-align: top;
 	}
 	.ffx-checkskin__input {
-	float: left;
 	height:  @formflex_input_height + @formflex_checkskin_input_size_decal;
 	line-height: @formflex_input_height + @formflex_checkskin_input_size_decal;
 	width: @formflex_input_height  + @formflex_checkskin_input_size_decal;
@@ -230,8 +242,9 @@ cursor: pointer;
 	border: 1px solid @formflex_checkskin_bd_color;
 	color: @formflex_checkskin_iconcolor;
 	font-size: @formflex_checkskin_fz;
-	display: block;
 	overflow: hidden;
+	float: left;
+	vertical-align: top;
 		input {
 		position: absolute;
 		top: 0px;
@@ -392,27 +405,20 @@ border: none;
 margin: 5px 0;
 position: relative;
 display: block;
-	.ffx-label {
-	min-height: 10px;
-	position: relative;
+	//bootstrap clearfix code
+	&::after {
 	display: block;
-	margin: 0;
-	float: left;
-		&:first-child {
-			.ffx-name:first-child {
-			margin-left: 0;
-			}
-		}
+	content: "";
+	clear: both;
 	}
-	.ffx-checkskin {
-	float: left;
-	margin-top: 0;
-	margin-bottom: 0;
+	.ffx-label, .ffx-checkskin {
+	min-height: 10px;
+	margin: 0;
+	display: inline-block;
 	}
 	&.ffx-fieldset--unify {
-		.ffx-input, .ffx-select {
-		margin-left: 0!important;
-		margin-right: 0!important;
+		.ffx-label {
+		float: left;
 		}
 		.ffx-label:first-child {
 			.ffx-input, .ffx-select {
@@ -458,8 +464,7 @@ color: #fff;
 border-radius: 100px;
 cursor: pointer;
 border: none;
-float: left;
-margin: 0 3px;
+display: inline-block;
 	&:hover {
 	background-color: @formflex_main_color_theme_hover;
 	}
@@ -497,10 +502,10 @@ margin: 0 3px;
 	}
 }
 .clone .ffx-round-icon--delete {
-display: block;
+display: inline-block;
 }
 .dupplicate_wrapper .ffx-round-icon--dupplicate {
-display: block;
+display: inline-block;
 }
 
 .ffx-lang-menu {
@@ -525,7 +530,7 @@ padding: 0;
 }
 
 .children_wrapper .ffx-round-icon--delete {
-display: block;
+display: inline-block;
 }
 .children_wrapper {
 margin-left: 50px;
