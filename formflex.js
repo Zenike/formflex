@@ -517,15 +517,6 @@ function insert_from_exterior(v){
 
 
 
-//fonction de test utile pour afficher les names des inputs dans la page
-function test_names(test){
-	setTimeout(function myFunction() {
-		$("input[type=text]").each(function(){
-			$(this).val($(this).attr("name"));
-		});
-	}, 500)
-}
-
 
 
 
