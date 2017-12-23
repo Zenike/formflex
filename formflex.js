@@ -574,7 +574,7 @@ function input_names_auto(element,original,group,last){
 
 
 //ajouter un enfant (via templates séparés)
-function insert_child(v){
+function ffxChildrenAdd(v){
 	var template_name = $(v).attr("data-ffx-children-add");
 	var template = $("[data-ffx-child-template=" + template_name + "]");
 
@@ -764,14 +764,14 @@ $(document).on("formflex_refresh", function(options){
 
 
 $("body").on("click", ".ffx-round-icon--dupplicate", function (e) {
-    e.preventDefault();
-    clone_form_element($(this).closest("[data-group]"));
-    return false;
+	e.preventDefault();
+	clone_form_element($(this).closest("[data-group]"));
+	return false;
 });
 $("body").on("click", "[data-ffx-children-add]", function (e) {
-    e.preventDefault();
-    insert_child($(this));
-    return false;
+	e.preventDefault();
+	ffxChildrenAdd($(this));
+	return false;
 });
 $("body").on("click", ".ffx-round-icon--delete", function(){
 	if($(this).parents(".category").length > 0){
@@ -779,5 +779,5 @@ $("body").on("click", ".ffx-round-icon--delete", function(){
 	}else{
 		delete_form_element($(this).closest("[data-group]"));
 	}
-    return false;
+	return false;
 });
