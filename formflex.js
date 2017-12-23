@@ -469,53 +469,6 @@ function do_sortable(){
 
 
 
-function insert_from_exterior(v){
-	//definir le template à duppliquer
-	var template_name = $(v).attr("data-child-template-cmd");
-	var template = $("[data-child-template=" + template_name + "]");
-
-	//definir les elements references (premier et dernier element appartenant au même groupe)
-	var group_target = $(v).attr("data-group-target");
-	var last_group_target = $("[data-group="+group_target+"]:last");
-	var original = $("[data-group="+group_target+"]:first");
-
-	//definir l'element, c'est à dire le groupe créé et ajouté
-	var element = template.clone(true).removeAttr("data-child-template").attr("data-group",group_target).addClass("clone");
-
-	//insérer l'élément à la fin de la liste
-	element.insertAfter(last_group_target);
-
-	//en cas d'incrementation des names en manuel (optionnel)
-	if(last_group_target.is(".manual_increment")){
-		input_names_auto(element,original,group_target,last_group_target);
-	};
-
-	//REMISE EN PLACE DES ELEMENTS DE LANGUE
-	//recuperation de la catégorie de langue
-	original_category = original.find("[data-lang-iso]").attr("data-lang-category");
-	//ajout en attribut au nouveau element de : categorie, target complet recomposé
-	element.find("[data-lang-iso]").each(function(){
-		$(this).attr("data-lang-category",original_category);
-		$(this).attr("data-lang-target",original_category+"-"+$(this).attr("data-lang-iso"));
-	});
-
-	lang_menu();
-
-	if(element.is(".auto_child_on_inclusion")){
-		element.find("[data-ffx-children-add]:visible").trigger("click");
-	}
-}//insert_from_exterior
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -818,11 +771,6 @@ $("body").on("click", ".ffx-round-icon--dupplicate", function (e) {
 $("body").on("click", "[data-ffx-children-add]", function (e) {
     e.preventDefault();
     insert_child($(this));
-    return false;
-});
-$("body").on("click", ".formflex .exterior_add", function (e) {
-    e.preventDefault();
-    insert_from_exterior($(this));
     return false;
 });
 $("body").on("click", ".ffx-round-icon--delete", function(){
