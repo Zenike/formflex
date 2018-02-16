@@ -432,7 +432,7 @@ function empty_the_inputs(inputs_parent){
 	$(inputs_parent).find('input[type="text"],input[type="password"],textarea').val("");
 	$(inputs_parent).find("input, textarea").removeAttr('checked');
 	$(inputs_parent).find(".checked").removeClass('checked');
-	$(inputs_parent).find(".children_wrapper").remove();
+	$(inputs_parent).find(".ffx-children-wrapper").remove();
 	$(inputs_parent).find("input, textarea, select").removeAttr('readonly');
 }
 
@@ -449,7 +449,7 @@ function do_sortable(){
 		handle: ".move",
 		update:function(event,ui){callback_form_add($(this))},
 		stop:function(event,ui){
-			if(ui.item.parent().is(".children_wrapper")){
+			if(ui.item.parent().is(".ffx-children-wrapper")){
 				var group = ui.item.parent().children(".category")
 				organize_sortable_position(group);
 			}else{
@@ -581,17 +581,17 @@ function ffxChildrenAdd(v){
 	//si le div "children_wrapper" rassemblant les enfants de l'élémen
 	//est inexistant, le créer, avec ou sans déclarer la fonction de tri (jquery ui sortable)
 
-	if($(v).closest(".category").find(".children_wrapper").length<1){
+	if($(v).closest(".category").find(".ffx-children-wrapper").length<1){
 		if($(v).parents(".sortable").length>=1){
-			$(v).closest(".category").append('<div class="sortable children_wrapper">');
+			$(v).closest(".category").append('<div class="sortable ffx-children-wrapper">');
 			do_sortable();
 		}else{
-			$(v).closest(".category").append('<div class="children_wrapper">');
+			$(v).closest(".category").append('<div class="ffx-children-wrapper">');
 		}
 	}
 
 	//trouver le groupe d'enfant relatif à cet élément
-	var children_wrapper = $(v).closest(".category").find(".children_wrapper:first");
+	var children_wrapper = $(v).closest(".category").find(".ffx-children-wrapper:first");
 	//trouver l'élément faisant office de parent au niveau de la logique de la structure
 	var parent = $(v).closest(".category");
 	//cloner le template adéquat et le mettre en variable, prêt pour la suite
