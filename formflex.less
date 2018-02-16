@@ -1,6 +1,27 @@
 
 //////////////////////////////// BASIC FORM ELEMENTS
 
+[class^="ffx-"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+color: @formflex_input_fontcolor;
+opacity: 0.8;
+}
+[class^="ffx-"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: @formflex_input_fontcolor;
+opacity: 0.8;
+}
+[class^="ffx-"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: @formflex_input_fontcolor;
+opacity: 0.8;
+}
+[class^="ffx-"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: @formflex_input_fontcolor;
+opacity: 0.8;
+}
+[class^="ffx-"]::-ms-input-placeholder { /* Microsoft Edge */
+color: @formflex_input_fontcolor;
+opacity: 0.8;
+}
+
 .ffx-input {
 display: block;
 height: @formflex_input_height;
@@ -521,31 +542,9 @@ padding: 0;
 .children_wrapper .ffx-round-icon--delete {
 display: inline-block;
 }
+
 .children_wrapper {
 margin-left: 50px;
-}
-
-.formflex {
-	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-	color: @formflex_input_fontcolor;
-	opacity: 0.8;
-	}
-	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color: @formflex_input_fontcolor;
-	opacity: 0.8;
-	}
-	::-moz-placeholder { /* Mozilla Firefox 19+ */
-	color: @formflex_input_fontcolor;
-	opacity: 0.8;
-	}
-	:-ms-input-placeholder { /* Internet Explorer 10-11 */
-	color: @formflex_input_fontcolor;
-	opacity: 0.8;
-	}
-	::-ms-input-placeholder { /* Microsoft Edge */
-	color: @formflex_input_fontcolor;
-	opacity: 0.8;
-	}
 }
 
 .customErrorValidation {

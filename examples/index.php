@@ -130,7 +130,7 @@ function generateRandomString() {
 
 <label class="ffx-label">
 	<span class="ffx-name ffx-name--inline">textarea horizontal</span>
-	<textarea class="ffx-textarea" name="" id="" cols="30" rows="10"></textarea>
+	<textarea class="ffx-textarea" placeholder="Mon textarea" name="" id="" cols="30" rows="10"></textarea>
 
 	<span class="customErrorValidation" data-name="street"></span>
 </label>
