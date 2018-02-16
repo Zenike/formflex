@@ -133,7 +133,6 @@ function generateRandomString() {
 	<textarea class="ffx-textarea" name="" id="" cols="30" rows="10"></textarea>
 
 	<span class="customErrorValidation" data-name="street"></span>
-	<span class="ffx-clear"></span>
 </label>
 
 <label class="ffx-label">
@@ -352,7 +351,6 @@ function generateRandomString() {
 		<input class="ffx-input" type="text" size="30" name="street">
 
 		<span class="customErrorValidation" data-name="street"></span>
-		<span class="ffx-clear"></span>
 	</label>
 </fieldset>
 
@@ -467,7 +465,6 @@ function generateRandomString() {
 		<input class="ffx-input" type="text" size="12" placeholder="Votre commune">
 
 		<span class="customErrorValidation"></span>
-		<span class="ffx-clear"></span>
 	</label>
 
 	<label class="ffx-label">
@@ -476,7 +473,6 @@ function generateRandomString() {
 		</select>
 
 		<span class="customErrorValidation"></span>
-		<span class="ffx-clear"></span>
 	</label>
 </fieldset>
 
@@ -485,14 +481,12 @@ function generateRandomString() {
 		<input class="ffx-input" type="text" size="12" placeholder="Votre commune">
 
 		<span class="customErrorValidation"></span>
-		<span class="ffx-clear"></span>
 	</label>
 
 	<label class="ffx-label">
 		<input class="ffx-input" type="text" size="6" placeholder="CP">
 
 		<span class="customErrorValidation"></span>
-		<span class="ffx-clear"></span>
 	</label>
 </fieldset>
 
@@ -1103,7 +1097,6 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 			<input class="ffx-input" type="text" name="formflex[pages][1295][1][street]" data-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
-			<span class="ffx-clear"></span>
 		</label>
 
 		<label class="ffx-label">
@@ -1113,7 +1106,6 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 			</select>
 
 			<span class="customErrorValidation" data-name="street_nbr"></span>
-			<span class="ffx-clear"></span>
 		</label>
 
 		<label class="ffx-label">
@@ -1134,7 +1126,6 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 			<input class="ffx-input" type="text" name="formflex[pages][1295][2][street]" data-name="street" size="30" value="">
 
 			<span class="customErrorValidation"></span>
-			<span class="ffx-clear"></span>
 		</label>
 
 		<label class="ffx-label">
@@ -1144,7 +1135,6 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 			</select>
 
 			<span class="customErrorValidation" data-name="street_nbr"></span>
-			<span class="ffx-clear"></span>
 		</label>
 
 		<label class="ffx-label">

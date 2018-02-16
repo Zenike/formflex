@@ -679,7 +679,7 @@ function clone_form_element(v){
 	var group = $(v).attr("data-group");
 	var original = $("[data-group=" + group + "]").first();
 	var last = $("[data-group=" + group + "]").last();
-	var element = $(original).clone(true).addClass("clone");
+	var element = $(original).clone(true).addClass("ffx-clone");
 
 	$.event.trigger({
 	type: "form_element_before_cloned",
