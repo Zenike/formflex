@@ -18,6 +18,23 @@ $(".replace_names_link").click(function(){
 
 
 
+function customValidation(){
+	$(".ffx-error").each(function(){
+		$(this).append('<span class="ffx-error__info">Message test</span><span class="ffx-error__arrow"></span>');
+		$(this).show();
+	});
+};
+
+$(".custom-validation-btn").click(function(){
+	customValidation();
+});
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +99,7 @@ $("#test_form").click(function () {
 
         $('html,body').scrollTop(0);
     } else {
-        $('.customErrorValidation').show();
+        $('.ffx-error').show();
     }
 });
 
@@ -90,9 +107,9 @@ function initValidation($form) {
     $form.validate({
         errorPlacement: function (error, element) {
 
-            $error = $(element).parent().find('.customErrorValidation').first();
+            $error = $(element).parent().find('.ffx-error').first();
             if ($error.length == 0) {
-                $error = $(element).parent().parent().find('.customErrorValidation').first();
+                $error = $(element).parent().parent().find('.ffx-error').first();
             }
 
             errorStr = "";
@@ -111,7 +128,7 @@ $('form').each(function () {
     initValidation($(this));
 });
 
-$(".customErrorValidation").each(function () {
+$(".ffx-error").each(function () {
 
     if ($(this).parents(".label,label").length == 1) {
         var conteneur = $(this).parents(".label,label");

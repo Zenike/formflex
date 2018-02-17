@@ -398,7 +398,7 @@ $(document).on("formflex_refresh", function(options){
 	position_each_customErrorValidation();
 });
 function position_each_customErrorValidation(){
-	$(".customErrorValidation").each(function(){
+	$(".ffx-error").each(function(){
 
 		if($(this).parents(".label,label").length==1){
 			var conteneur = $(this).parents(".label,label");
@@ -409,8 +409,8 @@ function position_each_customErrorValidation(){
 		var input = conteneur.find("input, select, textarea");
 
 		if(input.length > 0){
-			var deca_left = input.offset().left - conteneur.offset().left;
-			var deca_top = input.offset().top-21 - conteneur.offset().top;
+			var deca_left = input.offset().left+14 - conteneur.offset().left;
+			var deca_top = input.offset().top-25 - conteneur.offset().top;
 
 			$(this).css({
 			left: deca_left+"px",
