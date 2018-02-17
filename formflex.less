@@ -143,10 +143,10 @@ font-weight: @formflex_input_font_weight;
 .ffx-select {
 border: 1px solid @formflex_bd;
 overflow: hidden;
-background-image: url(../img/select_handler.png);
+background-image: url(../img/ffx-select-arrow-on.svg);
 background-repeat: no-repeat;
 background-position: top right;
-background-size: auto @formflex_input_height*2;
+background-size: auto @formflex_input_height;
 height: @formflex_input_height;
 background-color: @formflex_input_bgcolor;
 display: block;
@@ -166,8 +166,7 @@ position: relative;
 margin: 0;
 max-width: 100%;
 	&:hover {
-	background-position: bottom right;
-	border-color: @formflex_bd_hover;
+	background-image: url(../img/ffx-select-arrow-off.svg);
 	}
 	option {
 	background-color: @formflex_input_bgcolor;
