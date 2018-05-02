@@ -19,6 +19,7 @@
 /* FORMFLEX GENERAL */
 @formflex_input_height: 60px;/*27px*/
 @formflex_input_bgcolor: #333;/*#fff*/
+@formflex_option_bgcolor: #333;/*#fff*/
 @formflex_input_font_size: 16px;/*12px*/
 @formflex_input_font_weight: normal;/*12px*/
 @formflex_input_fontcolor: #fff;/*@tm*/
