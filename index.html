@@ -1,16 +1,3 @@
-<?php
-$pathLinkFile="./assets/";
-function generateRandomString() {
-	$length = rand(5, 20);
-	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	$charactersLength = strlen($characters);
-	$randomString = '';
-	for ($i = 0; $i < $length; $i++) {
-		$randomString .= $characters[rand(0, $charactersLength - 1)];
-	}
-	return $randomString;
-}
-?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -22,6 +9,8 @@ function generateRandomString() {
 	<link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="./assets/img/favicon.png" rel="shortcut icon" type="image/png" />
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./assets/js/prefunctions.js"></script>
 </head>
 <body>
 
@@ -49,7 +38,7 @@ function generateRandomString() {
 	input text
 </div>
 
-<?php ob_start(); ?>
+<section class="example-1">
 
 <label class="ffx-label">
 	<span class="ffx-name ffx-name--inline">horizontal simple</span>
@@ -72,11 +61,11 @@ function generateRandomString() {
 	<span class="ffx-error"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(1);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -84,7 +73,7 @@ function generateRandomString() {
 	Textareas
 </div>
 
-<?php ob_start(); ?>
+<section class="example-2">
 
 <label class="ffx-label">
 	<span class="ffx-name ffx-name--inline">textarea horizontal</span>
@@ -107,11 +96,11 @@ function generateRandomString() {
 	<span class="ffx-error" data-name="street"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(2);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -119,7 +108,7 @@ function generateRandomString() {
 	Select
 </div>
 
-<?php ob_start(); ?>
+<section class="example-3">
 
 <label class="ffx-label">
 	<span class="ffx-name ffx-name--inline">select inline</span>
@@ -154,11 +143,11 @@ function generateRandomString() {
 	<span class="ffx-error" data-name="street_nbr"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(3);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -166,7 +155,7 @@ function generateRandomString() {
 	Input file
 </div>
 
-<?php ob_start(); ?>
+<section class="example-4">
 
 <label class="ffx-label">
 	<span class="ffx-name">Upload des fichiers</span>
@@ -190,11 +179,11 @@ function generateRandomString() {
 	<span class="ffx-error" data-name="street"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(4);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -202,7 +191,7 @@ function generateRandomString() {
 	Checkskin (radio and checkbox)
 </div>
 
-<?php ob_start(); ?>
+<section class="example-5">
 
 <label class="ffx-checkskin ffx-checkskin--radio">
 	<span class="ffx-checkskin__input">
@@ -236,11 +225,11 @@ function generateRandomString() {
 	<span class="ffx-error"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(5);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -254,7 +243,7 @@ function generateRandomString() {
 	Barre de recherche (search bar)
 </div>
 
-<?php ob_start(); ?>
+<section class="example-6">
 
 <fieldset class="ffx-search">
 	<button type="submit">
@@ -268,11 +257,11 @@ function generateRandomString() {
 	</label>
 </fieldset>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(6);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -280,7 +269,7 @@ function generateRandomString() {
 	Fieldsets (contenants plusieurs éléments différents)
 </div>
 
-<?php ob_start(); ?>
+<section class="example-7">
 
 <div class="ffx-fieldset">
 	<legend class="ffx-legend">Adresse</legend>
@@ -360,11 +349,11 @@ function generateRandomString() {
 	</label>
 </fieldset>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(7);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -372,7 +361,7 @@ function generateRandomString() {
 	Combo double input
 </div>
 
-<?php ob_start(); ?>
+<section class="example-8">
 
 <fieldset class="ffx-fieldset ffx-fieldset--unify">
 	<label class="ffx-label">
@@ -404,11 +393,11 @@ function generateRandomString() {
 	</label>
 </fieldset>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(8);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -422,7 +411,7 @@ function generateRandomString() {
 	Items list
 </div>
 
-<?php ob_start(); ?>
+<section class="example-9">
 
 <ul class="ffx-list-items">
 	<li class="ffx-list-items__item">
@@ -450,11 +439,11 @@ function generateRandomString() {
 	</li>
 </ul>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(9);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -462,7 +451,7 @@ function generateRandomString() {
 	Systèmes d'affichage ciblé (radio)
 </div>
 
-<?php ob_start(); ?>
+<section class="example-10">
 
 <fieldset class="ffx-fieldset">
 	<legend class="ffx-legend">j'affiche la suite ?</legend>
@@ -553,11 +542,12 @@ function generateRandomString() {
 	<span class="ffx-error"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(10);
+</script>
+
 <blockquote>
 - utiliser l'attribut "data-radio-auto-menu" sur chaque élément
 de commande (label.formflex-radio) et y spécifier le mot clé lié à ce choix<br />
@@ -584,7 +574,7 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 	Systèmes d'affichage ciblé (checkbox)
 </div>
 
-<?php ob_start(); ?>
+<section class="example-11">
 
 <label class="ffx-checkskin ffx-checkskin--checkbox" data-checkbox-auto-menu="afficher_checkbox_suite">
 	<span class="ffx-checkskin__input">
@@ -601,11 +591,12 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 	<span class="ffx-error"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(11);
+</script>
+
 <blockquote>
 - utiliser l'attribut "data-checkbox-auto-menu" sur l'élément de commande (label.checkbox) et y spécifier le mot clé unique lié à ce choix<br />
 <br />
@@ -619,7 +610,7 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 	Systèmes d'affichage ciblé (select)
 </div>
 
-<?php ob_start(); ?>
+<section class="example-12">
 
 <label class="ffx-label">
 	<span class="ffx-name">j'affiche la suite ? (select)</span>
@@ -655,11 +646,12 @@ Ce dernier point décidera quel état de la checkbox fera apparaitre l'item (il 
 	<span class="ffx-error"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(12);
+</script>
+
 <blockquote>
 - utiliser l'attribut "data-ffx-select-automenu" sur le select
 et y spécifier le mot clé lié à cette question (sans la terminaison)<br />
@@ -688,7 +680,8 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 	Exemple 1 : simple, sans tri ni ffx-name automatique
 </div>
 
-<?php ob_start(); ?>
+<section class="example-13">
+
 <fieldset class="ffx-fieldset" data-group="simple1">
 	<label class="ffx-label">
 		<span class="ffx-name ffx-name--inline">champs-1</span>
@@ -709,17 +702,19 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 		<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
 	</label>
 </fieldset>
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+
+</section>
+
+<script>
+	createExampleBlockById(13);
+</script>
 
 <div class="formflex_title_2">
 	Exemple 2 : identique, avec le système de tri en plus
 </div>
 
-<?php ob_start(); ?>
+<section class="example-14">
+
 <div class="sortable">
 	<fieldset class="ffx-fieldset" data-group="simple1_tri">
 		<label class="ffx-label">
@@ -747,11 +742,13 @@ EX: enfants_au_domicile-oui, nombre_de_chambres-2, etc.
 		</label>
 	</fieldset>
 </div><!-- \sortable -->
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+
+</section>
+
+<script>
+	createExampleBlockById(14);
+</script>
+
 <blockquote>
 - commencez par identifier un groupe dupplicable en lui ajoutant l'attribut data-group, contenant un identifiant unique.<br />
 <br />
@@ -771,18 +768,13 @@ Dans ce cas, remplissez cet attribut avec le nombre de groupe par defaut au char
 	"children_templates" : élément invisible injecté par js
 </div>
 
-<?php ob_start(); ?>
+<section class="example-15">
 
 <div style="display:none">
 	<div class="category" data-ffx-child-template="classic_child1">
 		<div>
-<?php
-for($i=1;$i<=3;$i++) :
-if($i==1){$lang="fr";}
-if($i==2){$lang="nl";}
-if($i==3){$lang="en";}
-?>
-			<fieldset class="ffx-fieldset" data-lang-iso="<?php echo $lang; ?>">
+
+			<fieldset class="ffx-fieldset" data-lang-iso="fr">
 				<label class="ffx-label">
 					<input type="hidden" value="0" class="sortable_get_position">
 					<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
@@ -800,16 +792,54 @@ if($i==3){$lang="en";}
 					<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
 				</label>
 			</fieldset>
-<?php endfor; ?>
+
+			<fieldset class="ffx-fieldset" data-lang-iso="nl">
+				<label class="ffx-label">
+					<input type="hidden" value="0" class="sortable_get_position">
+					<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
+				</label>
+
+				<label class="ffx-label">
+					<span class="ffx-name ffx-name--inline">batiment</span>
+					<input class="ffx-input" type="text" size="60" name="" data-name="building" value="">
+
+					<span class="ffx-error"></span>
+				</label>
+
+				<label class="ffx-label">
+					<span class="ffx-round-icon ffx-round-icon--blue" data-ffx-children-add="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+					<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+				</label>
+			</fieldset>
+
+			<fieldset class="ffx-fieldset" data-lang-iso="en">
+				<label class="ffx-label">
+					<input type="hidden" value="0" class="sortable_get_position">
+					<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
+				</label>
+
+				<label class="ffx-label">
+					<span class="ffx-name ffx-name--inline">batiment</span>
+					<input class="ffx-input" type="text" size="60" name="" data-name="building" value="">
+
+					<span class="ffx-error"></span>
+				</label>
+
+				<label class="ffx-label">
+					<span class="ffx-round-icon ffx-round-icon--blue" data-ffx-children-add="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+					<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+				</label>
+			</fieldset>
+
 		</div>
 	</div><!-- \category -->
 </div>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(15);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -817,7 +847,7 @@ if($i==3){$lang="en";}
 	Menu de langue
 </div>
 
-<?php ob_start(); ?>
+<section class="example-16">
 
 <ul class="ffx-lang-menu" data-lang-menu="commentaires_test">
 	<li data-lang="fr">fr</li>
@@ -846,11 +876,12 @@ if($i==3){$lang="en";}
 	<span class="ffx-error" data-name="street"></span>
 </label>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(16);
+</script>
+
 <blockquote>
 - utiliser l'attribut "data-lang-menu" sur le menu des langues et lui donner une valeur unique (ex:menu_test).<br />
 <br />
@@ -872,7 +903,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 	Menu de langue avec système de création
 </div>
 
-<?php ob_start(); ?>
+<section class="example-17">
 
 <ul class="ffx-lang-menu" data-lang-menu="testation">
 	<li data-lang="fr">fr</li>
@@ -882,13 +913,8 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 
 <div class="sortable">
 <div class="category manual_increment" data-group="testation">
-	<?php for($i=1;$i<=3;$i++) : ?>
-	<?php
-		if($i==1){$lang="fr";}
-		if($i==2){$lang="nl";}
-		if($i==3){$lang="en";}
-	?>
-	<fieldset class="ffx-fieldset" data-lang-target="testation-<?php echo $lang; ?>" data-lang-category="testation" data-lang-iso="<?php echo $lang; ?>" data-formflex-base="formflex[pages][1295]">
+
+	<fieldset class="ffx-fieldset" data-lang-target="testation-fr" data-lang-category="testation" data-lang-iso="fr" data-formflex-base="formflex[pages][1295]">
 		<label class="ffx-label">
 			<input type="hidden" value="0" class="sortable_get_position">
 			<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
@@ -906,15 +932,53 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 			<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
 		</label>
 	</fieldset>
-	<?php endfor; ?>
+
+	<fieldset class="ffx-fieldset" data-lang-target="testation-nl" data-lang-category="testation" data-lang-iso="nl" data-formflex-base="formflex[pages][1295]">
+		<label class="ffx-label">
+			<input type="hidden" value="0" class="sortable_get_position">
+			<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
+		</label>
+
+		<label class="ffx-label">
+			<span class="ffx-name">Ville</span>
+			<input class="ffx-input" type="text" name="formflex[pages][1295][0][city]" data-name="city" size="50" value="">
+
+			<span class="ffx-error"></span>
+		</label>
+
+		<label class="ffx-label">
+			<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
+		</label>
+	</fieldset>
+
+	<fieldset class="ffx-fieldset" data-lang-target="testation-en" data-lang-category="testation" data-lang-iso="en" data-formflex-base="formflex[pages][1295]">
+		<label class="ffx-label">
+			<input type="hidden" value="0" class="sortable_get_position">
+			<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
+		</label>
+
+		<label class="ffx-label">
+			<span class="ffx-name">Ville</span>
+			<input class="ffx-input" type="text" name="formflex[pages][1295][0][city]" data-name="city" size="50" value="">
+
+			<span class="ffx-error"></span>
+		</label>
+
+		<label class="ffx-label">
+			<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+			<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
+		</label>
+	</fieldset>
+
 </div><!-- /category -->
 </div><!-- /sortable -->
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(17);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -922,7 +986,7 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 	Auto-naming : cas 1
 </div>
 
-<?php ob_start(); ?>
+<section class="example-18">
 
 <div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
 	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
@@ -951,11 +1015,12 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 	</fieldset>
 </div><!-- /category -->
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(18);
+</script>
+
 <blockquote>
 si on supprime l'attribut "data-name" des inputs, le système marche toujours mais n'ajoute pas les derniers crochets. Ca se finit donc sur le nombre incrémenté
 </blockquote>
@@ -967,7 +1032,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	<small class="replace_names_link">(click to show names)</small>
 </div>
 
-<?php ob_start(); ?>
+<section class="example-19">
 
 <div class="sortable">
 <div class="category manual_increment" data-group-cpt="2" data-group="children_group_efgdgfrer" data-this-cpt="0">
@@ -1059,11 +1124,11 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 </div><!-- /category -->
 </div><!-- /sortable -->
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(19);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -1072,8 +1137,7 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	<small class="replace_names_link">(click to show names)</small>
 </div>
 
-
-<?php ob_start(); ?>
+<section class="example-20">
 
 <fieldset class="ffx-fieldset category manual_increment" data-group="children_group_efgdgfsfsdfrer" data-formflex-base="formflex[pages][1295]">
 	<label class="ffx-label">
@@ -1098,11 +1162,11 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	</label>
 </fieldset>
 
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
+</section>
+
+<script>
+	createExampleBlockById(20);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -1110,6 +1174,8 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 	Auto-naming : cas 4
 	<small class="replace_names_link">(click to show names)</small>
 </div>
+
+<section class="example-21">
 
 <ul class="ffx-lang-menu" data-lang-menu="children_test">
 	<li data-lang="fr">fr</li>
@@ -1120,13 +1186,8 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 <div class="sortable">
 <div class="category manual_increment" data-group-cpt="999" data-group="children_group_erer" data-this-cpt="0">
 	<div>
-		<?php for($i=1;$i<=3;$i++) : ?>
-		<?php
-			if($i==1){$lang="fr";}
-			if($i==2){$lang="nl";}
-			if($i==3){$lang="en";}
-		?>
-		<fieldset class="ffx-fieldset" data-lang-target="children_test-<?php echo $lang; ?>" data-lang-category="children_test" data-lang-iso="<?php echo $lang; ?>" data-formflex-base="form[pages][1295]">
+
+		<fieldset class="ffx-fieldset" data-lang-target="children_test-fr" data-lang-category="children_test" data-lang-iso="fr" data-formflex-base="form[pages][1295]">
 			<label class="ffx-label">
 				<input type="hidden" value="0" class="sortable_get_position">
 				<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
@@ -1134,21 +1195,21 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 			<label class="ffx-label">
 				<span class="ffx-name ffx-name--inline">rue</span>
-				<input class="ffx-input" type="text" name="form[pages][1295][0][street][<?php echo $lang; ?>]" data-name="street" size="20" value="">
+				<input class="ffx-input" type="text" name="form[pages][1295][0][street][fr]" data-name="street" size="20" value="">
 
 				<span class="ffx-error"></span>
 			</label>
 
 			<label class="ffx-label">
 				<span class="ffx-name ffx-name--inline">numero</span>
-				<input class="ffx-input" type="text" name="form[pages][1295][0][number][<?php echo $lang; ?>]" data-name="number" size="3" value="">
+				<input class="ffx-input" type="text" name="form[pages][1295][0][number][fr]" data-name="number" size="3" value="">
 
 				<span class="ffx-error"></span>
 			</label>
 
 			<label class="ffx-label">
 				<span class="ffx-name ffx-name--inline">Ville test</span>
-				<input class="ffx-input" type="text" name="form[pages][1295][0][city][<?php echo $lang; ?>]" data-name="city" size="15" value="">
+				<input class="ffx-input" type="text" name="form[pages][1295][0][city][fr]" data-name="city" size="15" value="">
 
 				<span class="ffx-error"></span>
 			</label>
@@ -1159,10 +1220,84 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 				<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
 			</label>
 		</fieldset>
-		<?php endfor; ?>
+
+		<fieldset class="ffx-fieldset" data-lang-target="children_test-nl" data-lang-category="children_test" data-lang-iso="nl" data-formflex-base="form[pages][1295]">
+			<label class="ffx-label">
+				<input type="hidden" value="0" class="sortable_get_position">
+				<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name ffx-name--inline">rue</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][street][nl]" data-name="street" size="20" value="">
+
+				<span class="ffx-error"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name ffx-name--inline">numero</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][number][nl]" data-name="number" size="3" value="">
+
+				<span class="ffx-error"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name ffx-name--inline">Ville test</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][city][nl]" data-name="city" size="15" value="">
+
+				<span class="ffx-error"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-round-icon ffx-round-icon--blue" data-ffx-children-add="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+				<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+				<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
+			</label>
+		</fieldset>
+
+		<fieldset class="ffx-fieldset" data-lang-target="children_test-en" data-lang-category="children_test" data-lang-iso="en" data-formflex-base="form[pages][1295]">
+			<label class="ffx-label">
+				<input type="hidden" value="0" class="sortable_get_position">
+				<span class="ffx-round-icon ffx-round-icon--gray-on-white move"><i class="fa fa-arrows"></i></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name ffx-name--inline">rue</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][street][en]" data-name="street" size="20" value="">
+
+				<span class="ffx-error"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name ffx-name--inline">numero</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][number][en]" data-name="number" size="3" value="">
+
+				<span class="ffx-error"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-name ffx-name--inline">Ville test</span>
+				<input class="ffx-input" type="text" name="form[pages][1295][0][city][en]" data-name="city" size="15" value="">
+
+				<span class="ffx-error"></span>
+			</label>
+
+			<label class="ffx-label">
+				<span class="ffx-round-icon ffx-round-icon--blue" data-ffx-children-add="classic_child1"><i class="fa fa-caret-square-o-down"></i></span>
+				<span class="ffx-round-icon ffx-round-icon--red ffx-round-icon--delete"><i class="fa fa-trash"></i></span>
+				<span class="ffx-round-icon ffx-round-icon--green ffx-round-icon--dupplicate"><i class="fa fa-plus"></i></span>
+			</label>
+		</fieldset>
+
 	</div>
 </div><!-- /category -->
 </div><!-- /sortable -->
+
+</section>
+
+<script>
+	createExampleBlockById(21);
+</script>
 
 <!--------------------------------------------------------------------------------->
 
@@ -1178,19 +1313,8 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 
 </div><!-- \wrapper -->
 
-<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="./assets/js/picker.js"></script>
-<script type="text/javascript" src="./assets/js/picker.date.js"></script>
-<script type="text/javascript" src="./assets/js/picker.time.js"></script>
-<script type="text/javascript" src="./assets/js/jquery-validation/jquery.validate.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../formflex.js"></script>
-<script type="text/javascript" src="./assets/js/monjquery.js"></script>
+<script type="text/javascript" src="./formflex.js"></script>
+<script type="text/javascript" src="./assets/js/postfunctions.js"></script>
 </body>
 </html>
-<script>
-$(document).ready(function(){
-	var msg_error = $(".ffx-error:eq(0)").html();
-	$(".ffx-error").html(msg_error);
-});
-</script>
