@@ -36,11 +36,6 @@ function checkbox_checking() {
 		if ($(this).is(":checked")) {
 			var checkskin =  $(this).parents(".ffx-checkskin");
 			checkskin.addClass("ffx-checkskin--checked");
-
-			//condition spéciale dans le cas d'une "star"
-			if(checkskin.is(".ffx-checkskin--icon") && checkskin.parent().is(".ffx-fieldset")){
-				checkskin.prevAll().addClass("ffx-checkskin--checked");
-			}
 		} else {
 			$(this).parents(".ffx-checkskin").removeClass("ffx-checkskin--checked");
 		}

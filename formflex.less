@@ -247,11 +247,12 @@ cursor: pointer;
 	padding: 0;
 	padding-left: @formflex_input_height + 10 + @formflex_checkskin_input_size_decal;
 	margin-left: 0;
-	min-height: @formflex_input_height;
-	line-height: @formflex_input_height;
+	min-height: @formflex_input_height + @formflex_checkskin_input_size_decal;
 	padding-top: 0;
 	bottom: 0;
 	vertical-align: top;
+	display: flex;
+	align-items: center;
 	}
 	.ffx-checkskin__input {
 	height:  @formflex_input_height + @formflex_checkskin_input_size_decal;
@@ -265,7 +266,9 @@ cursor: pointer;
 	color: @formflex_checkskin_iconcolor;
 	font-size: @formflex_checkskin_fz;
 	overflow: hidden;
-	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
 	vertical-align: top;
 		input {
 		position: absolute;
@@ -321,37 +324,6 @@ cursor: pointer;
 		border: none;
 		}
 	}
-	&.ffx-checkskin--icon {
-		.ffx-name {
-		padding-left: 0;
-		margin-left: 27px;
-		}
-		.ffx-checkskin__input {
-		width: 22px !important;
-		color: @formflex_main_color_theme;
-		font-size: @formflex_icons_fz;
-		border: none;
-		background: none !important;
-			.ffx-checkskin__icon--on {display: none;}
-			.ffx-checkskin__icon--off {display: inline;}
-		}
-		&:hover {
-			.ffx-checkskin__input {
-			color: @formflex_main_color_theme_hover;
-			}
-		}
-		&.ffx-checkskin--mousedown {
-			.ffx-checkskin__input {
-			color: @formflex_main_color_theme_mousedown !important;
-			}
-		}
-		&.ffx-checkskin--checked {
-			.ffx-checkskin__input {
-				.ffx-checkskin__icon--on {display: inline;}
-				.ffx-checkskin__icon--off {display: none;}
-			}
-		}
-	}
 }
 
 //////////////////////////////// CONTAINER FORM ELEMENTS
@@ -370,17 +342,6 @@ margin: 5px 0;
 			margin-left: 0;
 			}
 		}
-	}
-}
-
-.ffx-righting-box {
-position: absolute;
-top: 0;
-right: 0;
-	.ffx-select, .ffx-input {
-	width: 100%;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
 	}
 }
 

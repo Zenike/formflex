@@ -265,45 +265,18 @@ function generateRandomString() {
 		Texte très très très très très très très très très très très très très très
 		 très très très très très très très très très très très très très très très
 		  très très très très très très très très très très très très très long
+		Texte très très très très très très très très très très très très très très
+		 très très très très très très très très très très très très très très très
+		  très très très très très très très très très très très très très long
+		 très très très très très très très très très très très très très très très
+		  très très très très très très très très très très très très très long
+		Texte très très très très très très très très très très très très très très
+		 très très très très très très très très très très très très très très très
+		  très très très très très très très très très très très très très long
 	</span>
 
 	<span class="ffx-error"></span>
 </label>
-
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
-
-<!--------------------------------------------------------------------------------->
-
-<div class="formflex_title">
-	Checkboxs/radios avec icones customs
-</div>
-
-<?php ob_start(); ?>
-
-<label class="ffx-checkskin ffx-checkskin--icon">
-	<span class="ffx-checkskin__input">
-		<i class="ffx-checkskin__icon--on fa fa-circle"></i>
-		<i class="ffx-checkskin__icon--off fa fa-circle-o"></i>
-		<input type="checkbox" name="test3">
-	</span>
-	<span class="ffx-name">Mercredi 19 fé</span>
-</label>
-
-<fieldset class="ffx-fieldset">
-	<?php for($i=1;$i<=5;$i++){ ?>
-	<label class="ffx-checkskin ffx-checkskin--icon">
-		<span class="ffx-checkskin__input">
-			<i class="ffx-checkskin__icon--on fa fa-star"></i>
-			<i class="ffx-checkskin__icon--off fa fa-star-o"></i>
-			<input type="radio" name="test3">
-		</span>
-	</label>
-	<?php } ?>
-</fieldset>
 
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
