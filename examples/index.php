@@ -270,23 +270,6 @@ function generateRandomString() {
 	<span class="ffx-error"></span>
 </label>
 
-<fieldset class="ffx-fieldset">
-	<legend class="ffx-legend">Enchainement horizontal d'un checkskin sans ffx-name et d'un input text</legend>
-	<label class="ffx-checkskin ffx-checkskin--checkbox">
-		<span class="ffx-checkskin__input">
-			<i class="fa fa-check"></i>
-			<input type="checkbox" name="test3">
-		</span>
-
-		<span class="ffx-error"></span>
-	</label>
-	<label class="ffx-label">
-		<input class="ffx-input" type="text" size="30">
-
-		<span class="ffx-error"></span>
-	</label>
-</fieldset>
-
 <?php $ffx_example_code = ob_get_clean(); ?>
 <?php echo $ffx_example_code; ?>
 <pre>
