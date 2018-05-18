@@ -19,11 +19,9 @@ function generateRandomString() {
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Language" content="fr" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<link href="<?php echo $pathLinkFile; ?>css/style.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="<?php echo $pathLinkFile; ?>img/favicon.png" rel="shortcut icon" type="image/png" />
-	<link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+	<link href="./assets/img/favicon.png" rel="shortcut icon" type="image/png" />
 </head>
 <body>
 
@@ -79,46 +77,6 @@ function generateRandomString() {
 <pre>
 <?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
 </pre>
-
-<!--------------------------------------------------------------------------------->
-
-<div class="formflex_title">
-	Alignement automatique (align-names) et exclusion
-</div>
-
-<?php ob_start(); ?>
-
-<div class="ffx-align-names-container">
-
-<?php for($i=1;$i<=3;$i++){ ?>
-	<label class="ffx-label">
-		<span class="ffx-name ffx-name--inline" data-ffx-align-names><?php echo generateRandomString(); ?></span>
-		<input class="ffx-input" type="text" size="30">
-
-		<span class="ffx-error"></span>
-	</label>
-<?php } ?>
-<label class="ffx-label">
-	<span class="ffx-name ffx-name--inline">label non aligné aux autres</span>
-	<input class="ffx-input" type="text" size="30">
-
-	<span class="ffx-error"></span>
-</label>
-
-</div><!-- /ffx-align-names-container -->
-
-<?php $ffx_example_code = ob_get_clean(); ?>
-<?php echo $ffx_example_code; ?>
-<pre>
-<?php echo str_replace("<", "&lt;", "$ffx_example_code"); ?>
-</pre>
-<blockquote>
-- les blocs alignent la taille de leurs intitulés automatiquement grace au conteneur .formflex-align-names<br />
-<br />
-- par defaut, les names dans les fieldsets ne sont pas formatés. Il est possible de forcer le formatage (de n'importe quel ffx-name) en ajoutant la class "forced_align" sur le ffx-name en question.<br />
-<br />
-- il est possible d'exclure un ffx-name de ce systeme en lui mettant la class "no_size".
-</blockquote>
 
 <!--------------------------------------------------------------------------------->
 
@@ -1221,15 +1179,13 @@ si on supprime l'attribut "data-name" des inputs, le système marche toujours ma
 </div><!-- \wrapper -->
 
 <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.actual/1.0.19/jquery.actual.min.js"></script>
-<script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/picker.js"></script>
-<script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/picker.date.js"></script>
-<script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/picker.time.js"></script>
-<script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/jquery-validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="./assets/js/picker.js"></script>
+<script type="text/javascript" src="./assets/js/picker.date.js"></script>
+<script type="text/javascript" src="./assets/js/picker.time.js"></script>
+<script type="text/javascript" src="./assets/js/jquery-validation/jquery.validate.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="<?php echo $pathLinkFile; ?>/../../../formflex.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo $pathLinkFile; ?>js/monjquery.js"></script>
+<script type="text/javascript" src="../formflex.js"></script>
+<script type="text/javascript" src="./assets/js/monjquery.js"></script>
 </body>
 </html>
 <script>

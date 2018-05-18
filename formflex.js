@@ -54,38 +54,6 @@ function checkbox_checking() {
 
 
 
-//équilibrer les tailles de names dans les formulaires (alignement)
-$(document).ready(function () {
-	ffx_align_names();
-});
-$(document).on("formflex_refresh", function(options){
-	ffx_align_names();
-});
-function ffx_align_names() {
-	$(".ffx-align-names-container").each(function (k, v) {
-		var max_width = 0;
-
-		$(v).find("[data-ffx-align-names]").each(function () {
-			$(this).removeAttr("style");
-
-			if ($(this).actual('width') >= max_width) {
-				max_width = $(this).actual('width');
-			}
-		});
-
-		$(v).find("[data-ffx-align-names]").width(max_width);
-	});
-};
-
-
-
-
-
-
-
-
-
-
 
 
 

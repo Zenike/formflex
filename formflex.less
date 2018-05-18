@@ -1,5 +1,8 @@
 
 //////////////////////////////// BASIC FORM ELEMENTS
+[class^="ffx-"], [class^="ffx-"] * {
+box-sizing: border-box;
+}
 
 [class^="ffx-"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 color: @formflex_input_fontcolor;
@@ -347,6 +350,9 @@ margin: 5px 0;
 
 .ffx-search {
 position: relative;
+padding: 0;
+margin: 0;
+border: none;
 	button {
 	position: absolute;
 	z-index: 2;
