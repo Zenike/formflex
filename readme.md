@@ -1,5 +1,5 @@
 # FORMFLEX
-### <http://10.1.1.200/web/formflex/examples/>
+### https://zenike.github.io/formflex/
 
 `sliker` est un plugin slider/slideshow écrit en `jQuery`
 
