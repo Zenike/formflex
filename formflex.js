@@ -1,3 +1,4 @@
+(function($) {
 //fonction permettant de rafraichir les calculs du
 //formulaire dans un cas de création en ajax
 function formflex_refresh(){
@@ -744,3 +745,8 @@ $("body").on("click", ".ffx-round-icon--delete", function(){
 	}
 	return false;
 });
+
+
+
+// end of the autoinvoked function that defines $
+}(jQuery));
