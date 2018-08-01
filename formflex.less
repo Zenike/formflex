@@ -246,6 +246,12 @@ position: relative;
 display: block;
 margin: 5px 0;
 cursor: pointer;
+	input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	}
 	.ffx-name {
 	padding: 0;
 	padding-left: @formflex_input_height + 10 + @formflex_checkskin_input_size_decal;
@@ -256,8 +262,10 @@ cursor: pointer;
 	vertical-align: top;
 	display: flex;
 	align-items: center;
+	position: relative;
 	}
-	.ffx-checkskin__input {
+	.ffx-name::before {
+	content: ' ';
 	height:  @formflex_input_height + @formflex_checkskin_input_size_decal;
 	line-height: @formflex_input_height + @formflex_checkskin_input_size_decal;
 	width: @formflex_input_height  + @formflex_checkskin_input_size_decal;
@@ -273,53 +281,44 @@ cursor: pointer;
 	top: 0;
 	left: 0;
 	vertical-align: top;
-		input {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		visibility: hidden;
-		}
-		i {
-		display: none;
-		}
+	box-sizing: border-box;
+	font-family: FontAwesome;
 	}
 	&:hover {
 		.ffx-name {
 		color: @formflex_name_color_hover;
 		}
-		.ffx-checkskin__input {
+		.ffx-name::before {
 		border-color: @formflex_checkskin_bd_color_hover;
 		}
 	}
 	&.ffx-checkskin--radio {
-		.ffx-checkskin__input {
+		.ffx-name::before {
 		border-radius: 100px;
 		}
 	}
 	&.ffx-checkskin--checkbox {
-		.ffx-checkskin__input {
+		.ffx-name::before {
 		border-radius: @formflex_checkskin_checkbox_round;
 		}
 	}
-	&.ffx-checkskin--checked {
-		.ffx-checkskin__input {
+	input:checked + .ffx-name {
+		&::before {
 		background-color: @formflex_checkskin_bg_color_checked;
 		height: @formflex_input_height + @formflex_checkskin_input_size_decal;
 		line-height: @formflex_input_height + @formflex_checkskin_input_size_decal;
 		width: @formflex_input_height + @formflex_checkskin_input_size_decal;
 		border: none;
-			i {
-			display: inline;
-			}
+		content: '\f00c';
 		}
 	}
-	&.ffx-checkskin--checked:hover {
-		.ffx-checkskin__input {
+	input:checked + .ffx-name:hover {
+		&::before {
 		background-color: @formflex_checkskin_bg_color_checked_hover;
 		}
 	}
-	&.ffx-checkskin--mousedown {
-		.ffx-checkskin__input {
+	input:active + .ffx-name {
+		&::before {
 		background-color: @formflex_checkskin_bg_color_mousedown !important;
 		height: @formflex_input_height + @formflex_checkskin_input_size_decal;
 		line-height: @formflex_input_height + @formflex_checkskin_input_size_decal;

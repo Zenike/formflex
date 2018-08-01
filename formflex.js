@@ -14,49 +14,6 @@ function formflex_refresh(){
 
 
 
-//checkbox et radio personnalisé
-$(document).ready(function () {
-	checkbox_checking();
-});
-$(document).on("formflex_refresh", function(options){
-	checkbox_checking();
-});
-$("body").on("change",".ffx-checkskin input",function () {
-	checkbox_checking();
-});
-$("body").on("mousedown",".ffx-checkskin",function () {
-	if ($(this).find("input").prop('disabled') == false) {
-		$(this).addClass("ffx-checkskin--mousedown");
-	}
-})
-$("body").on("mouseup",function () {
-	$(".ffx-checkskin").removeClass("ffx-checkskin--mousedown");
-});
-function checkbox_checking() {
-	$(".ffx-checkskin input").each(function () {
-		if ($(this).is(":checked")) {
-			var checkskin =  $(this).parents(".ffx-checkskin");
-			checkskin.addClass("ffx-checkskin--checked");
-		} else {
-			$(this).parents(".ffx-checkskin").removeClass("ffx-checkskin--checked");
-		}
-	});
-}//checkbox_checking
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
