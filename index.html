@@ -193,14 +193,14 @@
 
 <section class="example-5">
 
-<label class="ffx-checkskin ffx-checkskin--radio">
+<label class="ffx-checkskin">
 	<input type="radio" name="test3">
 	<span class="ffx-name">Texte court</span>
 
 	<span class="ffx-error"></span>
 </label>
 
-<label class="ffx-checkskin ffx-checkskin--checkbox">
+<label class="ffx-checkskin">
 	<input type="checkbox" name="test3">
 	<span class="ffx-name">
 		Texte très très très très très très très très très très très très très très
@@ -218,6 +218,19 @@
 
 	<span class="ffx-error"></span>
 </label>
+
+<span class="wpcf7-form-control-wrap rpd-datas">
+	<span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required">
+		<span class="wpcf7-list-item first last">
+			<label>
+				<input name="rpd-datas[]" value="rgpd-checkbox-datas" type="checkbox">
+				<span class="wpcf7-list-item-label">
+					Form 7 structure
+				</span>
+			</label>
+		</span>
+	</span>
+</span>
 
 </section>
 
@@ -322,14 +335,14 @@
 <fieldset class="ffx-fieldset">
 	<legend class="ffx-legend">Enchainement horizontal classique de checkskins</legend>
 
-	<label class="ffx-checkskin ffx-checkskin--radio">
+	<label class="ffx-checkskin">
 		<input type="radio" name="test3">
 		<span class="ffx-name">radio1</span>
 
 		<span class="ffx-error"></span>
 	</label>
 
-	<label class="ffx-checkskin ffx-checkskin--radio">
+	<label class="ffx-checkskin">
 		<input type="radio" name="test3">
 		<span class="ffx-name">radio2</span>
 
@@ -444,17 +457,17 @@
 <fieldset class="ffx-fieldset">
 	<legend class="ffx-legend">j'affiche la suite ?</legend>
 
-	<label class="ffx-checkskin ffx-checkskin--radio" data-radio-auto-menu="afficher_suite_oui">
+	<label class="ffx-checkskin" data-radio-auto-menu="afficher_suite_oui">
 		<input type="radio" name="test3">
 		<span class="ffx-name">oui</span>
 	</label>
 
-	<label class="ffx-checkskin ffx-checkskin--radio" data-radio-auto-menu="afficher_suite_non">
+	<label class="ffx-checkskin" data-radio-auto-menu="afficher_suite_non">
 		<input type="radio" checked name="test3">
 		<span class="ffx-name">non</span>
 	</label>
 
-	<label class="ffx-checkskin ffx-checkskin--radio" data-radio-auto-menu="afficher_suite_ptet">
+	<label class="ffx-checkskin" data-radio-auto-menu="afficher_suite_ptet">
 		<input type="radio" name="test3">
 		<span class="ffx-name">peut-être</span>
 	</label>
@@ -492,12 +505,12 @@
 <fieldset class="ffx-fieldset">
 	<legend class="ffx-legend">j'affiche la suite ?</legend>
 
-	<label class="ffx-checkskin ffx-checkskin--radio" data-radio-auto-menu="afficher_suite_2_oui">
+	<label class="ffx-checkskin" data-radio-auto-menu="afficher_suite_2_oui">
 		<input type="radio" name="test223">
 		<span class="ffx-name">oui</span>
 	</label>
 
-	<label class="ffx-checkskin ffx-checkskin--radio uncheck_default" data-radio-auto-menu="afficher_suite_2_non">
+	<label class="ffx-checkskin uncheck_default" data-radio-auto-menu="afficher_suite_2_non">
 		<input type="radio" name="test223">
 		<span class="ffx-name">non</span>
 	</label>
@@ -549,7 +562,7 @@ PS: ici la class "uncheck_default" est appliquée au label contenant la réponse
 
 <section class="example-11">
 
-<label class="ffx-checkskin ffx-checkskin--checkbox" data-checkbox-auto-menu="afficher_checkbox_suite">
+<label class="ffx-checkskin" data-checkbox-auto-menu="afficher_checkbox_suite">
 	<input class="ffx-input" type="checkbox" name="test3">
 	<span class="ffx-name">Afficher la suite</span>
 </label>
@@ -960,13 +973,13 @@ PS: il est possible d'utiliser plusieurs fois le même attribut (pas besoin de r
 
 <div class="category manual_increment" data-group="identifiant-unique-de-ce-groupe">
 	<fieldset class="ffx-fieldset" data-formflex-base="formflex[pages][1295]">
-		<label class="ffx-checkskin ffx-checkskin--radio">
+		<label class="ffx-checkskin">
 			<input type="radio" name="formflex[pages][1295][0][radio]" data-name="radio">
 			<span class="ffx-name">oui</span>
 
 			<span class="ffx-error"></span>
 		</label>
-		<label class="ffx-checkskin ffx-checkskin--radio">
+		<label class="ffx-checkskin">
 			<input type="radio" name="formflex[pages][1295][0][radio]" data-name="radio">
 			<span class="ffx-name">non</span>
 

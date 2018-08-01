@@ -1,4 +1,10 @@
 (function($) {
+// start of the autoinvoked function that defines $
+
+
+
+
+
 //fonction permettant de rafraichir les calculs du
 //formulaire dans un cas de création en ajax
 function formflex_refresh(){
