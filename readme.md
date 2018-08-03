@@ -1,6 +1,6 @@
-# FORMFLEX
+# Formflex
+Démo et exemples détaillés des possibilités (avec code correspondant) ici (GitHub Page) :
 ### https://zenike.github.io/formflex/
-
 `formflex` est un plugin de personnalisation de formulaire. Il permet de configurer facilement les différents éléments constituants un formulaire en changeant uniquement des variables `LESS`.
 Il ajoute également des fonctions avancées en javascript comme un système d'affichage/masquage en fonction des réponses précédentes choisies.
 
