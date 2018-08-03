@@ -1,11 +1,12 @@
 # FORMFLEX
 ### https://zenike.github.io/formflex/
 
-`sliker` est un plugin slider/slideshow écrit en `jQuery`
+`formflex` est un plugin de personnalisation de formulaire. Il permet de configurer facilement les différents éléments constituants un formulaire en changeant uniquement des variables `LESS`.
+Il ajoute également des fonctions avancées en javascript comme un système d'affichage/masquage en fonction des réponses précédentes choisies.
 
-# dépendances
+# Dépendances
 - `jQuery`: une version récente sans limitation précise
-- `Less`: le css de ce plugin est écrit en LESS, quelques variables de couleur devront être définies pour son bon fonctionnement.
+- `Less`: ce plugin utilise LESS pour la personnalsation du formulaire
 
 # Installation
 1. récuperer les fichiers `formflex.less` et `formflex.js` à la racine du projet GitHUb
@@ -13,9 +14,9 @@
 3. lier et génerer un css à partir de `formflex.less`
 4. incorporer les variables de personnalisation ci dessous dans les less du projet
 
-# variables de personnalisation
+# Variables de personnalisation
 - variables less à inclure avant formflex.less
-```css
+```less
 /* FORMFLEX GENERAL */
 @formflex_input_height: 60px;
 @formflex_input_bgcolor: #333;
