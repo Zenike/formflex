@@ -1,0 +1,29 @@
+{
+  "name": "formflex",
+  "version": "2.1.0",
+  "description": "jquery gallery plugin",
+  "main": "formflex.less",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zenike/formflex.git"
+  },
+  "keywords": [
+    "css",
+    "javascript",
+    "jquery",
+    "less",
+    "form",
+  ],
+  "author": "Zenike <nicolasmaquet@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zenike/sliker/issues"
+  },
+  "homepage": "https://github.com/Zenike/sliker#readme"
+}
