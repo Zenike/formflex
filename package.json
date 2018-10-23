@@ -1,7 +1,7 @@
 {
   "name": "formflex",
   "version": "2.1.0",
-  "description": "jquery gallery plugin",
+  "description": "customizable form plugin",
   "main": "formflex.less",
   "directories": {
     "example": "examples"
@@ -23,7 +23,7 @@
   "author": "Zenike <nicolasmaquet@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zenike/sliker/issues"
+    "url": "https://github.com/Zenike/formflex/issues"
   },
-  "homepage": "https://github.com/Zenike/sliker#readme"
+  "homepage": "https://github.com/Zenike/formflex#readme"
 }
