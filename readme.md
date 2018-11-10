@@ -32,6 +32,7 @@ Il ajoute également des fonctions avancées en javascript comme un système d'a
 @formflex_main_color_theme: @theme;
 @formflex_main_color_theme_hover: @theme_light;
 @formflex_main_color_theme_mousedown: @theme_dark;
+@formflex_mobile_size_switch: 500px;
 
 /* FORMFLEX NAME */
 @formflex_name_fz: 12px;
@@ -51,4 +52,3 @@ Il ajoute également des fonctions avancées en javascript comme un système d'a
 @formflex_checkskin_bd_color: #aaa;
 @formflex_checkskin_bd_color_hover: #555;
 ```
-
