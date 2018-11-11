@@ -327,21 +327,15 @@ $(document).on("formflex_refresh", function(options){
 function position_each_customErrorValidation(){
 	$(".ffx-error").each(function(){
 
-		if($(this).parents(".label,label").length==1){
-			var conteneur = $(this).parents(".label,label");
-		}else{
-			var conteneur = $(this).parents(".lane, fieldset");
-		}
+		var conteneur = $(this).closest(".ffx-label, .ffx-checkskin");
 
-		var input = conteneur.find("input, select, textarea");
-
-		if(input.length > 0){
-			var deca_left = input.offset().left+14 - conteneur.offset().left;
-			var deca_top = input.offset().top-25 - conteneur.offset().top;
+		if(conteneur.length > 0) {
+			var deca_left = 0;
+			var deca_top = - 22;
 
 			$(this).css({
-			left: deca_left+"px",
-			top: deca_top+"px",
+			left: deca_left + "px",
+			top: deca_top + "px",
 			});
 		}
 	});
