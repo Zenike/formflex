@@ -24,7 +24,9 @@
 	</li>
 </ul>
 
-<h1><i class="fa fa-superpowers"></i> Formflex v3.0</h1>
+<h1>
+	<img src="./assets/img/formflex-logo.svg" alt="formflex">
+</h1>
 
 <!-- /FIN DU HEADER ------------------------------------------------------------------------------->
 
@@ -41,8 +43,17 @@
 <section class="example-1">
 
 <label class="ffx-label">
-	<span class="ffx-name">à la ligne simple</span>
+	<span class="ffx-name">Champs texte classique</span>
 	<input class="ffx-input" type="text" size="30">
+
+	<span class="ffx-error"></span>
+</label>
+
+<label class="ffx-label">
+	<span class="ffx-name">Version form7</span>
+	<span class="wpcf7-form-control-wrap text-918">
+		<input type="text" name="text-918" value="" size="40" class="wpcf7-form-control wpcf7-text ffx7-full" aria-invalid="false">
+	</span>
 
 	<span class="ffx-error"></span>
 </label>
@@ -62,8 +73,17 @@
 <section class="example-2">
 
 <label class="ffx-label">
-	<span class="ffx-name">textarea vertical classique</span>
+	<span class="ffx-name">Texte du textarea</span>
 	<textarea class="ffx-textarea" name="" id="" cols="30" rows="10"></textarea>
+
+	<span class="ffx-error" data-name="street"></span>
+</label>
+
+<label class="ffx-label">
+	<span class="ffx-name">version form7</span>
+	<span class="wpcf7-form-control-wrap textarea-250">
+		<textarea name="textarea-250" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+	</span>
 
 	<span class="ffx-error" data-name="street"></span>
 </label>
@@ -83,12 +103,25 @@
 <section class="example-3">
 
 <label class="ffx-label">
-	<span class="ffx-name">select vertical classique</span>
+	<span class="ffx-name">select classique</span>
 	<select name="" id="" class="ffx-select">
 		<option value="">texte de l'option1</option>
 		<option value="">texte de l'option2</option>
 		<option value="">texte de l'option3</option>
 	</select>
+
+	<span class="ffx-error" data-name="street_nbr"></span>
+</label>
+
+<label class="ffx-label">
+	<span class="ffx-name">version form7</span>
+	<span class="wpcf7-form-control-wrap menu-967">
+		<select name="menu-967" class="wpcf7-form-control wpcf7-select" aria-invalid="false">
+			<option value="texte de l'option1">texte de l'option1</option>
+			<option value="texte de l'option2">texte de l'option2</option>
+			<option value="texte de l'option3">texte de l'option3</option>
+		</select>
+	</span>
 
 	<span class="ffx-error" data-name="street_nbr"></span>
 </label>
@@ -118,7 +151,22 @@
 	<span class="ffx-error" data-name="street"></span>
 </label>
 
+<label class="ffx-label">
+	<span class="ffx-name">version form7</span>
+	<div class="ffx-file">
+		<span class="ffx-file__infos">Fichier pdf...</span>
+		<span class="ffx-file__btn">Parcourir</span>
+		<span class="wpcf7-form-control-wrap file-890"><input type="file" name="file-890" size="40" class="wpcf7-form-control wpcf7-file" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false"></span>
+	</div>
+
+	<span class="ffx-error" data-name="street"></span>
+</label>
+
 </section>
+
+<blockquote>
+	Pour form7, il est ici nécessaire de garder toute la structure exemple et d'insérer le shortcode form7 à la place de la balise input uniquement.
+</blockquote>
 
 <script>
 	createExampleBlockById(4);
@@ -158,20 +206,44 @@
 	<span class="ffx-error"></span>
 </label>
 
-<span class="wpcf7-form-control-wrap rpd-datas">
-	<span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required">
+<span class="wpcf7-form-control-wrap checkbox-800">
+	<span class="wpcf7-form-control wpcf7-checkbox">
+		<span class="wpcf7-list-item last">
+			<label>
+				<input type="checkbox" name="checkbox-800[]" value="sdfsdfsd">
+				<span class="wpcf7-list-item-label">form 7 "checkboxes" (avec Wrap each item with label element)</span>
+			</label>
+		</span>
+	</span>
+</span>
+
+<span class="wpcf7-form-control-wrap radio-533">
+	<span class="wpcf7-form-control wpcf7-radio">
 		<span class="wpcf7-list-item first last">
 			<label>
-				<input name="rpd-datas[]" value="rgpd-checkbox-datas" type="checkbox">
-				<span class="wpcf7-list-item-label">
-					Form 7 structure
-				</span>
+				<input type="radio" name="radio-533" value="ghghfgh">
+				<span class="wpcf7-list-item-label">form 7 "radios" (avec Wrap each item with label element)</span>
+			</label>
+		</span>
+	</span>
+</span>
+
+<span class="wpcf7-form-control-wrap acceptance-424">
+	<span class="wpcf7-form-control wpcf7-acceptance">
+		<span class="wpcf7-list-item">
+			<label>
+				<input type="checkbox" name="acceptance-424" value="1" aria-invalid="false">
+				<span class="wpcf7-list-item-label">form7 "acceptance"</span>
 			</label>
 		</span>
 	</span>
 </span>
 
 </section>
+
+<blockquote>
+	avec form7 dans les cas des "checkboxes" et des "radios", il est obligatoire de cocher la case "avec Wrap each item with label element".
+</blockquote>
 
 <script>
 	createExampleBlockById(5);
