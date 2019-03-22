@@ -1,6 +1,6 @@
 {
   "name": "formflex",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "customizable form plugin",
   "main": "formflex.less",
   "directories": {
